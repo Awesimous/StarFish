@@ -27,3 +27,19 @@ six>=1.14
 joblib
 memoized-property
 termcolor
+
+# batch 606 modules
+git+https://github.com/freichel/tstprjctflo
+git+https://github.com/domzae/muchwow
+git+https://github.com/g-wagen/myproject
+git+https://github.com/jjjaan/jan_proudly_presents
+git+https://github.com/caduffn/my_package
+git+https://github.com/WolfSchew/collatz_problem
+git+https://github.com/cyrilaubry86/ca1
+git+https://github.com/SandraOelschlegel/mypackage
+git+https://github.com/AlexBabkf/babkfproj
+git+https://github.com/BabsBerlin/babs_package
+git+https://github.com/clairebeswick/clairespackage
+git+https://github.com/Iakithega/just_a_try
+git+https://github.com/katerinadek/kd
+git+https://github.com/Awesimous/StarFish
