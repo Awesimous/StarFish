@@ -16,6 +16,10 @@ six>=1.14
 # API
 twitchAPI==2.3.2
 
+# Scraping
+html5lib
+bs4
+
 plotly==4.14.3
 requests==2.25.1
 streamlit==0.82.0
@@ -25,8 +29,3 @@ black
 coverage
 flake8
 pytest
-
-# frontend
-plotly==4.14.3
-requests==2.25.1
-streamlit==0.82.0
