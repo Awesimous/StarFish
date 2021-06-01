@@ -8,7 +8,7 @@ twine
 numpy==1.18.5
 pandas==1.2.3
 scikit-learn==0.22
-scipy==1.6.2
+scipy==1.6.3
 
 # utilities
 six>=1.14
@@ -25,3 +25,8 @@ black
 coverage
 flake8
 pytest
+
+# frontend
+plotly==4.14.3
+requests==2.25.1
+streamlit==0.82.0
