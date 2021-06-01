@@ -1,45 +1,20 @@
 # packaging
 pip>=9
 setuptools>=26
-twine
 wheel>=0.29
+twine
 
 # data science
-numpy
-pandas
-scikit-learn
+numpy==1.18.5
+pandas==1.2.3
+scikit-learn==0.22
+scipy==1.6.2
+
+# utilities
+six>=1.14
 
 # tests/linter
 black
 coverage
 flake8
 pytest
-yapf
-
-# API
-gcsfs
-google-cloud-storage
-mlflow
-s3fs
-
-# utilities
-six>=1.14
-joblib
-memoized-property
-termcolor
-
-# batch 606 modules
-git+https://github.com/freichel/tstprjctflo
-git+https://github.com/domzae/muchwow
-git+https://github.com/g-wagen/myproject
-git+https://github.com/jjjaan/jan_proudly_presents
-git+https://github.com/caduffn/my_package
-git+https://github.com/WolfSchew/collatz_problem
-git+https://github.com/cyrilaubry86/ca1
-git+https://github.com/SandraOelschlegel/mypackage
-git+https://github.com/AlexBabkf/babkfproj
-git+https://github.com/BabsBerlin/babs_package
-git+https://github.com/clairebeswick/clairespackage
-git+https://github.com/Iakithega/just_a_try
-git+https://github.com/katerinadek/kd
-git+https://github.com/Awesimous/StarFish

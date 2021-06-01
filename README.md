@@ -1,74 +1,55 @@
-# Data analysis
-- Document here the project: StarFish
-- Description: Project Description
-- Data Source:
-- Type of analysis:
+# Starfish
 
-Please document the project the better you can.
+A twitch broadcaster information dashboard. A small broadcaster ranking and highlighting tool.
 
-# Startup the project
+Contents
+----
+- Links
+- Development Environment Setup
+- Features selected for
+- Milestones
 
-The initial setup.
+### Links
+- [Trello](https://trello.com/b/4jGmUJGH/starfish)
 
-Create virtualenv and install the project:
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv ~/venv ; source ~/venv/bin/activate ;\
-    pip install pip -U; pip install -r requirements.txt
-```
+### API Notes
 
-Unittest test:
-```bash
-make clean install test
-```
+- unfortunately, get broadcaster subscriptions requires the broadcaster's authorization.
 
-Check for StarFish in gitlab.com/{group}.
-If your project is not set please add it:
+###### Sorting
+- search categories
+- get channel information
+- search channels
+- get stream tags
+- get all stream tags
+- get channel teams
+- get teams
+- get top games
+- get games
 
-- Create a new project on `gitlab.com/{group}/StarFish`
-- Then populate it:
+###### By Streamer
+- get videos (video ids, user id, game id)
+- get bits leaderboard (by channel)
 
-```bash
-##   e.g. if group is "{group}" and project_name is "StarFish"
-git remote add origin git@github.com:{group}/StarFish.git
-git push -u origin master
-git push -u origin --tags
-```
+- get hype train events
+- (Extension and game analytics)
 
-Functionnal test with a script:
+TODO: understand relationship between "games" and "categories". See: get streams for example. What are game_id and game_name, for a knitting stream?
 
-```bash
-cd
-mkdir tmp
-cd tmp
-StarFish-run
-```
+### Development Environment Setup
 
-# Install
+From an environment already set up with the lewagon pyenv:
 
-Go to `https://github.com/{group}/StarFish` to see the project, manage issues,
-setup you ssh public key, ...
+    pyenv global 3.8.6
+    pyenv virtualenv starfish
+    pyenv activate starfish
+    pip install -r requirements.txt
 
-Create a python3 virtualenv and activate it:
+It should say `[starfish]` at the right end of your shell prompt.
 
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv -ppython3 ~/venv ; source ~/venv/bin/activate
-```
 
-Clone the project and install it:
+### Milestones
 
-```bash
-git clone git@github.com:{group}/StarFish.git
-cd StarFish
-pip install -r requirements.txt
-make clean install test                # install and test
-```
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
-StarFish-run
-```
+| Stage | Description |
+| ---- | ---- |
+| MVP | A dashboard collating scraped and api data, usefully interpreted |
