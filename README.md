@@ -21,12 +21,26 @@ A twitch broadcaster information dashboard. A small broadcaster ranking and high
 
 __Possibly__: dataframes for broadcasters, teams, games (times and engagement)
 
-Broadcasters:
-broadcaster_id (index by) | display_name | broadcaster_language | team_id | team_display_name | team_name | team_updated_at | team_created_at | team_info
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+Broadcaster:
 
-- broadcaster_id (index by)
+    get_streamer_data: {streamer id, streamer login, streamer language}
+
+Broadcaster Teams:
+
+    get_streamer_teams: {streamer id,
+                        0 {team name,
+                            team display name,
+                            team updated at,
+                            team created at,
+                            team info,
+                            team id}
+                        }
+
+
+###### Features
+- broadcaster_id
 - display_name
+- broadcaster_login
 - broadcaster_language
 - team_id
 - team_display_name
@@ -35,21 +49,19 @@ broadcaster_id (index by) | display_name | broadcaster_language | team_id | team
 - team_created_at
 - team_info
 
-
-###### Sorting
-- search channels; `display_name` -> `id` (match to`broadcaster_id`)
-- get channel information; keep in mind `broadcaster_name` != `broadcaster_id`
-- get channel teams; per team: `id` + `team_display_name` + `team_name` + `updated_at` + `info`
-- get teams; `name` and `id`(from above) returns `users[id]`
-- get top games; get top 100 + pagination. How plugged in or niche are any streamers?
-- get games; for connecting a broadcaster lookup with the last thing they streamed through `id` and `name` (game id and name)
-- get all stream tags; pivotal
+###### Endpoints
+- search channels
+- get channel information
+- get channel teams; per team
+- get teams
+- get top games
+- get games
+- get all stream tags
 - get stream tags
-- search categories; for searching games or categories. Noisy results.
+- search categories
 
-
-###### By Streamer
-- get videos (video ids, user id, game id); aggregate information on videos by topic and language. "What kind of streams are XXXX streams?"
+###### BBB
+- get videos (video ids, user id, game id); aggregate information on videos by topic and language. "What kind of streams are XXXX's streams?"
 - get streams; How active are certain timeframes for certain languages.
 
 

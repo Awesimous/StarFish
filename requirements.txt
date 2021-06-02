@@ -12,17 +12,19 @@ scipy==1.6.3
 
 # utilities
 six>=1.14
+python-dotenv==0.17.1
 
 # API
 twitchAPI==2.3.2
 
-# Scraping
-html5lib
-bs4
 
 plotly==4.14.3
 requests==2.25.1
 streamlit==0.82.0
+
+# Scraping
+html5lib
+bs4
 
 # tests/linter
 black
