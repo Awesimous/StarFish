@@ -3,6 +3,11 @@ import numpy as np
 import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
+import pandas as pd
+
+
+df = pd.read_csv('notebooks/streamer_df_25pages')
+st.write(df.head)
 
 
 st.button("Re-run")
