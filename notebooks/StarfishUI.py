@@ -5,7 +5,10 @@ import time
 #from notebooks.twitchtracker_games_function_done import parse_games_2
 
 df = pd.read_csv('streamer_df_clean')
-st.write(df["Hours Watched"].)
+df[:30]
+st.bar_chart(df["Hours Watched"][:30])
+
+
 
 with st.form(key='my_form'):
     text_input = st.text_input(label='Enter your name')
