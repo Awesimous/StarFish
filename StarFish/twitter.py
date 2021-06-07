@@ -1,11 +1,7 @@
 import tweepy as tw
 import pandas as pd
-import geograpy3
-import os
-from os.path import join
+import geograpy
 from twython import Twython
-import os
-import time
 
 def twitter_viewer_locations(consumer_key, consumer_secret, access_token,access_token_secret, user, date, item_count):
     '''Takes secrets, username on twitter and starting date (format yyyy-mm-dd)'''
@@ -23,7 +19,7 @@ def twitter_viewer_locations(consumer_key, consumer_secret, access_token,access_
     tweet_text = pd.DataFrame(data=users_locs,
                         columns=['user', "location"])
     locations = ' '.join(tweet_text['location'].to_list())
-    places = geograpy3.get_geoPlace_context(text = locations)
+    places = geograpy.get_geoPlace_context(text = locations)
     frequent_locations = {'cities': places.cities, 'countries': places.countries}
     return frequent_locations
 
