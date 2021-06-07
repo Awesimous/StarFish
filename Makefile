@@ -77,3 +77,31 @@ deploy_heroku:
 
 run_streamlit:
 	streamlit run app.py
+
+# project id - replace with your GCP project id
+PROJECT_ID=starfish-316120
+
+# bucket name - replace with your GCP bucket name
+BUCKET_NAME=starfish-databases
+
+# choose your region from https://cloud.google.com/storage/docs/locations#available_locations
+REGION=europe-west1
+
+set_project:
+	@gcloud config set project ${PROJECT_ID}
+
+create_bucket:
+	@gsutil mb -l ${REGION} -p ${PROJECT_ID} gs://${BUCKET_NAME}
+
+# File to upload to gcp
+LOCAL_PATH="StarFish/data/top_streams_2450.csv"
+
+# Bucket directory in which to store the uploaded file (`data` is an arbitrary name that we choose to use)
+BUCKET_FOLDER=twitch_data
+
+# Name for the uploaded file inside of the bucket (we choose not to rename the file that we upload)
+BUCKET_FILE_NAME=$(shell basename ${LOCAL_PATH})
+
+upload_data:
+	@gsutil cp ${LOCAL_PATH} gs://${BUCKET_NAME}/${BUCKET_FOLDER}/${BUCKET_FILE_NAME}
+
