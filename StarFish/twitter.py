@@ -1,6 +1,6 @@
 import tweepy as tw
 import pandas as pd
-import geograpy
+import geograpy3
 import os
 from os.path import join
 from twython import Twython
@@ -23,7 +23,7 @@ def twitter_viewer_locations(consumer_key, consumer_secret, access_token,access_
     tweet_text = pd.DataFrame(data=users_locs,
                         columns=['user', "location"])
     locations = ' '.join(tweet_text['location'].to_list())
-    places = geograpy.get_geoPlace_context(text = locations)
+    places = geograpy3.get_geoPlace_context(text = locations)
     frequent_locations = {'cities': places.cities, 'countries': places.countries}
     return frequent_locations
 
