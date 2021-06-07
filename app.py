@@ -44,7 +44,7 @@ def main():
 
     st.sidebar.title(":floppy_disk: Navigation bar")
     page = st.sidebar.radio("Select your page", tuple(pages.keys()))
-
+    st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     # Display the selected page with the session state
     pages[page](state)
 
@@ -84,40 +84,105 @@ def page_settings(state):
     state.target_df = state.target_df[state.target_df['Total Followers'] >= state.follower]
     state.features = st.multiselect('Select feature:', state.target_df.columns)
     state.feature_df = state.target_df[state.features]
-    state.col_sort = st.multiselect('Select feature to sort on:', state.feature_df.columns)
+    if state.features:
+        state.col_sort = st.radio('Select feature to sort on:', state.feature_df.columns)
+        st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+        st.write(f'You selected {state.col_sort}!')
     state.social = st.multiselect('Select social media:', state.social_media)
 
 
 
 def display_state_values(state):
     st.write('Display the 5 best streamers (if there are 5) based on your chosen categories:')
-    state.feature_df = state.feature_df.sort_values(by=[state.col_sort[0]], ascending=False).head()
+    state.feature_df = state.feature_df.sort_values(by=[state.col_sort], ascending=False).head()
+    
+    st.dataframe(state.feature_df)
+    state.target = st.radio('Do you want to look at any streamer in particular?', state.feature_df.index)
+    st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+    c1, c2, c3 = st.beta_columns((1, 1, 2))
+    
+    with c1:
+        # expander=st.beta_expander("expand")
+        # with expander:
+        #     state.games_df = pd.read_csv('notebooks/CSVs/Games_df')
+        #     state.top_games_max_viewers = state.games_df.sort_values(by = ['Avg. viewers'], ascending=False)
+        #     state.top_10 = state.top_games_max_viewers.head(10)
 
-    st.table(state.feature_df)
+        #     # fig = make_subplots(rows=1, cols=2)
+        #     fig, ax = plt.subplots()
+        #     # ax.hist(arr, bins=20)
+            
+        #     px.pie(state.top_10, values='Max. viewers', names='Game', 
+        #                         title='Max Viewers Top 10 Games')
+        #     px.pie(state.top_10, values='Max. viewers', names='Game', 
+        #             title='Max Viewers Top 10 Games')
+        #     # fig.add_trace(px.pie(state.top_10, values='Max. viewers', names='Game', 
+        #     #         title='Max Viewers Top 10 Games'),
+        #     # row=1,col=2)
+            
+        #     # fig.update_layout(height=300, width=800, title_text="Side By Side Subplots")
 
-    # c1, c2, c3 = st.beta_columns((1, 1, 2))
+        #     g = st.plotly_chart(fig)
+        # #c4, c5, c6 = st.beta_columns((1, 1, 2))
+        state.games_df = pd.read_csv('notebooks/CSVs/Games_df')
+        state.top_games_max_viewers = state.games_df.sort_values(by = ['Avg. viewers'], ascending=False)
+        state.top_games_followers_gained = state.games_df.sort_values(by =['Followers per hour'], ascending=False)
+        state.top_10_followers_gained = state.top_games_followers_gained.head(10)
+        state.top_10 = state.top_games_max_viewers.head(10)
+        
+        fig = make_subplots(rows=2, 
+                            cols=2,
+                            subplot_titles=("Pie 1", "Pie 2", "Pie 3", 'Pie 4'), 
+                            specs=[
+                            [{"type": "domain"}, {"type": "domain"}],
+                            [{"type": "domain"}, {"type": "domain"}]
+                            ])
+        fig.add_trace(go.Pie(labels=state.top_10_followers_gained["Game"], values=state.top_10_followers_gained['Followers per hour']), 1, 1)
+        fig.add_trace(go.Pie(labels=state.top_10_followers_gained["Game"], values=state.top_10_followers_gained['Followers per hour']), 1, 2)
+        fig.add_trace(go.Pie(labels=state.top_10_followers_gained["Game"], values=state.top_10_followers_gained['Followers per hour']), 2, 1)
+        fig.add_trace(go.Pie(labels=state.top_10_followers_gained["Game"], values=state.top_10_followers_gained['Followers per hour']), 2, 2)
+        fig.update_layout(
+            showlegend=True,
+            uniformtext_minsize=12, 
+            uniformtext_mode='hide')
 
-    # with c1:
-    #     expander=st.beta_expander("expand")
-    #     with expander:
-    #         state.games_df = pd.read_csv('StarFish/data/games_clean.csv')
-    #         state.top_games_max_viewers = state.games_df.sort_values(by = ['Avg. viewers'], ascending=False)
-    #         state.top_10 = state.top_games_max_viewers.head(10)
-
-    #         fig = make_subplots(rows=1, cols=2)
-    #         #fig = px.pie(state.top_10)
-    #         fig.add_trace(go.pie(state.top_10, values='Max. viewers', names='Game', 
-    #                             title='Max Viewers Top 10 Games', 
-    #                             color_discrete_sequence=px.colors.sequential.RdBu),
-    #                     row=1,col=1)
-
-    #         fig.update_layout(height=300, width=800, title_text="Side By Side Subplots")
-
-    #         g = st.plotly_chart(fig)
-        #c4, c5, c6 = st.beta_columns((1, 1, 2))
+        st.plotly_chart(fig)
 
 
+        
+        
+    #     fig = make_subplots(
+    #         rows=2,
+    #         cols=2,
+    #         subplot_titles=("Table 1", "Plot 1", "Plot 2", "Table 3"),
+    #         specs=[
+    #             [{"type": "scatter"}, {"type": "scatter"}],
+    #             [{"type": "pie"}, {"type": "scatter"}],
+    #         ])
+        
+    #     # fig.add_table(
+    #     #     header=dict(values=["A Scores", "B Scores"]),
+    #     #     cells=dict(values=[[100, 90, 80, 90], [95, 85, 75, 95]]),
+    #     #     row=1,
+    #     #     col=1,
+    #     # )
+    #     fig.add_trace(go.Scatter(x=state.top_10['Avg. viewers'], y=state.top_10['Game']), row=1, col=1)
+        
+    #     fig.add_trace(go.Scatter(x=[1, 2, 3], y=[4, 5, 6]), row=1, col=2)
+        
+    #     fig.add_trace(go.Pie(state.top_10_followers_gained, values='Followers per hour', names='Game', title='Most followers gained'))
+    #     #fig.add_trace(px.pie(state.top_10, values='Max. viewers', names='Game'), row=2, col=1)
 
+    #     #fig.add_trace(go.Scatter(x=[300, 400, 500], y=[600, 700, 800]), row=2, col=1)
+
+    #     fig.add_trace(go.Scatter(x=[300, 400, 500], y=[600, 700, 800]), row=2, col=2)
+
+    #     fig.update_layout(
+    #         height=500,
+    #         width=700,
+    #         title_text="Plotly Multiple Subplots with Titles")
+    # st.plotly_chart(fig, use_container_width=True)
+    
     if st.button("Clear state"):
         state.clear()
 
