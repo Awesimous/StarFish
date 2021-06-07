@@ -8,20 +8,13 @@ import matplotlib.pyplot as plt
 from geopy import geocoders
 from geopy.geocoders import Nominatim
 from requests.api import get
-import streamlit as st
-import pandas as pd
-import numpy as np
-import plotly.express as px
-from plotly.subplots import make_subplots
-import plotly.graph_objects as go
-import matplotlib.pyplot as plt
+import wordcloud
+
 from StarFish.twitch import search_channels
 import requests
 from bs4 import BeautifulSoup
 import os
 import tweepy as tw
-import pandas as pd
-import geograpy
 from StarFish.twitter import twitter_viewer_locations, get_streamer_data_filtered, get_streamer_data
 from os.path import join
 from twython import Twython
@@ -39,7 +32,7 @@ st.title('Twitch dashboard')
 st.markdown('The dashboard will visualize statistics of each streamer')
 st.sidebar.title('Visualization Selector')
 
-df = pd.read_csv('notebooks/streamer_df_clean')
+df = pd.read_csv('notebooks/CSVs/streamer_df_clean')
 #username = df['username']
 
 
