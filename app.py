@@ -1,24 +1,28 @@
 import streamlit as st
-from streamlit.hashing import _CodeHasher
+import time
 import numpy as np
 import plotly.express as px
-from plotly.subplots import make_subplots
+import requests
 import plotly.graph_objects as go
 import pandas as pd
 import matplotlib.pyplot as plt
+import streamlit.components.v1 as components
+import wordcloud
 from geopy import geocoders
 from geopy.geocoders import Nominatim
-import wordcloud
-import streamlit.components.v1 as components
+from plotly.subplots import make_subplots
+from streamlit.hashing import _CodeHasher
 from StarFish.twitch import search_channels
-import requests
 from bs4 import BeautifulSoup
 from StarFish.twitter import twitter_viewer_locations, get_streamer_data_filtered, get_streamer_data
-import time
-
 from PIL import Image
+from streamlit.report_thread import get_report_ctx
+from streamlit.server.server import Server
+
+
 st.set_page_config(layout="wide",initial_sidebar_state="expanded")
 
+'''
 try:
     # Before Streamlit 0.65
     from streamlit.ReportThread import get_report_ctx
@@ -27,6 +31,7 @@ except ModuleNotFoundError:
     # After Streamlit 0.65
     from streamlit.report_thread import get_report_ctx
     from streamlit.server.server import Server
+'''
 
 
 def main():
@@ -34,7 +39,7 @@ def main():
     state = _get_state()
     pages = {
         "Input": page_settings,
-        "Dashboard": page_dashboard,  
+        "Dashboard": page_dashboard,
     }
 
     st.sidebar.title(":floppy_disk: Navigation bar")
@@ -56,8 +61,8 @@ def page_dashboard(state):
 def page_settings(state):
     st.title(":wrench: Set your input")
     #display_state_values(state)
-    state.games_df = pd.read_csv('notebooks/CSVs/Games_df')
-    state.df = pd.read_csv('notebooks/CSVs/streamer_df_clean')
+    state.games_df = pd.read_csv('StarFish/data/games_clean.csv')
+    state.df = pd.read_csv('StarFish/data/streamers_clean.csv')
     state.target_df = state.df[500:700].set_index('username')
     state.target_df = state.target_df.drop('ESL_CSGO')
     state.max_followers = int(state.target_df["Total Followers"].max())
@@ -143,6 +148,7 @@ def display_state_values(state):
 
         st.plotly_chart(fig)
 
+
         
         
     #     fig = make_subplots(
@@ -202,7 +208,7 @@ class _SessionState:
     def __getitem__(self, item):
         """Return a saved state value, None if item is undefined."""
         return self._state["data"].get(item, None)
-        
+
     def __getattr__(self, item):
         """Return a saved state value, None if item is undefined."""
         return self._state["data"].get(item, None)
@@ -214,12 +220,12 @@ class _SessionState:
     def __setattr__(self, item, value):
         """Set state value."""
         self._state["data"][item] = value
-    
+
     def clear(self):
         """Clear session state and request a rerun."""
         self._state["data"].clear()
         self._state["session"].request_rerun()
-    
+
     def sync(self):
         """Rerun the app with all state values up to date from the beginning to fix rollbacks."""
 
@@ -229,7 +235,7 @@ class _SessionState:
         # Example: state.value += 1
         if self._state["is_rerun"]:
             self._state["is_rerun"] = False
-        
+
         elif self._state["hash"] is not None:
             if self._state["hash"] != self._state["hasher"].to_bytes(self._state["data"], None):
                 self._state["is_rerun"] = True
@@ -244,7 +250,7 @@ def _get_session():
 
     if session_info is None:
         raise RuntimeError("Couldn't get your Streamlit Session object.")
-    
+
     return session_info.session
 
 
