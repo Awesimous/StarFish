@@ -7,8 +7,8 @@ df = pd.read_csv('streamer_df_clean')
 def time_assignment(x):
     '''Support function to classify streams by time when they are on air'''
     midnight = 24
-    morning = 6 
-    noon = 12 
+    morning = 6
+    noon = 12
     evening = 18
     if morning <= x.hour < noon:
         return 1

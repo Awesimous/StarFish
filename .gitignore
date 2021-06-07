@@ -7,3 +7,5 @@ raw_data/
 .env
 /notebooks/CSVs
 *.json
+StarFish/data/
+requirements_snapshot.txt

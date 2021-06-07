@@ -8,18 +8,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from geopy import geocoders
 from geopy.geocoders import Nominatim
-from requests.api import get
 import wordcloud
 import streamlit.components.v1 as components
 from StarFish.twitch import search_channels
 import requests
 from bs4 import BeautifulSoup
-import os
-import tweepy as tw
 from StarFish.twitter import twitter_viewer_locations, get_streamer_data_filtered, get_streamer_data
-from os.path import join
-from twython import Twython
 import time
+
 from PIL import Image
 st.set_page_config(layout="wide",initial_sidebar_state="expanded")
 

@@ -77,7 +77,7 @@ if __name__ =='__main__':
 
     # Write the channel, game, and subs data to file
     channels = get_channels_data(50)
-    channels.to_csv(f'data/channels.csv')
-    #channels = pd.read_csv('data/channels.csv')
+    channels.to_csv(f'data/raw/channels.csv')
+    #channels = pd.read_csv('data/raw/channels.csv')
     get_games_data(channels)
-    get_subs_data(125).to_csv('data/subs.csv')
+    get_subs_data(125).to_csv('data/raw/subs.csv')
