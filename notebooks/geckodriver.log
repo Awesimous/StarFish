@@ -1,0 +1,1806 @@
+1622472041419	geckodriver	INFO	Listening on 127.0.0.1:53806
+1622472065020	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rd/83bwb01n4wbbhpx7_ntx3xrh0000gn/T/rust_mozprofilecaGIvs"
+1622472065661	Marionette	INFO	Marionette enabled
+2021-05-31 16:41:07.145 firefox-bin[20651:705196] Warning: Expected min height of view: (<NSButton: 0x133e32400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:41:07.146 firefox-bin[20651:705196] Warning: Expected min height of view: (<NSButton: 0x13eed6c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:41:07.147 firefox-bin[20651:705196] Warning: Expected min height of view: (<NSButton: 0x13eed8000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:41:07.148 firefox-bin[20651:705196] Warning: Expected min height of view: (<NSButton: 0x13eed4000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:41:07.148 firefox-bin[20651:705196] Warning: Expected min height of view: (<NSButton: 0x13eed7000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:41:07.149 firefox-bin[20651:705196] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13eed3000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:41:07.150 firefox-bin[20651:705196] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13eedc000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622472068882	Marionette	INFO	Listening on port 53817
+1622472068963	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622472076948	geckodriver	INFO	Listening on 127.0.0.1:53893
+1622472100075	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rd/83bwb01n4wbbhpx7_ntx3xrh0000gn/T/rust_mozprofileZZ3YEi"
+1622472100686	Marionette	INFO	Marionette enabled
+2021-05-31 16:41:42.196 firefox-bin[20659:706009] Warning: Expected min height of view: (<NSButton: 0x1330ac000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:41:42.197 firefox-bin[20659:706009] Warning: Expected min height of view: (<NSButton: 0x13e7ef800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:41:42.198 firefox-bin[20659:706009] Warning: Expected min height of view: (<NSButton: 0x13e7f3000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:41:42.198 firefox-bin[20659:706009] Warning: Expected min height of view: (<NSButton: 0x13e7f3400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:41:42.199 firefox-bin[20659:706009] Warning: Expected min height of view: (<NSButton: 0x13e7f5c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:41:42.200 firefox-bin[20659:706009] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13e7ee400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:41:42.201 firefox-bin[20659:706009] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13e7f9c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622472103697	Marionette	INFO	Listening on port 53904
+1622472103811	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622472272123	geckodriver	INFO	Listening on 127.0.0.1:53984
+1622472298865	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rd/83bwb01n4wbbhpx7_ntx3xrh0000gn/T/rust_mozprofileR9wIrR"
+1622472299464	Marionette	INFO	Marionette enabled
+2021-05-31 16:45:00.835 firefox-bin[20673:708031] Warning: Expected min height of view: (<NSButton: 0x135296400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:45:00.835 firefox-bin[20673:708031] Warning: Expected min height of view: (<NSButton: 0x1355dd400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:45:00.836 firefox-bin[20673:708031] Warning: Expected min height of view: (<NSButton: 0x1355df400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:45:00.837 firefox-bin[20673:708031] Warning: Expected min height of view: (<NSButton: 0x1355de800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:45:00.837 firefox-bin[20673:708031] Warning: Expected min height of view: (<NSButton: 0x1355e0800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:45:00.838 firefox-bin[20673:708031] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1355de000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 16:45:00.839 firefox-bin[20673:708031] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1355e8800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622472302330	Marionette	INFO	Listening on port 53997
+1622472302406	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622473559929	geckodriver	INFO	Listening on 127.0.0.1:55098
+1622473585768	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rd/83bwb01n4wbbhpx7_ntx3xrh0000gn/T/rust_mozprofileLBe02k"
+1622473586508	Marionette	INFO	Marionette enabled
+2021-05-31 17:06:27.943 firefox-bin[20779:721777] Warning: Expected min height of view: (<NSButton: 0x12c8bd000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:06:27.944 firefox-bin[20779:721777] Warning: Expected min height of view: (<NSButton: 0x1394d9000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:06:27.944 firefox-bin[20779:721777] Warning: Expected min height of view: (<NSButton: 0x1394dd000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:06:27.945 firefox-bin[20779:721777] Warning: Expected min height of view: (<NSButton: 0x1394db000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:06:27.946 firefox-bin[20779:721777] Warning: Expected min height of view: (<NSButton: 0x12c943400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:06:27.946 firefox-bin[20779:721777] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1394d8400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:06:27.947 firefox-bin[20779:721777] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1394e1000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622473589488	Marionette	INFO	Listening on port 55215
+1622473589609	Marionette	WARN	TLS certificate errors will be ignored for this session
+2021-05-31 17:13:55.044 firefox-bin[20651:705196] Warning: Expected min height of view: (<NSButton: 0x119d8b000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:13:55.046 firefox-bin[20651:705196] Warning: Expected min height of view: (<NSButton: 0x1457b3400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:13:55.046 firefox-bin[20651:705196] Warning: Expected min height of view: (<NSButton: 0x1457b3800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:13:55.047 firefox-bin[20651:705196] Warning: Expected min height of view: (<NSButton: 0x1457b3c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:13:55.048 firefox-bin[20651:705196] Warning: Expected min height of view: (<NSButton: 0x1457b4c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:13:55.048 firefox-bin[20651:705196] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1457b4400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:13:55.049 firefox-bin[20651:705196] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1457d5400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:13:58.322 firefox-bin[20659:706009] Warning: Expected min height of view: (<NSButton: 0x11b088800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:13:58.323 firefox-bin[20659:706009] Warning: Expected min height of view: (<NSButton: 0x1254c2800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:13:58.324 firefox-bin[20659:706009] Warning: Expected min height of view: (<NSButton: 0x13edb1400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:13:58.324 firefox-bin[20659:706009] Warning: Expected min height of view: (<NSButton: 0x13edac400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:13:58.325 firefox-bin[20659:706009] Warning: Expected min height of view: (<NSButton: 0x13edb0000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:13:58.326 firefox-bin[20659:706009] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13edb1800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 17:13:58.327 firefox-bin[20659:706009] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13ef61400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+1622474042405	Marionette	INFO	Stopped listening on port 53817
+1622474044796	Marionette	INFO	Stopped listening on port 53904
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1622479692144	geckodriver	INFO	Listening on 127.0.0.1:61893
+1622479715710	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rd/83bwb01n4wbbhpx7_ntx3xrh0000gn/T/rust_mozprofilev5cyMB"
+1622479716190	Marionette	INFO	Marionette enabled
+2021-05-31 18:48:37.204 firefox-bin[22152:783993] Warning: Expected min height of view: (<NSButton: 0x12eb19000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 18:48:37.205 firefox-bin[22152:783993] Warning: Expected min height of view: (<NSButton: 0x139bd6000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 18:48:37.205 firefox-bin[22152:783993] Warning: Expected min height of view: (<NSButton: 0x139bd7800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 18:48:37.206 firefox-bin[22152:783993] Warning: Expected min height of view: (<NSButton: 0x139bd3c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 18:48:37.207 firefox-bin[22152:783993] Warning: Expected min height of view: (<NSButton: 0x139bd1000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 18:48:37.207 firefox-bin[22152:783993] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x139bd6800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-31 18:48:37.208 firefox-bin[22152:783993] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x139bdd000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622479718349	Marionette	INFO	Listening on port 61905
+1622479718377	Marionette	WARN	TLS certificate errors will be ignored for this session
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+JavaScript error: undefined, line 0: Error: Permission denied to access property "document" on cross-origin object
+console.error: "Error while calling actor 'layout's method 'getGrids'" "node is null"
+console.error: (new TypeError("node is null", "resource://devtools/server/actors/layout.js", 502))
+console.error: "Error while calling actor 'layout's method 'getGrids'" "node is null"
+console.error: (new TypeError("node is null", "resource://devtools/server/actors/layout.js", 502))
+1622479966799	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1622479966801	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://devtools/server/actors/targets/browsing-context.js, line 1730: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIDocShell.domWindow]
+JavaScript error: undefined, line 0: Error: Permission denied to access property "document" on cross-origin object
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:153:9
+setOptions@moz-extension://8bfc794a-db18-5c42-af7f-4d7ebe4c00ac/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+JavaScript error: resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm, line 219: Error: Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2
+JavaScript error: resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm, line 219: Error: Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2
+JavaScript error: resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm, line 219: Error: Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2
+JavaScript error: resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm, line 219: Error: Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2
+JavaScript error: resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm, line 219: Error: Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2
+1622497200871	Marionette	INFO	Stopped listening on port 53997
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x230032,name=PBrowser::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+1622497204147	Marionette	INFO	Stopped listening on port 55215
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1622497206845	Marionette	INFO	Stopped listening on port 61905
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1622533560635	geckodriver	INFO	Listening on 127.0.0.1:50300
+1622533585938	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rd/83bwb01n4wbbhpx7_ntx3xrh0000gn/T/rust_mozprofileJl4Ynt"
+1622533586461	Marionette	INFO	Marionette enabled
+2021-06-01 09:46:27.580 firefox-bin[1737:59369] Warning: Expected min height of view: (<NSButton: 0x12c890000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:46:27.580 firefox-bin[1737:59369] Warning: Expected min height of view: (<NSButton: 0x137657800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:46:27.581 firefox-bin[1737:59369] Warning: Expected min height of view: (<NSButton: 0x137659000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:46:27.581 firefox-bin[1737:59369] Warning: Expected min height of view: (<NSButton: 0x137658c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:46:27.582 firefox-bin[1737:59369] Warning: Expected min height of view: (<NSButton: 0x13765a000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:46:27.583 firefox-bin[1737:59369] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x137659400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:46:27.583 firefox-bin[1737:59369] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13799e000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622533588810	Marionette	INFO	Listening on port 50311
+1622533588870	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622533703762	geckodriver	INFO	Listening on 127.0.0.1:50383
+1622533727894	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rd/83bwb01n4wbbhpx7_ntx3xrh0000gn/T/rust_mozprofileKeEvyF"
+1622533728409	Marionette	INFO	Marionette enabled
+2021-06-01 09:48:49.524 firefox-bin[1742:61181] Warning: Expected min height of view: (<NSButton: 0x128772400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:48:49.525 firefox-bin[1742:61181] Warning: Expected min height of view: (<NSButton: 0x133658800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:48:49.525 firefox-bin[1742:61181] Warning: Expected min height of view: (<NSButton: 0x133655c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:48:49.526 firefox-bin[1742:61181] Warning: Expected min height of view: (<NSButton: 0x133653400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:48:49.527 firefox-bin[1742:61181] Warning: Expected min height of view: (<NSButton: 0x1042b8c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:48:49.527 firefox-bin[1742:61181] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x133659c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:48:49.528 firefox-bin[1742:61181] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1339a8000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622533730749	Marionette	INFO	Listening on port 50395
+1622533730823	Marionette	WARN	TLS certificate errors will be ignored for this session
+2021-06-01 09:53:04.756 firefox-bin[1742:61181] Warning: Expected min height of view: (<NSButton: 0x126b30400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:53:04.756 firefox-bin[1742:61181] Warning: Expected min height of view: (<NSButton: 0x134045000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:53:04.757 firefox-bin[1742:61181] Warning: Expected min height of view: (<NSButton: 0x13dff0800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:53:04.758 firefox-bin[1742:61181] Warning: Expected min height of view: (<NSButton: 0x13dff2000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:53:04.758 firefox-bin[1742:61181] Warning: Expected min height of view: (<NSButton: 0x13e285c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:53:04.759 firefox-bin[1742:61181] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13e76c000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:53:04.760 firefox-bin[1742:61181] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x17173f400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:130:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:959:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:710:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 130, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 130))
+Handler function threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:130:9
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:959:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:710:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 130, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 130))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:130:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:456:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 130, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 130))
+Handler function _httpResponseExaminer threw an exception: TypeError: topFrame.browsingContext is null
+Stack: matchRequest@resource://devtools/server/actors/network-monitor/network-observer.js:130:9
+_httpResponseExaminer@resource://devtools/server/actors/network-monitor/network-observer.js:456:10
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 130, column: 9
+console.error: (new TypeError("topFrame.browsingContext is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 130))
+1622534232156	geckodriver	INFO	Listening on 127.0.0.1:50621
+1622534256569	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rd/83bwb01n4wbbhpx7_ntx3xrh0000gn/T/rust_mozprofileAqOceC"
+1622534257114	Marionette	INFO	Marionette enabled
+2021-06-01 09:57:38.347 firefox-bin[1799:67944] Warning: Expected min height of view: (<NSButton: 0x1406b0800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:57:38.347 firefox-bin[1799:67944] Warning: Expected min height of view: (<NSButton: 0x1406b6400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:57:38.348 firefox-bin[1799:67944] Warning: Expected min height of view: (<NSButton: 0x1406ba400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:57:38.349 firefox-bin[1799:67944] Warning: Expected min height of view: (<NSButton: 0x1406bd400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:57:38.350 firefox-bin[1799:67944] Warning: Expected min height of view: (<NSButton: 0x1406bac00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:57:38.350 firefox-bin[1799:67944] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1406bc000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 09:57:38.351 firefox-bin[1799:67944] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1409e7800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622534259721	Marionette	INFO	Listening on port 50634
+1622534259813	Marionette	WARN	TLS certificate errors will be ignored for this session
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+JavaScript error: undefined, line 0: Error: Permission denied to access property "document" on cross-origin object
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+JavaScript warning: resource://devtools/client/shared/demangle.js, line 0: Successfully compiled asm.js code (total compilation time 68ms)
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+JavaScript error: undefined, line 0: Error: Permission denied to access property "document" on cross-origin object
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:153:9
+setOptions@moz-extension://5e70b313-d32f-cc4b-b1ac-9848feca1598/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+JavaScript error: undefined, line 0: Error: Permission denied to access property "document" on cross-origin object
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.error: "Task cancelled"
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "sheet.ownerNode is null"
+console.error: (new TypeError("sheet.ownerNode is null", "resource://devtools/server/actors/style-sheet.js", 76))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: (new Error("Protocol error (TypeError): sheet.ownerNode is null from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:76:21)", "resource://devtools/shared/protocol/Front.js", 358))
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.error: "Error while calling actor 'stylesheets's method 'getText'" "can't access dead object"
+console.error: (new TypeError("can't access dead object", "resource://devtools/server/actors/style-sheet.js", 74))
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Could not fetch the source for null, the editor was destroyed"
+console.error: (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child4/styleSheetsActor4 (resource://devtools/server/actors/style-sheet.js:74:7)", "resource://devtools/shared/protocol/Front.js", 358))
+console.error: "Error writing request: getGrids"
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.error: "Error while calling actor 'layout's method 'getGrids'" "node is null"
+console.error: (new TypeError("node is null", "resource://devtools/server/actors/layout.js", 502))
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+console.warn: "Already stopped listening to websocket events from another toolbox."
+console.error: ({})
+[Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIEventSourceEventService.removeListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/resources/server-sent-events.js :: stopListening :: line 84"  data: no]: stopListening@resource://devtools/server/actors/resources/server-sent-events.js:84:31
+onWindowDestroy@resource://devtools/server/actors/resources/server-sent-events.js:71:10
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+_windowDestroyed@resource://devtools/server/actors/targets/browsing-context.js:1480:10
+DebuggerProgressListener.prototype.observe<@resource://devtools/server/actors/targets/browsing-context.js:1854:25
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+
+1622538467093	geckodriver	INFO	Listening on 127.0.0.1:57613
+1622538492283	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rd/83bwb01n4wbbhpx7_ntx3xrh0000gn/T/rust_mozprofiledLz276"
+1622538492848	Marionette	INFO	Marionette enabled
+2021-06-01 11:08:14.098 firefox-bin[2075:106897] Warning: Expected min height of view: (<NSButton: 0x135f30800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 11:08:14.098 firefox-bin[2075:106897] Warning: Expected min height of view: (<NSButton: 0x140c59800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 11:08:14.099 firefox-bin[2075:106897] Warning: Expected min height of view: (<NSButton: 0x140c5f800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 11:08:14.099 firefox-bin[2075:106897] Warning: Expected min height of view: (<NSButton: 0x140c59400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 11:08:14.100 firefox-bin[2075:106897] Warning: Expected min height of view: (<NSButton: 0x140c59c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 11:08:14.101 firefox-bin[2075:106897] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x140c5a000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 11:08:14.102 firefox-bin[2075:106897] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x140fae400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622538495582	Marionette	INFO	Listening on port 57725
+1622538495632	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm, line 219: Error: Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2
+JavaScript error: resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm, line 219: Error: Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2
+JavaScript error: resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm, line 219: Error: Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2
+JavaScript error: resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm, line 219: Error: Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2
+JavaScript error: resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm, line 219: Error: Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2
+JavaScript error: resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm, line 219: Error: Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2
+JavaScript error: resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm, line 219: Error: Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2
+JavaScript error: resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm, line 219: Error: Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2
+JavaScript error: resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm, line 219: Error: Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2
+console.error: "Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2"
+console.error: "Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2"
+console.error: "Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2"
+console.error: "Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2"
+console.error: "Trying to destroy a target actor that doesn't exists, or has already been destroyed. Watcher Actor ID:server0.conn0.watcher2"
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:153:9
+setOptions@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:153:9
+setOptions@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:153:9
+setOptions@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:153:9
+setOptions@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:153:9
+setOptions@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:153:9
+setOptions@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:153:9
+setOptions@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:153:9
+setOptions@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:153:9
+setOptions@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:153:9
+setOptions@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+Extension error: SecurityError: Permission denied to access property "document" on cross-origin object undefined 153
+[[Exception stack
+activate@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:153:9
+setOptions@moz-extension://1203c5e8-ec02-ea43-b336-03412da74c75/inspect.js:61:12
+Current stack
+applySafeWithoutClone@resource://gre/modules/ExtensionCommon.jsm:622:13
+applySafe@resource://gre/modules/ExtensionCommon.jsm:599:19
+wrapPromise/<@resource://gre/modules/ExtensionCommon.jsm:829:22
+]]
+JavaScript error: undefined, line 0: Error: Permission denied to access property "document" on cross-origin object
+2021-06-01 11:28:22.620 firefox-bin[1737:59369] Warning: Expected min height of view: (<NSButton: 0x1109c6c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 11:28:22.622 firefox-bin[1737:59369] Warning: Expected min height of view: (<NSButton: 0x137dfa800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 11:28:22.622 firefox-bin[1737:59369] Warning: Expected min height of view: (<NSButton: 0x137df7800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 11:28:22.623 firefox-bin[1737:59369] Warning: Expected min height of view: (<NSButton: 0x137df4800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 11:28:22.624 firefox-bin[1737:59369] Warning: Expected min height of view: (<NSButton: 0x137df3400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 11:28:22.624 firefox-bin[1737:59369] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x137df5c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-01 11:28:22.625 firefox-bin[1737:59369] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x137ffb400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+1622539706783	Marionette	INFO	Stopped listening on port 50311
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1622539709251	Marionette	INFO	Stopped listening on port 50395
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1622539711189	Marionette	INFO	Stopped listening on port 50634
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1622539713430	Marionette	INFO	Stopped listening on port 57725
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1622623773477	geckodriver	INFO	Listening on 127.0.0.1:63936
+1622623774488	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rd/83bwb01n4wbbhpx7_ntx3xrh0000gn/T/rust_mozprofileGySGoa"
+1622623778361	Marionette	INFO	Marionette enabled
+2021-06-02 10:49:39.193 firefox-bin[12619:508856] Warning: Expected min height of view: (<NSButton: 0x12d99c400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-02 10:49:39.194 firefox-bin[12619:508856] Warning: Expected min height of view: (<NSButton: 0x12d9a4400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-02 10:49:39.195 firefox-bin[12619:508856] Warning: Expected min height of view: (<NSButton: 0x12d9a4800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-02 10:49:39.196 firefox-bin[12619:508856] Warning: Expected min height of view: (<NSButton: 0x12d9a6400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-02 10:49:39.196 firefox-bin[12619:508856] Warning: Expected min height of view: (<NSButton: 0x12d9a1800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-02 10:49:39.197 firefox-bin[12619:508856] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12d9a1000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-06-02 10:49:39.197 firefox-bin[12619:508856] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12dbb4c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rd/83bwb01n4wbbhpx7_ntx3xrh0000gn/T/rust_mozprofileGySGoa/search.json.mozlz4", (void 0)))
+1622623780532	Marionette	INFO	Listening on port 63951
+1622625123694	Marionette	INFO	Stopped listening on port 63951
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

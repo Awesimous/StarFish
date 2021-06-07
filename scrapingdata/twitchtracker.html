@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twitch Channels, Games and Global Statistics · TwitchTracker</title>
+<meta name="description" content="Track Twitch channels, streams and subscribers along with global statistics visualised in a clear form of tables, charts and graphs.">
+<meta name="keywords" content="twitch, statistics, stream, channel, stats, games, subs, subscribers, clips, viewers, followers, views, shroud, ninja, drdisrespect, summit1g, lirik, dreadztv">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-51794509-3', 'auto'); ga('send', 'pageview');
+    </script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/lity@2/dist/lity.min.css" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet">
+<link href="/css/master.css" rel="stylesheet">
+<script>e='#ffffff'</script>
+<style>
+        #live-panels > div, #stats-panels > div {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .stats-panel-block {
+            padding:10px 10px 0 10px;
+        }
+        .g-x-s-label {
+            font-style: italic;
+        }
+
+        #index-search-form {
+            margin: 30px 0 40px;
+            background-color: #05101e;
+            text-align: center;
+        }
+    </style>
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/png" sizes="192x192" href="/img/ico/android-icon-192x192.png">
+<link rel="apple-touch-icon" href="/img/ico/apple-icon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/ico/apple-icon-180x180.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@twitchtracker_">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TwitchTracker">
+<meta property="og:url" content="https://twitchtracker.com">
+<meta property="og:title" content="Twitch Channels, Games and Global Statistics">
+<meta property="og:description" content="Track Twitch channels, streams and subscribers along with global statistics visualised in a clear form of tables, charts and graphs.">
+<meta property="og:image" content="https://twitchtracker.com/img/share-tt.png">
+<div id='fixedban' style='width:100%;margin:auto; text-align:center;float:none;overflow:hidden; display:scroll;position:fixed; bottom:0;z-index:9999999'>
+<div style='text-align:center;display:block;max-width:970px;height:auto;overflow:hidden;margin:auto'>
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>  var gptadslots = [];
+          var googletag = googletag || {cmd:[]};</script>
+<script>  googletag.cmd.push(function() {
+            var responsiveads = googletag.sizeMapping()
+                   .addSize([0,0],[[320,50],[300,75],[300,50]])
+                   .addSize([730,200],[[728,90],[468,60]])
+                   .addSize([975,200],[[970,90],[728,90],[960,90],[750,100],[950,90],[468,60]])  .build();
+                                   gptadslots.push(googletag.defineSlot('/21849154601,21872144841/Ad.Plus-Anchor', [[320,100]], 'adplus-anchor')
+                                    .setTargeting('site', ['twitchtracker.com'])
+                                    .defineSizeMapping(responsiveads)
+                                    .addService(googletag.pubads()));
+                               googletag.enableServices();  }); </script>
+<div> <a id='close-fixedban' onclick='document.getElementById(&apos;fixedban&apos;).style.display = &apos;none&apos;;' style='cursor:pointer;'><img src="https://ad.plus/adplus-advertising.svg" alt="adplus-dvertising" title='Ad.Plus Advertising' style='vertical-align:middle;' /></a></div> <div id='adplus-anchor'>
+<script>   googletag.cmd.push(function() { googletag.display('adplus-anchor'); });  </script></div></div></div>
+<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+<body>
+<div id="main-nav" class="navbar navbar-default">
+<div class="container">
+<div class="navbar-header" style="float:left">
+<a href="/" class="navbar-brand">TwitchTracker</a>
+</div>
+<div class="navbar-header" style="float:right">
+<div class="navbar-static" id="timezone-switch" title="Switch time zone between local and UTC">
+<div>Time zone</div>
+<span></span>
+</div>
+<a class="navbar-static" id="sign-in-button" href="/u/login">
+<i class="fas fa-sign-in-alt fa-fw"></i>
+<span>SIGN IN</span>
+</a>
+<a class="navbar-static" id="menu-user-icon" href="/u/dashboard">
+<img>
+</a>
+<a class="navbar-static" id="invoke-main-search-form" href="#">
+<i class="fas fa-search fa-fw"></i>
+<span>SEARCH</span>
+</a>
+<button class="navbar-toggle navbar-static" type="button" data-toggle="collapse" data-target="#navbar-main">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse" id="navbar-main">
+<ul class="nav navbar-nav">
+<li>
+<a href="/channels/viewership">Channels</a>
+</li>
+<li>
+<a href="/games">Games</a>
+</li>
+<li>
+<a href="/clips">Clips</a>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Stats <span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="/statistics">Overview</a></li>
+<li><a href="/statistics/viewers">Viewers</a></li>
+<li><a href="/statistics/channels">Channels</a></li>
+<li><a href="/statistics/games">Games</a></li>
+<li><a href="/languages">Languages</a></li>
+</ul>
+</li>
+<li>
+<a href="/subscribers">Subscribers</a>
+</li>
+</ul>
+</div>
+</div>
+<form class="search-form" id="main-search-form" action="/search">
+<div class="container">
+<input type="search" name="q" minlength="3" required autocomplete="off" placeholder="channel or game">
+<button type="submit" class="fas fa-search"></button>
+</div>
+</form>
+</div>
+<div id="content-wrapper">
+<div style="background:#05101e;padding-top:10px;text-align:center">
+
+<ins class="adsbygoogle leaderboard-atf" style="display:inline-block;min-width:360px; max-width:970px; width:100%; min-height: 100px; max-height: 250px" data-full-width-responsive="true" data-ad-client="ca-pub-3581129455196386" data-ad-slot="8060421250"></ins>
+<script>
+			     (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+</div>
+<div class="bg-dark" style="padding:20px 0">
+<div class="container">
+<form class="search-form" id="index-search-form" action="/search">
+<input type="search" name="q" minlength="3" required autocomplete="off" placeholder="Search for a streamer or game" autofocus>
+<button type="submit" class="fas fa-search"></button>
+</form>
+</div>
+<div class="container">
+<div id="live-panels" class="row">
+<template id="live-panel-template">
+<div class="col-xs-4">
+<div class="stats-panel-block">
+<div class="g-x-s-value" style="text-align:center"></div>
+<div class="g-x-s-label" style="text-align:center"></div>
+</div>
+</div>
+</template>
+</div>
+<div id="stats-panels" class="row">
+<template id="stats-panel-template">
+<div class="col-sm-3 col-xs-6">
+<div class="stats-panel-block">
+<div class="g-x-s-value"></div>
+<div class="chart"></div>
+<div class="g-x-s-label" style="text-align:center;border-top:1px solid"></div>
+</div>
+</div>
+</template>
+</div>
+</div>
+</div>
+<div class="container index-page">
+<div class="row" style="margin-top:30px">
+<div class="col-sm-6 col-sm-push-6">
+<h4 class="headline">Top Live Channels <small class="value-title">viewers<br><small>currently watching</small></small></h4>
+<table class="tops table table-condensed table-hover">
+<tbody>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/82b63a01-628f-4c81-9b05-dd3a5011fdda-profile_image-300x300.png">
+</td>
+<td>
+<a href="/tfue" class="item-title">Tfue</a>
+<div class="small meta">
+English
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">33137</div>
+<div class="small">
+<span class="text-success">1.1%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/c495b77e-7f47-4bc5-a216-3045d7545796-profile_image-300x300.png">
+</td>
+<td>
+<a href="/gaules" class="item-title">Gaules</a>
+<div class="small meta">
+Portuguese
+Partner
+18+
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">28790</div>
+<div class="small">
+<span class="text-success">1%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+ </tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/asmongold-profile_image-f7ddcbd0332f5d28-300x300.png">
+</td>
+<td>
+<a href="/asmongold" class="item-title">Asmongold</a>
+<div class="small meta">
+English
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">28626</div>
+<div class="small">
+<span class="text-success">1%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/321ccdc6-54d1-4f0f-9ac3-c1fca45c91ca-profile_image-300x300.png">
+</td>
+<td>
+<a href="/punz" class="item-title">Punz</a>
+<div class="small meta">
+English
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">27309</div>
+<div class="small">
+<span class="text-success">0.9%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/stylishnoob4-profile_image-08271f11296c16df-300x300.png">
+</td>
+<td>
+<a href="/stylishnoob4" class="item-title">stylishnoob4</a>
+<div class="small meta">
+Japanese
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">23585</div>
+<div class="small">
+<span class="text-success">0.8%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/5757d1cb-ee4c-44bb-8738-c1f2627d1935-profile_image-300x300.png">
+</td>
+<td>
+<a href="/jaggerprincesa" class="item-title">JaggerPrincesa</a>
+<div class="small meta">
+Spanish
+Partner
+</div>
+</td>
+<td class="value-cell">
+ <div class="to-number">22944</div>
+<div class="small">
+<span class="text-success">0.8%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/04abc1b4-7bad-4b55-8da8-c0f1cf031bda-profile_image-300x300.png">
+</td>
+<td>
+<a href="/papaplatte" class="item-title">Papaplatte</a>
+<div class="small meta">
+German
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">22294</div>
+<div class="small">
+<span class="text-success">0.8%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/14d8f9eb-73bc-4a00-9730-aa45b5522c4d-profile_image-300x300.png">
+</td>
+<td>
+<a href="/hiko" class="item-title">Hiko</a>
+<div class="small meta">
+English
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">21619</div>
+<div class="small">
+<span class="text-success">0.7%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/fdff3559-e0cc-4c12-b93a-13c0d9a02c64-profile_image-300x300.png">
+</td>
+<td>
+<a href="/roshtein" class="item-title">ROSHTEIN</a>
+<div class="small meta">
+English
+18+
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">21547</div>
+<div class="small">
+<span class="text-success">0.7%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/781da428-ee53-4acb-b1a8-f4540dce5eff-profile_image-300x300.png">
+</td>
+<td>
+<a href="/anthonyz" class="item-title">AnthonyZ</a>
+<div class="small meta">
+English
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">18817</div>
+<div class="small">
+<span class="text-success">0.7%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="link-more">
+<a href="/channels/live"><i class="fas fa-angle-down fa-fw"></i> VIEW MORE</a>
+</div>
+</div>
+<div class="col-sm-6 col-sm-pull-6">
+<h4 class="headline">Top Streams of the Week <small class="value-title">peak viewers</small></h4>
+<table class="tops table table-condensed table-hover">
+<tbody>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/574228be-01ef-4eab-bc0e-a4f6b68bedba-profile_image-300x300.png">
+</td>
+<td>
+<a href="/ibai/streams/42067496557" class="item-title">ibai</a>
+<div class="stream-status">EL COMBATE DEL AÑO #LAVELADADELAÑO</div>
+</td>
+<td class="value-cell">
+<div class="to-number">1538645</div>
+<div class="small"><span class="to-number">1087208</span> in average</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af6e4ea5318-profile_image-300x300.png">
+</td>
+<td>
+<a href="/shroud/streams/42131590653" class="item-title">shroud</a>
+<div class="stream-status">GRAND FINAL! #VCTPartner | Follow @shroud on socials</div>
+</td>
+<td class="value-cell">
+<div class="to-number">334836</div>
+<div class="small"><span class="to-number">231188</span> in average</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/811dc7d4-1079-4ead-8b48-97f3ff4fa361-profile_image-300x300.png">
+</td>
+<td>
+<a href="/valorant/streams/42131506157" class="item-title">valorant</a>
+<div class="stream-status">Sentinels vs FNATIC - VCT Masters Reykjavík - Grand Finals</div>
+</td>
+<td class="value-cell">
+<div class="to-number">198833</div>
+<div class="small"><span class="to-number">140852</span> in average</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1a50f189-3f73-4a93-a6e4-d53e8a26fceb-profile_image-300x300.jpeg">
+ </td>
+<td>
+<a href="/tommyinnit/streams/39427323931" class="item-title">tommyinnit</a>
+<div class="stream-status">BIG MAN DOES MCC (with little tubbo, niki and VIKKSTAR)</div>
+</td>
+<td class="value-cell">
+<div class="to-number">196499</div>
+<div class="small"><span class="to-number">174866</span> in average</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/8fb3bb16-6b9a-4d91-9161-e6b1c1b7f8ea-profile_image-300x300.png">
+</td>
+<td>
+<a href="/therealknossi/streams/42198089260" class="item-title">therealknossi</a>
+<div class="stream-status">Das Mittelalter Camp mit Knossi, Sido, MannyMarc und UnsympathischTV</div>
+</td>
+<td class="value-cell">
+<div class="to-number">192676</div>
+<div class="small"><span class="to-number">112471</span> in average</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/8de4d844-586d-4be9-8570-04a0678fa99e-profile_image-300x300.png">
+</td>
+<td>
+<a href="/ranboolive/streams/39427986539" class="item-title">ranboolive</a>
+<div class="stream-status">Proving myself because MCC has shattered my sense of self-worth</div>
+</td>
+<td class="value-cell">
+<div class="to-number">167960</div>
+<div class="small"><span class="to-number">119329</span> in average</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/e4d9bf96-311d-487a-b5eb-9f9a94e0f795-profile_image-300x300.png">
+</td>
+<td>
+<a href="/nmplol/streams/42120153405" class="item-title">nmplol</a>
+<div class="stream-status">Sh*tcon 2021</div>
+</td>
+<td class="value-cell">
+<div class="to-number">159164</div>
+<div class="small"><span class="to-number">135255</span> in average</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/ec898e4a-e0df-4dc0-a99d-7540c6dbe1e8-profile_image-300x300.png">
+</td>
+<td>
+<a href="/auronplay/streams/42188787212" class="item-title">auronplay</a>
+<div class="stream-status">MARBELLA VICE #29 y luego Dying Light</div>
+</td>
+<td class="value-cell">
+<div class="to-number">150020</div>
+<div class="small"><span class="to-number">92132</span> in average</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/371a4ddd-c4ef-418c-9f42-cfecda78187d-profile_image-300x300.png">
+</td>
+<td>
+<a href="/loud_coringa/streams/39412265099" class="item-title">loud_coringa</a>
+<div class="stream-status">FRENTE A FRENTE !!! JUIZO FINAL</div>
+</td>
+<td class="value-cell">
+<div class="to-number">144537</div>
+<div class="small"><span class="to-number">118578</span> in average</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/823b1a32-eb4e-425a-b1e6-48913ed58f1b-profile_image-300x300.png">
+</td>
+<td>
+<a href="/quackity/streams/42116691405" class="item-title">quackity</a>
+<div class="stream-status">MCC WINNERS POV!!! DREAM GEORGE CAPTAINSPARKLEZ</div>
+</td>
+<td class="value-cell">
+<div class="to-number">142608</div>
+<div class="small"><span class="to-number">96584</span> in average</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<hr>
+<h4 class="headline">Today's most popular clips</h4>
+<div id="clips" class="row"></div>
+<div class="link-more">
+<a href="/clips"><i class="fas fa-angle-down fa-fw"></i> VIEW MORE</a>
+</div>
+<template id="clip-card">
+<div class="rowless-col col-xs-6 col-sm-3">
+<div class="clip-entity">
+<img class="clip-placeholder" src="/img/clip-placeholder.png">
+<img class="clip-thumbnail">
+<div class="clip-meta">
+<div class="clip-title"></div>
+<div class="clip-views"></div>
+<div class="clip-play"><i class="fas fa-play fa-2x"></i></div>
+</div>
+</div>
+</div>
+</template>
+</div>
+<section id="ads-midpage-1"></section>
+<div class="row">
+<div class="col-sm-6">
+<hr>
+<h4 class="headline">Most Popular Games <small class="value-title">viewership<br><small>week average</small></small></h4>
+<table class="tops table table-condensed table-hover">
+<tbody>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Just Chatting-45x60.jpg">
+</td>
+<td>
+<a href="/games/509658" class="item-title">Just Chatting</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">379639</div>
+<div class="small">
+<span class="text-success">12.7%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Grand Theft Auto V-45x60.jpg">
+</td>
+<td>
+<a href="/games/32982" class="item-title">Grand Theft Auto V</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">277136</div>
+<div class="small">
+<span class="text-success">9.3%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/VALORANT-45x60.jpg">
+</td>
+<td>
+<a href="/games/516575" class="item-title">VALORANT</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">216281</div>
+<div class="small">
+<span class="text-success">7.2%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/League of Legends-45x60.jpg">
+</td>
+<td>
+<a href="/games/21779" class="item-title">League of Legends</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">189194</div>
+<div class="small">
+<span class="text-success">6.3%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Call of Duty: Warzone-45x60.jpg">
+</td>
+<td>
+<a href="/games/512710" class="item-title">Call of Duty: Warzone</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">118793</div>
+<div class="small">
+<span class="text-success">4%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Minecraft-45x60.jpg">
+</td>
+<td>
+<a href="/games/27471" class="item-title">Minecraft</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">110221</div>
+<div class="small">
+<span class="text-success">3.7%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Fortnite-45x60.jpg">
+</td>
+<td>
+<a href="/games/33214" class="item-title">Fortnite</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">109230</div>
+<div class="small">
+<span class="text-success">3.7%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike: Global Offensive-45x60.jpg">
+</td>
+<td>
+<a href="/games/32399" class="item-title">Counter-Strike: Global Offensive</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">102127</div>
+<div class="small">
+<span class="text-success">3.4%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Apex Legends-45x60.jpg">
+</td>
+<td>
+<a href="/games/511224" class="item-title">Apex Legends</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">67518</div>
+<div class="small">
+<span class="text-success">2.3%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Slots-45x60.jpg">
+</td>
+<td>
+<a href="/games/498566" class="item-title">Slots</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">66681</div>
+<div class="small">
+<span class="text-success">2.2%</span>
+of <i class="fab fa-twitch fa-fw"></i> total
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-sm-6">
+<hr>
+<h4 class="headline">Trending Games <small class="value-title">channels<br><small>week average</small></small></h4>
+<table class="tops table table-condensed table-hover">
+<tbody>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Biomutant-45x60.jpg">
+</td>
+<td>
+<a href="/games/498483" class="item-title">Biomutant</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">1084</div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">36139</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Chivalry 2-45x60.jpg">
+</td>
+<td>
+<a href="/games/512971" class="item-title">Chivalry 2</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">115</div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">11450</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Super Bomberman R Online-45x60.jpg">
+</td>
+<td>
+<a href="/games/1884783031" class="item-title">Super Bomberman R Online</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">57</div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">5700</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Maneater-45x60.jpg">
+</td>
+<td>
+<a href="/games/506452" class="item-title">Maneater</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">103</div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">2809</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Solasta: Crown of the Magister-45x60.jpg">
+</td>
+<td>
+<a href="/games/514205" class="item-title">Solasta: Crown of the Magister</a>
+ <div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">26</div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">1925</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/MechWarrior 5: Mercenaries-45x60.jpg">
+</td>
+<td>
+<a href="/games/494684" class="item-title">MechWarrior 5: Mercenaries</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">26</div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">1540</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Little Nightmares-45x60.jpg">
+</td>
+<td>
+<a href="/games/494131" class="item-title">Little Nightmares</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">139</div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">315</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Conan Exiles-45x60.jpg">
+</td>
+<td>
+<a href="/games/493551" class="item-title">Conan Exiles</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">97</div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">181</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Knockout City-45x60.jpg">
+</td>
+<td>
+<a href="/games/1924769596" class="item-title">Knockout City</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">724</div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">172</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell-game">
+<img src="https://static-cdn.jtvnw.net/ttv-boxart/Shin Megami Tensei III: Nocturne - HD Remaster-45x60.jpg">
+</td>
+<td>
+<a href="/games/673382043" class="item-title">Shin Megami Tensei III: Nocturne - HD Remaster</a>
+<div class="small meta">
+</div>
+</td>
+<td class="value-cell">
+<div class="to-number">32</div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">131</span>%
+</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<hr>
+<h4 class="headline">Followers Absolute Growth <small class="value-title">followers<br><small>week increase</small></small></h4>
+<table class="tops table table-condensed table-hover">
+<tbody>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/574228be-01ef-4eab-bc0e-a4f6b68bedba-profile_image-300x300.png">
+</td>
+<td>
+<a href="/ibai" class="item-title">ibai</a>
+<div class="small meta">
+Spanish
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div>+<span class="to-number">175512</span></div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">2.92</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af6e4ea5318-profile_image-300x300.png">
+</td>
+<td>
+<a href="/shroud" class="item-title">shroud</a>
+<div class="small meta">
+English
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div>+<span class="to-number">142301</span></div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">1.56</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/10c197cb-295f-4d40-8a6c-26a0a5da22ee-profile_image-300x300.png">
+</td>
+<td>
+<a href="/adinross" class="item-title">AdinRoss</a>
+<div class="small meta">
+English
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div>+<span class="to-number">95296</span></div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">2.74</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/823b1a32-eb4e-425a-b1e6-48913ed58f1b-profile_image-300x300.png">
+</td>
+<td>
+<a href="/quackity" class="item-title">Quackity</a>
+<div class="small meta">
+English
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div>+<span class="to-number">93202</span></div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">2.76</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/d5a5f6ca-702f-47ee-8d8b-777c4717d42c-profile_image-300x300.png">
+</td>
+<td>
+<a href="/elmariana" class="item-title">ElMariana</a>
+<div class="small meta">
+Spanish
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div>+<span class="to-number">88234</span></div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">15.68</span>%
+</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-sm-6">
+<hr>
+<h4 class="headline">Followers Relative Growth <small class="value-title">followers, %<br><small>to channel's total</small></small></h4>
+<table class="tops table table-condensed table-hover">
+<tbody>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/618a957d-d166-484b-8102-8e731f821d82-profile_image-300x300.png">
+</td>
+<td>
+<a href="/chanoentwitch" class="item-title">chanoentwitch</a>
+<div class="small meta">
+Spanish
+18+
+</div>
+</td>
+<td class="value-cell">
+<div><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">2430</span>%
+</span>
+</div>
+ <div class="small">+<span class="to-number">14607</span></div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/f7ea08c2-bd2e-4f45-9928-2dd635404bb9-profile_image-300x300.png">
+</td>
+<td>
+<a href="/nowciu_" class="item-title">nowciu_</a>
+<div class="small meta">
+Polish
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">651</span>%
+</span>
+</div>
+<div class="small">+<span class="to-number">37324</span></div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/93a339d5-d8a2-4980-9e2c-60cd98fa48f8-profile_image-300x300.png">
+</td>
+<td>
+<a href="/grigorich18" class="item-title">GriGorich18</a>
+<i class="twitch-live-circle"></i> <div class="small meta">
+Russian
+</div>
+</td>
+<td class="value-cell">
+<div><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">594</span>%
+</span>
+</div>
+<div class="small">+<span class="to-number">10801</span></div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/2a539874-4a78-4997-acd6-7f7bb5065ecb-profile_image-300x300.png">
+</td>
+<td>
+<a href="/stephvieira" class="item-title">StephVieira</a>
+<div class="small meta">
+Portuguese
+18+
+</div>
+</td>
+<td class="value-cell">
+<div><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">385</span>%
+</span>
+</div>
+<div class="small">+<span class="to-number">8126</span></div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/04d0e690-e73c-4614-9d64-dcdff5cf1aa0-profile_image-300x300.png">
+</td>
+<td>
+<a href="/broodway_" class="item-title">BroodWay_</a>
+<div class="small meta">
+Portuguese
+ </div>
+</td>
+<td class="value-cell">
+<div><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">296</span>%
+</span>
+</div>
+<div class="small">+<span class="to-number">16416</span></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<hr>
+<h4 class="headline">Viewership Absolute Growth <small class="value-title">viewers<br><small>week average increase</small></small></h4>
+<table class="tops table table-condensed table-hover">
+<tbody>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/574228be-01ef-4eab-bc0e-a4f6b68bedba-profile_image-300x300.png">
+</td>
+<td>
+<a href="/ibai" class="item-title">ibai</a>
+<div class="small meta">
+Spanish
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div>+<span class="to-number">328569</span></div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">573</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/8fb3bb16-6b9a-4d91-9161-e6b1c1b7f8ea-profile_image-300x300.png">
+</td>
+<td>
+<a href="/therealknossi" class="item-title">TheRealKnossi</a>
+<div class="small meta">
+German
+Partner
+18+
+</div>
+</td>
+<td class="value-cell">
+<div>+<span class="to-number">95800</span></div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">1523</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af6e4ea5318-profile_image-300x300.png">
+</td>
+<td>
+<a href="/shroud" class="item-title">shroud</a>
+<div class="small meta">
+English
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div>+<span class="to-number">95063</span></div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">403</span>%
+</span>
+</div>
+</td>
+ </tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/13041726-052f-4009-bf48-2195eb3bd376-profile_image-300x300.png">
+</td>
+<td>
+<a href="/baiano" class="item-title">Baiano</a>
+<div class="small meta">
+Portuguese
+Partner
+18+
+</div>
+</td>
+<td class="value-cell">
+<div>+<span class="to-number">44818</span></div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">183</span>%
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/e4d9bf96-311d-487a-b5eb-9f9a94e0f795-profile_image-300x300.png">
+</td>
+<td>
+<a href="/nmplol" class="item-title">Nmplol</a>
+<div class="small meta">
+English
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div>+<span class="to-number">31670</span></div>
+<div class="small"><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">170</span>%
+</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-sm-6">
+<hr>
+<h4 class="headline">Viewership Relative Growth <small class="value-title">viewers, %<br><small>to week average</small></small></h4>
+<table class="tops table table-condensed table-hover">
+<tbody>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/9db7f5a1-fade-4004-91d8-dab79f42d291-profile_image-300x300.png">
+</td>
+<td>
+<a href="/fiba" class="item-title">FIBA</a>
+<div class="small meta">
+English
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">12837</span>%
+</span>
+</div>
+<div class="small">+<span class="to-number">4803</span></div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/2af1608a-b130-469f-8f61-9749cf62f925-profile_image-300x300.png">
+</td>
+<td>
+<a href="/amazonmusic" class="item-title">AmazonMusic</a>
+ <div class="small meta">
+English
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">6665</span>%
+</span>
+</div>
+<div class="small">+<span class="to-number">8374</span></div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/ccadc42b-5051-4c56-9c84-d7c36081e4eb-profile_image-300x300.png">
+</td>
+<td>
+<a href="/themavshow" class="item-title">TheMavShow</a>
+<div class="small meta">
+English
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">6108</span>%
+</span>
+</div>
+<div class="small">+<span class="to-number">3959</span></div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/82a56abe-a334-4020-b8eb-f128f69df800-profile_image-300x300.png">
+</td>
+<td>
+<a href="/athleticoparanaense" class="item-title">AthleticoParanaense</a>
+<div class="small meta">
+Portuguese
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">6097</span>%
+</span>
+</div>
+<div class="small">+<span class="to-number">862</span></div>
+</td>
+</tr>
+<tr>
+<td class="image-cell">
+<img class="img-circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/0ba03905-d644-4061-839a-de8a2a6d7cdc-profile_image-300x300.png">
+</td>
+<td>
+<a href="/iambrandon" class="item-title">iamBrandon</a>
+<div class="small meta">
+English
+Partner
+</div>
+</td>
+<td class="value-cell">
+<div><span class="diff text-success  ">
+<i class="fas fa-caret-up"></i>&nbsp;<span class="to-number-lg">6083</span>%
+</span>
+</div>
+<div class="small">+<span class="to-number">4108</span></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<meta id="ecs" content="eyJ2a#V3ZXJzIjp7InZhbHVlcyI6#yIzMTE0NjYxIiwiMzA2NDgzMyIsIjMwNDk0MjciLCIyODk5OTEwIiwiMjkzMzM5MyIsIjI5NTcxNjQiLCIyOTk3ODA0Il0sImF2ZyI6MzAwMjQ1NiwiZ3Jvd3RoIjotMy44fSwiY2hhbm5lbHMiOnsidmFsd#VzIjpbIjEwMzU0OCIsIjEwMzQ3MiIsIjEwMzYwNiIsIjEwNDMzOCIsIjEwNzI2MCIsIjExNTEwNSIsIjEwOTM2NiJdLCJhdmciOjEwNjY3MSwiZ3Jvd3RoIjo1LjZ9LCJhY3RpdmVfY2hhbm5lbHMiOnsidmFsd#VzIjpbMTM2MTYyNiwxMzcwNDU2LDEzODA2MjUsMTM5MTE4OSwxNDEzNTU1LDE0NDAwMDEsMTM2NDI0Nl0sImF2ZyI6MTM4ODgxNCwiZ3Jvd3RoIjowLjJ9LCJtY#5faG91cnMiOnsidmFsd#VzIjpbNzQ3NTE4NjQsNzM1NTU5OTIsNzMxODYyNDgsNjk1OTc4NDAsNzA0MDE0MzIsNzA5NzE5MzYsNzE5NDcyOTZdLCJhdmciOjcyMDU4OTQ0LCJncm93dGgiOi0zLjh9fQ!eyJ2a#V3ZXJzIjoyODgyNTQ2LCJjaGFubmVscyI6OTM5NjYsImdhb#VzIjozMTk0fQ!#3sic2x1ZyI6IkZsaXJ0eUNvbmZpZGVudFJoa#5vY2Vyb3NTU1Nzc3MtRXpoaERjQ3J6YlBlSUpyRCIsImJyb2FkY2FzdGVyIjoiUVRDa#5kZXJlbGxhIiwidGl0bGUiOiJLY#NleSBvbiBEcmVhbSdzIGNvbmZlc3Npb24iLCJ2a#V3cyI6MTMyODY4LCJjcmVhdGVkX2F0IjoiMjAyMS0wNS0zMFQxNzo0NDozOFoiLCJ0aHVtYm5ha#wiOiJodHRwczpcL1wvY2xpcHMtb#Vka#EtYXNzZXRzMi50d2l0Y2gudHZcL0FUL#NtJTdDMTE5OTk5NDc1Ni1wcmV2a#V3LTQ4MHgyNzIuanBnIn0seyJzbHVnIjoiQ3J5cHRpY1ByZXR0a#VzdEtpb#NoaU5vbm9ub0NhdC1PbXM5RUtwV2NtRG9Yc3NjIiwiYnJvY#RjYXN0ZXIiOiJRVENpbmRlcmVsbGEiLCJ0aXRsZSI6Ik5pY2sgUG9nTyBPZmYtU3RyZ#FtIiwidmlld3MiOjkwMzU5LCJjcmVhdGVkX2F0IjoiMjAyMS0wNS0zMFQxODozMTo0M1oiLCJ0aHVtYm5ha#wiOiJodHRwczpcL1wvY2xpcHMtb#Vka#EtYXNzZXRzMi50d2l0Y2gudHZcL0FUL#NtJTdDMTIwMDA1ODU3OS1wcmV2a#V3LTQ4MHgyNzIuanBnIn0seyJzbHVnIjoiTGlnaHRJbnRlcmVzdGluZ0NsY#1HaXZlUExaLVlRczluc0RRMUFERzRFcjYiLCJicm9hZGNhc3RlciI6Ik1pemtpZiIsInRpdGxlIjoiTGVha2VkIiwidmlld3MiOjg4MjI0LCJjcmVhdGVkX2F0IjoiMjAyMS0wNS0zMFQyMzo0OTowMFoiLCJ0aHVtYm5ha#wiOiJodHRwczpcL1wvY2xpcHMtb#Vka#EtYXNzZXRzMi50d2l0Y2gudHZcL0FUL#NtJTdDMTIwMDUxNTg2My1wcmV2a#V3LTQ4MHgyNzIuanBnIn0seyJzbHVnIjoiR#5qb3lhYmxlQnVzeVNxd#lycmVsUG9nQ2hhbXAtcEtrTGVYSFRrcmNTN1FLZiIsImJyb2FkY2FzdGVyIjoieFFjT1ciLCJ0aXRsZSI6InhRYyBSZ#FjdHMgdG8gUG9raSBDbGlwIiwidmlld3MiOjgyNDY5LCJjcmVhdGVkX2F0IjoiMjAyMS0wNS0zMFQxNDo1NTo0NVoiLCJ0aHVtYm5ha#wiOiJodHRwczpcL1wvY2xpcHMtb#Vka#EtYXNzZXRzMi50d2l0Y2gudHZcLzQyMTMwMDQ0MzE3L#9mZnNldC0yODE4LXByZXZpZXctNDgweDI3Mi5qcGcifSx7InNsd#ciOiJTYXZhZ2VGcmFna#xlU2hhbGxvdFJhY2NBdHRhY2stQVVGbzRFVVZrY013UnNadyIsImJyb2FkY2FzdGVyIjoiQ#RpblJvc3MiLCJ0aXRsZSI6ImFsb#9zdCBzY#lkIGl0Iiwidmlld3MiOjY4OTAzLCJjcmVhdGVkX2F0IjoiMjAyMS0wNS0zMVQwNDoyMzoxM1oiLCJ0aHVtYm5ha#wiOiJodHRwczpcL1wvY2xpcHMtb#Vka#EtYXNzZXRzMi50d2l0Y2gudHZcLzQyMTM5NzIxOTAxL#9mZnNldC03MDE4LXByZXZpZXctNDgweDI3Mi5qcGcifSx7InNsd#ciOiJGY#l0aGZ1bE9iZ#RpZ#50TGVnQU1QR#5lcmd5LThaY#FvcF82Z2FuT0NHM2MiLCJicm9hZGNhc3RlciI6Ik1pemtpZiIsInRpdGxlIjoiZHJhb#EgIiwidmlld3MiOjY1NTkxLCJjcmVhdGVkX2F0IjoiMjAyMS0wNS0zMVQwMDoyODoxNFoiLCJ0aHVtYm5ha#wiOiJodHRwczpcL1wvY2xpcHMtb#Vka#EtYXNzZXRzMi50d2l0Y2gudHZcL0FUL#NtJTdDMTIwMDU1MjE3MS1wcmV2a#V3LTQ4MHgyNzIuanBnIn0seyJzbHVnIjoiT2JzZXJ2Y#50Q2xldmVyVmFua#xsYUltR2xpdGNoLVdsS1FZenFrTjRzTUU1ckQiLCJicm9hZGNhc3RlciI6Ikhhc2FuQ#JpIiwidGl0bGUiOiJBdmVyY#dlIEVnZ3MgUXVld#UgU2VlIFZpZXdlciIsInZpZXdzIjo2MTMwOSwiY3JlYXRlZF9hdCI6IjIwMjEtMDUtMzBUMjE6MDc6MzlaIiwidGh1b#JuY#lsIjoiaHR0cHM6XC9cL2NsaXBzL#1lZGlhL#Fzc2V0czIudHdpdGNoLnR2XC9BVC1jbSU3QzEyMDAzMjQzNDAtcHJldmlldy00ODB4MjcyLmpwZyJ9LHsic2x1ZyI6IkJvcmVkRnVydGl2ZUZveFVuU2FuZS1UeFVU#nBYdHZpNkliVFN6IiwiYnJvY#RjYXN0ZXIiOiJBZGluUm9zcyIsInRpdGxlIjoiQ#RpbiBCY#4gU29kYSBmcm9tIGhpcyBjaGF0ICIsInZpZXdzIjo1MzMyNiwiY3JlYXRlZF9hdCI6IjIwMjEtMDUtMzFUMDM6MDc6MDlaIiwidGh1b#JuY#lsIjoiaHR0cHM6XC9cL2NsaXBzL#1lZGlhL#Fzc2V0czIudHdpdGNoLnR2XC9BVC1jbSU3QzEyMDA2OTEwOTktcHJldmlldy00ODB4MjcyLmpwZyJ9XQ!#yJzdGF0c1BhbmVscyIsImxpdmVQY#5lbHMiLCJjbGlwcyJd">
+<div class="bg-dark" style="padding:20px 0 10px;text-align:center">
+
+<ins class="adsbygoogle" style="display:inline-block;min-width:360px; max-width:970px; width:100%; height: 250px" data-full-width-responsive="true" data-ad-client="ca-pub-3581129455196386" data-ad-slot="6664111937"></ins>
+<script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+</div>
+<footer class="bg-dark" style="padding-bottom: 120px;">
+<div class="container">
+<p>Get in touch, report a bug or incorrect information, suggest a feature.</p>
+<ul class="list-inline">
+<li>TwitchTracker © 2021</li>
+<li><a href="/cdn-cgi/l/email-protection#13707c7d677270675367647a67707b676172707876613d707c7e"><span class="__cf_email__" data-cfemail="07646869736664734773706e73646f737566646c62752964686a">[email&#160;protected]</span></a></li>
+</ul>
+<p style="opacity: .3;">Scraping is prohibited, it overloads the servers. Violation will be detected and eliminated!</p>
+<p>TwitchTracker is not affiliated with Twitch or Amazon. All Trademarks referred to are the property of their respective owners.</p>
+</div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4/lodash.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/dataTables.bootstrap.min.js"></script>
+<script src="https://unpkg.com/highcharts@9/highcharts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lity@2/dist/lity.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/unveil2/2.0.8/jquery.unveil2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+<div data-tc="WyIyZWppNGR6dHMwcHB3d3Bwcnh3bmFvOWQyN3Nmd3oiLCIzOG9neGc0MWZkYmR1czQ1eGptaXdoaGw4c3RrNWIiLCJpdCdzIGFsbW9zdCBhcyBpZiB5b3UndmUgZm91bmQgYSB0cmVhc3VyZSJd">
+<script src="/js/master.js"></script>
+<script src="/js/pages/index.js"></script>
+<style>
+            .ads {
+                display: none;
+                text-align: center;
+            }
+        </style>
+<script>
+            if (getDocumentWidth() > 500) {
+                // Midpage #1 Desktop 90
+                $('#ads-midpage-1').show().html('<ins class="adsbygoogle" \
+                    style="display:inline-block;width:1140px;height:90px" \
+                    data-ad-client="ca-pub-3581129455196386" \
+                    data-ad-slot="2550606525"></ins>');
+                window.adsbygoogle.push({});
+            } else {
+                // Midpage #1 Mobile Square
+                $('#ads-midpage-1').show().html('<ins class="adsbygoogle" \
+                    style="display:block" \
+                    data-ad-client="ca-pub-3581129455196386" \
+                    data-ad-slot="4055259883" \
+                    data-ad-format="auto" \
+                    data-full-width-responsive="true"></ins>');
+                window.adsbygoogle.push({});
+            }
+        </script>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'658141347fb2417b',m:'f448cdb5b41ee90904a96b344bd16096c963e528-1622475144-1800-AS/0SvyqX875r93KzrW+iRdkjM+pjqaWrVypIdqdu7AoGCJd24QE10SHaPiiMo7u8Dpj0B7nLQqtJrefAATvKfht7noFtLhGIuca8tl7WU5bYM9HBw/K2YxZFn0isBsXBw==',s:[0x9a20fd8aaa,0x3d2c3e5f34],}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"658141347fb2417b","version":"2021.5.2","r":1,"token":"d8628ec49fc643f0b22affc6c63db38b","si":10}'></script>
+</body>
+</html>
