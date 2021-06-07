@@ -1,12 +1,7 @@
-import os
 import tweepy as tw
 import pandas as pd
 import geograpy
-import os
-from os.path import join
 from twython import Twython
-import os
-import time
 
 def twitter_viewer_locations(consumer_key, consumer_secret, access_token,access_token_secret, user, date, item_count):
     '''Takes secrets, username on twitter and starting date (format yyyy-mm-dd)'''
@@ -16,12 +11,12 @@ def twitter_viewer_locations(consumer_key, consumer_secret, access_token,access_
     new_search = f"@{user}"
     date_since = f"{date}"
 
-    tweets = tw.Cursor(api.search, 
+    tweets = tw.Cursor(api.search,
                                q=new_search,
                                lang="en",
                                since=date_since).items(item_count)
     users_locs = [[tweet.user.screen_name, tweet.user.location] for tweet in tweets]
-    tweet_text = pd.DataFrame(data=users_locs, 
+    tweet_text = pd.DataFrame(data=users_locs,
                         columns=['user', "location"])
     locations = ' '.join(tweet_text['location'].to_list())
     places = geograpy.get_geoPlace_context(text = locations)
@@ -37,7 +32,7 @@ def twitter_viewer_locations(consumer_key, consumer_secret, access_token,access_
 
 def get_streamer_data(streamer):
     consumer_key= 'RBAhyItP3hdDNBH9LpNPTfl4F'
-    consumer_secret='DT0lHHLgNWqhIKlPCqtTw7E3jyIogDqU8u5PUL8lGSUosSSvV2' 
+    consumer_secret='DT0lHHLgNWqhIKlPCqtTw7E3jyIogDqU8u5PUL8lGSUosSSvV2'
     access_token= '798115618243411968-RiWI7ZbAyZdCD2ZH7XQDHdYA2UTzvK8'
     access_token_secret= '3wK6v91wmQ3rlOpr0SEw4lnCUKm1NrypJqtNKEKfx7Nzf'
     python_tweets = Twython(consumer_key, consumer_secret)
