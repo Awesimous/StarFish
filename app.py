@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit.hashing import _CodeHasher
 import numpy as np
 import plotly.express as px
 from plotly.subplots import make_subplots
@@ -7,157 +8,190 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from geopy import geocoders
 from geopy.geocoders import Nominatim
-from requests.api import get
 import wordcloud
-
+import streamlit.components.v1 as components
 from StarFish.twitch import search_channels
 import requests
 from bs4 import BeautifulSoup
-import os
-import tweepy as tw
 from StarFish.twitter import twitter_viewer_locations, get_streamer_data_filtered, get_streamer_data
-from os.path import join
-from twython import Twython
 import time
 
-def parse_games_2(user_name):
-    user_name.lower()
-    headers = {'User-Agent': 'Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)'}
-    response = requests.get(url = f"https://twitchtracker.com/{user_name}/games", headers=headers)
-    soup = BeautifulSoup(response.content, "html.parser")
-    df=pd.read_html(str(soup))[0]
-    return df
+from PIL import Image
+st.set_page_config(layout="wide",initial_sidebar_state="expanded")
 
-st.title('Twitch dashboard')
-st.markdown('The dashboard will visualize statistics of each streamer')
-st.sidebar.title('Visualization Selector')
-
-df = pd.read_csv('notebooks/CSVs/streamer_df_clean')
-#username = df['username']
+try:
+    # Before Streamlit 0.65
+    from streamlit.ReportThread import get_report_ctx
+    from streamlit.server.Server import Server
+except ModuleNotFoundError:
+    # After Streamlit 0.65
+    from streamlit.report_thread import get_report_ctx
+    from streamlit.server.server import Server
 
 
-#display = (df['username'])
+def main():
+    # import all relevant csv files
+    state = _get_state()
+    pages = {
+        "Input": page_settings,
+        "Dashboard": page_dashboard,  
+    }
 
-#df_games = parse_games_2('Bruncky')
-#st.table(df_games)
+    st.sidebar.title(":floppy_disk: Navigation bar")
+    page = st.sidebar.radio("Select your page", tuple(pages.keys()))
 
- 
+    # Display the selected page with the session state
+    pages[page](state)
 
-#options = list(range(len(display)))
-
-games_temp = ['Just Chatting', 'Grand Theft Auto V',
-              'League of Legends',
-              'VALORANT',
-              'Minecraft',
-              'Call of Duty: Warzone',
-              'World of Warcraft',
-              'Fortnite',
-              'Counter-Strike: Global Offensive',
-              'All Other Games Combined']
-
-#value = st.sidebar.selectbox("username", options, format_func=lambda x: display[x])
-games = st.sidebar.multiselect('Select game:', games_temp)
-viewer = st.sidebar.slider('Minimum Average Viewer per Hour', 1, 200000, 1000)
-df = df[df['AVG Viewers'] >= viewer]
-follower = st.sidebar.slider('Minimum Total Follower', 1, 10000000, 5000)
-df = df[df['Total Followers'] >= follower]
-
-st.table(df)
-# st.sidebar.write(df.loc[value]['AVG Viewers'])
-#st.sidebar.text_input('name:',value)
-#st.sidebar.text_input('sth:')
-
-selected_indices = st.multiselect('Select streamer by index:', df.index)
-target = df.iloc[0]
-if selected_indices:
-    st.write(target)
-
-#df_games = parse_games_2('Bruncky')
-#st.table(df_games)
-#print(value)
-
-#st.bar_chart(pd.DataFrame([value]))
-#st.line_chart()
-#df2=parse_games_2('Shroud')
-
-#st.table(df2)
-#st.line_chart(value)
-# fig = plt.figure(figsize=(12,8))
-# x = range(1,len(df_games['Followers'])+1)
-# plt.plot(x, df_games['Followers'])
-# #st.line_chart(df_games['Followers'])
-# st.pyplot(fig)
+    # Mandatory to avoid rollbacks with widgets, must be called at the end of your app
+    state.sync()
 
 
-locations = twitter_viewer_locations(consumer_key, consumer_secret, access_token,access_token_secret, 'shroud', '2018-01-01', 100)
+def page_dashboard(state):
+    st.title(":chart_with_upwards_trend: Dashboard page")
+    st.markdown('The dashboard will visualize statistics of each streamer')
+    display_state_values(state)
 
 
-def city_lat_long(city):
-    geolocator = Nominatim(user_agent='myapplication')
-    location = geolocator.geocode(city)
-    latitude = location[1][0]
-    longitude = location[1][1]
-    return latitude, longitude
-def country_lat_long(country):
-    geolocator = Nominatim(user_agent='myapplication')
-    location = geolocator.geocode(country)
-    latitude = location[1][0]
-    longitude = location[1][1]
-    return latitude, longitude
-test = ['London', 'Bristol', 'New Brunswick']
-@st.cache
-def get_map_data(cities):
-    coords = []
-    for city in cities:
-        city_data = city_lat_long(city)
-        coords.append([city_data[0], city_data[1]])
-    return pd.DataFrame(
-            np.array(coords),
-            columns=['lat', 'lon']
-        )
-df = get_map_data(locations['cities'])
-st.map(df)
+def page_settings(state):
+    st.title(":wrench: Set your input")
+    #display_state_values(state)
+    state.games_df = pd.read_csv('notebooks/CSVs/Games_df')
+    state.df = pd.read_csv('notebooks/CSVs/streamer_df_clean')
+    state.target_df = state.df[500:700].set_index('username')
+    state.target_df = state.target_df.drop('ESL_CSGO')
+    state.max_followers = int(state.target_df["Total Followers"].max())
+    state.max_viewer = int(state.target_df['AVG Viewers'].max())
+    state.games_temp = ['Just Chatting', 'Grand Theft Auto V',
+                'League of Legends',
+                'VALORANT',
+                'Minecraft',
+                'Call of Duty: Warzone',
+                'World of Warcraft',
+                'Fortnite',
+                'Counter-Strike: Global Offensive',
+                'All Other Games Combined']
+    state.social_media = ['Twitter', 'YouTube']
+    st.write("---")
+    state.viewer = st.slider('Minimum Average Viewer per Hour', 1, state.max_viewer, 1000)
+    state.target_df = state.target_df[state.target_df['AVG Viewers'] >= state.viewer]
+    state.follower = st.slider('Minimum Total Follower', 1, state.max_followers, 5000)
+    state.target_df = state.target_df[state.target_df['Total Followers'] >= state.follower]
+    state.features = st.multiselect('Select feature:', state.target_df.columns)
+    state.feature_df = state.target_df[state.features]
+    state.col_sort = st.multiselect('Select feature to sort on:', state.feature_df.columns)
+    state.social = st.multiselect('Select social media:', state.social_media)
 
-temp_table = get_streamer_data_filtered('shroud')
-st.table(temp_table)
 
-words = [
-    dict(text="Robinhood", value=16000, color="#b5de2b", country="US", industry="Cryptocurrency"),
-    dict(text="Personio", value=8500, color="#b5de2b", country="DE", industry="Human Resources"),
-    dict(text="Boohoo", value=6700, color="#b5de2b", country="UK", industry="Beauty"),
-    dict(text="Deliveroo", value=13400, color="#b5de2b", country="UK", industry="Delivery"),
-    dict(text="SumUp", value=8300, color="#b5de2b", country="UK", industry="Credit Cards"),
-    dict(text="CureVac", value=12400, color="#b5de2b", country="DE", industry="BioPharma"),
-    dict(text="Deezer", value=10300, color="#b5de2b", country="FR", industry="Music Streaming"),
-    dict(text="Eurazeo", value=31, color="#b5de2b", country="FR", industry="Asset Management"),
-    dict(text="Drift", value=6000, color="#b5de2b", country="US", industry="Marketing Automation"),
-    dict(text="Twitch", value=4500, color="#b5de2b", country="US", industry="Social Media"),
-    dict(text="Plaid", value=5600, color="#b5de2b", country="US", industry="FinTech"),
-]
-return_obj = wordcloud.visualize(words, tooltip_data_fields={
-    'text':'Company', 'value':'Mentions', 'country':'Country of Origin', 'industry':'Industry'
-}, per_word_coloring=False)
 
-st.button("Re-run")
+def display_state_values(state):
+    st.write('Display the 5 best streamers (if there are 5) based on your chosen categories:')
+    state.feature_df = state.feature_df.sort_values(by=[state.col_sort[0]], ascending=False).head()
+    
+    st.table(state.feature_df)
+    
+    # c1, c2, c3 = st.beta_columns((1, 1, 2))
+    
+    # with c1:
+    #     expander=st.beta_expander("expand")
+    #     with expander:
+    #         state.games_df = pd.read_csv('notebooks/CSVs/Games_df')
+    #         state.top_games_max_viewers = state.games_df.sort_values(by = ['Avg. viewers'], ascending=False)
+    #         state.top_10 = state.top_games_max_viewers.head(10)
 
-pts = 50
-x1 = np.arange(pts)
-y1 = np.random.random(pts)
-y2 = np.random.random(pts)
-y3 = (x1/pts)**2
+    #         fig = make_subplots(rows=1, cols=2)
+    #         #fig = px.pie(state.top_10)
+    #         fig.add_trace(go.pie(state.top_10, values='Max. viewers', names='Game', 
+    #                             title='Max Viewers Top 10 Games', 
+    #                             color_discrete_sequence=px.colors.sequential.RdBu),
+    #                     row=1,col=1)
 
-fig = make_subplots(rows=1, cols=2)
+    #         fig.update_layout(height=300, width=800, title_text="Side By Side Subplots")
 
-fig.add_trace(go.Scatter(x=x1,y=y1,
-                    mode='markers',
-                    name='markers'),row=1,col=1)
-fig.add_trace(go.Scatter(x=x1,y=y2,
-                    mode='markers',
-                    name='markers2'),row=1,col=2)
-fig.add_trace(go.Scatter(x=x1,y=y3,
-                    mode='lines',
-                    name='lines'),row=1,col=2)
+    #         g = st.plotly_chart(fig)
+        #c4, c5, c6 = st.beta_columns((1, 1, 2))
 
-fig.update_layout(height=300, width=800, title_text="Side By Side Subplots")
 
-g = st.plotly_chart(fig)
+
+    if st.button("Clear state"):
+        state.clear()
+
+
+class _SessionState:
+
+    def __init__(self, session, hash_funcs):
+        """Initialize SessionState instance."""
+        self.__dict__["_state"] = {
+            "data": {},
+            "hash": None,
+            "hasher": _CodeHasher(hash_funcs),
+            "is_rerun": False,
+            "session": session,
+        }
+
+    def __call__(self, **kwargs):
+        """Initialize state data once."""
+        for item, value in kwargs.items():
+            if item not in self._state["data"]:
+                self._state["data"][item] = value
+
+    def __getitem__(self, item):
+        """Return a saved state value, None if item is undefined."""
+        return self._state["data"].get(item, None)
+        
+    def __getattr__(self, item):
+        """Return a saved state value, None if item is undefined."""
+        return self._state["data"].get(item, None)
+
+    def __setitem__(self, item, value):
+        """Set state value."""
+        self._state["data"][item] = value
+
+    def __setattr__(self, item, value):
+        """Set state value."""
+        self._state["data"][item] = value
+    
+    def clear(self):
+        """Clear session state and request a rerun."""
+        self._state["data"].clear()
+        self._state["session"].request_rerun()
+    
+    def sync(self):
+        """Rerun the app with all state values up to date from the beginning to fix rollbacks."""
+
+        # Ensure to rerun only once to avoid infinite loops
+        # caused by a constantly changing state value at each run.
+        #
+        # Example: state.value += 1
+        if self._state["is_rerun"]:
+            self._state["is_rerun"] = False
+        
+        elif self._state["hash"] is not None:
+            if self._state["hash"] != self._state["hasher"].to_bytes(self._state["data"], None):
+                self._state["is_rerun"] = True
+                self._state["session"].request_rerun()
+
+        self._state["hash"] = self._state["hasher"].to_bytes(self._state["data"], None)
+
+
+def _get_session():
+    session_id = get_report_ctx().session_id
+    session_info = Server.get_current()._get_session_info(session_id)
+
+    if session_info is None:
+        raise RuntimeError("Couldn't get your Streamlit Session object.")
+    
+    return session_info.session
+
+
+def _get_state(hash_funcs=None):
+    session = _get_session()
+
+    if not hasattr(session, "_custom_session_state"):
+        session._custom_session_state = _SessionState(session, hash_funcs)
+
+    return session._custom_session_state
+
+
+if __name__ == "__main__":
+    main()
