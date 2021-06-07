@@ -67,6 +67,7 @@ def get_games_data(channels_data):
         # Write the data to csv
         time.sleep(uniform(1,4))
         game_df.to_csv(f'data/games/{streamer}.csv')
+        print(f'#{i}: {streamer}')
 
 
 
@@ -80,5 +81,3 @@ if __name__ =='__main__':
     #channels = pd.read_csv('data/channels.csv')
     get_games_data(channels)
     get_subs_data(125).to_csv('data/subs.csv')
-
-
