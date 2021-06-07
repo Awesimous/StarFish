@@ -6,11 +6,15 @@ flake8==3.9.2
 geopy==2.1.0
 html5lib==1.1
 lxml==4.6.3
+pip-chill==1.0.1
 plotly==4.14.3
+pysocks==1.7.1
 pytest==6.2.4
 python-dotenv==0.17.1
 scikit-learn==0.22
 streamlit-wordcloud==0.1.0
+tweepy==3.10.0
 twine==3.4.1
 twitchapi==2.3.2
+twython==3.8.2
 wordcloud==1.8.1
