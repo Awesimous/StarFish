@@ -27,7 +27,7 @@ st.title('Twitch dashboard')
 st.markdown('The dashboard will visualize statistics of each streamer')
 st.sidebar.title('Visualization Selector')
 
-df = pd.read_csv('notebooks/CSVs/streamer_df_clean')
+df = pd.read_csv('StarFish/data/channels.csv')
 #username = df['username']
 
 
