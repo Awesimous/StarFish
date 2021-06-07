@@ -9,3 +9,4 @@ raw_data/
 *.json
 StarFish/data/
 requirements_snapshot.txt
+gcptest.py

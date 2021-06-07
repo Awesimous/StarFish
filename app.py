@@ -15,23 +15,18 @@ from streamlit.hashing import _CodeHasher
 from StarFish.twitch import search_channels
 from bs4 import BeautifulSoup
 from StarFish.twitter import twitter_viewer_locations, get_streamer_data_filtered, get_streamer_data
+from StarFish.data import GCPFileHandler
 from PIL import Image
 from streamlit.report_thread import get_report_ctx
 from streamlit.server.server import Server
 
 
-st.set_page_config(layout="wide",initial_sidebar_state="expanded")
+# Download dbs on initial setup
+GCPFileHandler('twitch_data/top_streams_2450.csv')\
+    .download_from_gcp('StarFish/data/raw/top_streams_2450.csv')
 
-'''
-try:
-    # Before Streamlit 0.65
-    from streamlit.ReportThread import get_report_ctx
-    from streamlit.server.Server import Server
-except ModuleNotFoundError:
-    # After Streamlit 0.65
-    from streamlit.report_thread import get_report_ctx
-    from streamlit.server.server import Server
-'''
+
+st.set_page_config(layout="wide",initial_sidebar_state="expanded")
 
 
 def main():
