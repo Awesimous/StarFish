@@ -15,6 +15,8 @@ from bs4 import BeautifulSoup
 from StarFish.twitter import twitter_viewer_locations, get_streamer_data_filtered, get_streamer_data
 import time
 
+
+
 def parse_games_2(user_name):
     user_name.lower()
     headers = {'User-Agent': 'Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)'}
