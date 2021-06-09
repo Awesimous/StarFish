@@ -85,7 +85,7 @@ def page_settings(state):
     st.title(":wrench: Set your input")
     #display_state_values(state)
     state.games_df = pd.read_csv('StarFish/data/games_clean.csv')
-    state.stream_df = pd.read_csv('StarFish/data/top_streamers_2450.csv')
+    state.stream_df = pd.read_csv('StarFish/data/top_streams_2450.csv')
     # clean games_df
     state.games_df = clean_gamer_df(state.games_df)
     state.df = pd.read_csv('StarFish/data/streamer_games_clean.csv')
@@ -114,8 +114,8 @@ def page_settings(state):
     #state.feature_df = state.target_df[state.features]
     st.write('Select games you think could be interesting for your product:')
     state.games_selection = st.multiselect('Select games you are interested in:', list(state.games_info.index.values))
-    
-    
+
+
     state.features = st.multiselect('Select which features you are interested in', state.target_df.columns)
     state.target_df = state.target_df[state.features]
 
@@ -148,7 +148,7 @@ def page_settings(state):
     state.temp_time = ["morning", "afternoon", "evening", "night"]
     state.time = st.radio('Which time you want your star to be streaming at?', state.temp_time)
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-    
+
     st.write("Select any of the following social media channels to include:")
     c3, c4, c5 = st.beta_columns((1, 1, 1))
     with c3:
