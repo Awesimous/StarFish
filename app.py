@@ -101,34 +101,33 @@ def page_settings(state):
     
     
     state.features = st.multiselect('Select which features you are interested in', state.target_df.columns)
-    state.target_df = state.target_df[state.features]
-
+    state.features = state.target_df[state.features]
     if "AVG Viewers" in state.features:
         state.avg_viewer = st.slider('Minimum Average Viewer per Hour', 1, int(state.target_df['AVG Viewers'].max()), 1000)
-        state.target_df = state.target_df[state.target_df['AVG Viewers'] >= state.avg_viewer]
+        state.features = state.features[state.features['AVG Viewers'] >= state.avg_viewer]
     if "Time Streamed (in hours)" in state.features:
-        state.time_streamed = st.slider('Minimum time streamed in total hours', 1, int(state.target_df['Time Streamed (in hours)'].max()), 1000)
-        state.target_df = state.target_df[state.target_df['Time Streamed (in hours)'] >= state.time_streamed]
+        state.time_streamed = st.slider('Minimum time streamed in total hours', 1, int(state.features['Time Streamed (in hours)'].max()), 1000)
+        state.features = state.features[state.features['Time Streamed (in hours)'] >= state.time_streamed]
     if 'Hours Watched' in state.features:
-        state.hours_watched = st.slider('Minimum hours watched', 1, int(state.target_df['Hours Watched'].max()), 1000)
-        state.target_df = state.target_df[state.target_df['Hours Watched'] >= state.hours_watched]
+        state.hours_watched = st.slider('Minimum hours watched', 1, int(state.features['Hours Watched'].max()), 1000)
+        state.features = state.features[state.features['Hours Watched'] >= state.hours_watched]
     if 'Followers Gained' in state.features:
-        state.followers_hour = st.slider('Minimum followers gained on average per hour om air', 1, int(state.target_df['Followers Gained'].max()), 1000)
-        state.target_df = state.target_df[state.target_df['Followers Gained'] >= state.followers_hour]
+        state.followers_hour = st.slider('Minimum followers gained on average per hour om air', 1, int(state.features['Followers Gained'].max()), 1000)
+        state.features = state.features[state.features['Followers Gained'] >= state.followers_hour]
     if "Total Followers" in state.features:
-        state.total_follower = st.slider('Minimum Total Follower', 1, int(state.target_df['Total Followers'].max()), 1000)
-        state.target_df = state.target_df[state.target_df['Total Followers'] >= state.total_follower]
+        state.total_follower = st.slider('Minimum Total Follower', 1, int(state.features['Total Followers'].max()), 1000)
+        state.features = state.features[state.features['Total Followers'] >= state.total_follower]
     if "Total Views" in state.features:
-        state.total_views = st.slider('Minimum Total Views', 1, int(state.target_df['Total Views'].max()), 1000)
-        state.target_df = state.target_df[state.target_df['Total Views'] >= state.total_views]
+        state.total_views = st.slider('Minimum Total Views', 1, int(state.features['Total Views'].max()), 1000)
+        state.features = state.features[state.features['Total Views'] >= state.total_views]
     if "All Time Peak Viewers" in state.features:
-        state.peak = st.slider('Minimum All Time Peak Viewers', 1, int(state.target_df['All Time Peak Viewers'].max()), 1000)
-        state.target_df = state.target_df[state.target_df['All Time Peak Viewers'] >= state.peak]
+        state.peak = st.slider('Minimum All Time Peak Viewers', 1, int(state.features['All Time Peak Viewers'].max()), 1000)
+        state.features = state.features[state.target_df['All Time Peak Viewers'] >= state.peak]
 
-    if state.features:
-        state.col_sort = st.radio('Select feature to sort on:', state.target_df.columns)
-        st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-        st.write(f'You selected {state.col_sort}!')
+    # #if state.features:
+    # state.col_sort = st.radio('Select feature to sort on:', state.target_df.columns)
+    # st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+    # st.write(f'You selected {state.col_sort}!')
     state.temp_time = ["morning", "afternoon", "evening", "night"]
     state.time = st.radio('Which time you want your star to be streaming at?', state.temp_time)
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
