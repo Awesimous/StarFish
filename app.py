@@ -30,12 +30,18 @@ import base64
 from StarFish.maps import country_lat_long, city_lat_long, get_map_data
 
 
-# Download dbs on initial setup
-# GCPFileHandler('twitch_data/top_streams_2450.csv')\
-#     .download_from_gcp('StarFish/data/raw/top_streams_2450.csv')
-# stream_df = pd.read_csv('StarFish/data/raw/top_streams_2450.csv')
-# st.dataframe(stream_df)
 st.set_page_config(layout="wide", page_icon=":art:", page_title="StarFish")
+
+# Download dbs on initial setup
+print('Going to gcp')
+GCPFileHandler('scraped_data/streamers_clean.csv')\
+    .download_from_gcp('StarFish/data/streamers_clean.csv')
+print('Downloaded')
+stream_df = pd.read_csv('StarFish/data/streamers_clean.csv')
+print('Showing')
+st.table(stream_df.head())
+print('Shown')
+
 
 
 def main():
@@ -75,7 +81,7 @@ def page_settings(state):
     # drop outliers as they make range setting difficult
     state.target_df = state.target_df.drop('ESL_CSGO')
     #make a list with all users in the range
-    
+
     state.max_followers = int(state.target_df["Total Followers"].max())
     state.max_viewer = int(state.target_df['AVG Viewers'].max())
     st.write('Select games you think could be interesting for your product:')
@@ -91,7 +97,7 @@ def page_settings(state):
         option_b = st.checkbox('League of Legends')
         option_l = st.checkbox('Just Chatting')
         option_i = st.checkbox('All Other Games Combined')
-        
+
     state.games_temp = ['Just Chatting', 'Grand Theft Auto V',
                 'League of Legends',
                 'VALORANT',
