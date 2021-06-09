@@ -25,7 +25,7 @@ from StarFish.data import GCPFileHandler
 from StarFish.twitter import twitter_viewer_locations, get_streamer_data, get_streamer_data_filtered
 import altair as alt
 from StarFish.images import load_image, image_tag, background_image_style
-from StarFish.plots import lineplot, get_10_recent_streams
+from StarFish.plots import lineplot, get_10_recent_streams, time_processing
 import base64
 from StarFish.maps import country_lat_long, city_lat_long, get_map_data
 
@@ -154,6 +154,9 @@ def display_state_values(state):
     state.target_stream = state.stream_df[state.stream_df['User'] == state.target]
     state.target_df = state.feature_df.loc[state.target]
     
+    # updating processing to allow for plots:
+    state.target_stream = time_processing(state.target_stream)
+    
     # import games_df
     state.games_df = pd.read_csv('notebooks/CSVs/Games_df')
     
@@ -199,23 +202,15 @@ def display_state_values(state):
 
 ## trying to implement lineplots
 
-    # state.target_stream['new_date'] = pd.to_datetime(state.target_stream['new_date'])
-    # state.target_stream['month'] = state.target_stream['new_date'].dt.to_period('m')
-    # state.df_grouped = state.target_stream.groupby('month', as_index = False)
-    # st.table(state.df_grouped)
-    # df_grouped['month'] =  df_grouped['month'].astype(str)
+
     # state.new_range = state.target_stream.iloc[::20, :][['AVG Viewers', 'MAX Viewers']]
-    
     # st.table(state.new_range)
-    # st.title('Some other Stuff with plots')
-    # fig.add_trace(st.line_chart(state.new_range))
-    # fig.update_layout(
-    #     showlegend=True,
-    #     uniformtext_minsize=12, 
-    #     uniformtext_mode='hide')
+    
+    st.title('Some other Stuff with plots')
+    fig_line = px.line(lineplot(state.target_stream, 'month', 'AVG Viewers'))
+    st.plotly_chart(fig_line)
 
     # st.plotly_chart(fig)
-    # Functions to retrieve city lat and long
 
     # fig = make_subplots(rows=1, 
     #                     cols=2,
@@ -224,6 +219,7 @@ def display_state_values(state):
     #                     [{"type": "domain"}, {"type": "domain"}]
     #                     ])
     # add a bridge to get twitter name for specific target (StarFish/socials_clean.csv)
+    
     state.socials = pd.read_csv('StarFish/data/socials_clean.csv')
     state.social_target = state.socials[state.socials['username'] == state.target]
     # for Twitter
