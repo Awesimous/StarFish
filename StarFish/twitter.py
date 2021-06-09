@@ -2,9 +2,14 @@ import tweepy as tw
 import pandas as pd
 import geograpy
 from twython import Twython
+import streamlit as st
 
 def twitter_viewer_locations(consumer_key, consumer_secret, access_token,access_token_secret, user, date, item_count):
     '''Takes secrets, username on twitter and starting date (format yyyy-mm-dd)'''
+    consumer_key= 'Xj2jbXn0tQImrpcmciRQ13upY'
+    consumer_secret='BvMGX1tYpo47LI3WfGKUzp1X0ZLyMvGr9K7XZHNnjTijExvJJb'
+    access_token= '798115618243411968-YgIWBpos6NqtipFl6469BQlxrTQnrKl'
+    access_token_secret= 'GRqEHWMOwaipCmLQa1epsWbuE72kOPc34rBDclrl4ygZi'
     auth = tw.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     api = tw.API(auth, wait_on_rate_limit=True)
@@ -31,10 +36,10 @@ def twitter_viewer_locations(consumer_key, consumer_secret, access_token,access_
 #- 100000 in 24h
 
 def get_streamer_data(streamer):
-    consumer_key= 'RBAhyItP3hdDNBH9LpNPTfl4F'
-    consumer_secret='DT0lHHLgNWqhIKlPCqtTw7E3jyIogDqU8u5PUL8lGSUosSSvV2'
-    access_token= '798115618243411968-RiWI7ZbAyZdCD2ZH7XQDHdYA2UTzvK8'
-    access_token_secret= '3wK6v91wmQ3rlOpr0SEw4lnCUKm1NrypJqtNKEKfx7Nzf'
+    consumer_key= 'Xj2jbXn0tQImrpcmciRQ13upY'
+    consumer_secret='BvMGX1tYpo47LI3WfGKUzp1X0ZLyMvGr9K7XZHNnjTijExvJJb'
+    access_token= '798115618243411968-YgIWBpos6NqtipFl6469BQlxrTQnrKl'
+    access_token_secret= 'GRqEHWMOwaipCmLQa1epsWbuE72kOPc34rBDclrl4ygZi'
     python_tweets = Twython(consumer_key, consumer_secret)
     streamer_data=[]
 #     time.sleep(60*15) #run every 15min
@@ -43,6 +48,7 @@ def get_streamer_data(streamer):
     streamer_tweets = pd.DataFrame(streamer_data)
     return streamer_tweets
 
+@st.cache
 def get_streamer_data_filtered(streamer):
     data_streamer_filtered=[]
     for column in get_streamer_data(streamer):
