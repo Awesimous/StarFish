@@ -31,16 +31,31 @@ from StarFish.maps import country_lat_long, city_lat_long, get_map_data
 from StarFish.games_info import games_dict
 
 
-#Download dbs on initial setup
-# print("GCP DOWNLOAD")
-# GCPFileHandler('twitch_data/top_streams_2450.csv')\
-#     .download_from_gcp('StarFish/data/top_streams_2450.csv')
-# print("GCP DOWNLOAD")
-# stream_df = pd.read_csv('StarFish/data/top_streams_2450.csv')
-# print("DOWNLOAD COMPLETE")
-# st.table(stream_df.head())
-
 st.set_page_config(layout="wide", page_icon=":art:", page_title="StarFish")
+
+# Download dbs on initial setup
+print('Going to gcp')
+GCPFileHandler('scraped_data/streamers_clean.csv')\
+    .download_from_gcp('StarFish/data/streamers_clean.csv')
+print('Downloaded streamers')
+
+#stream_df = pd.read_csv('StarFish/data/streamers_clean.csv')
+#st.table(stream_df.head())
+#print('Shown')
+
+GCPFileHandler('scraped_data/socials_clean.csv')\
+    .download_from_gcp('StarFish/data/socials_clean.csv')
+print('Downloaded soc')
+
+GCPFileHandler('scraped_data/games_clean.csv')\
+    .download_from_gcp('StarFish/data/games_clean.csv')
+print('Downloaded games')
+
+GCPFileHandler('scraped_data/top_streams_2450.csv')\
+    .download_from_gcp('StarFish/data/top_streams_2450.csv')
+print('Downloaded top s')
+
+
 
 def main():
     # import all relevant csv files
@@ -83,6 +98,7 @@ def page_settings(state):
     # drop outliers as they make range setting difficult
     state.target_df = state.target_df.drop('ESL_CSGO')
     #make a list with all users in the range
+
     games_dict = {
     'WoW': ['MORE (Multiplayer online role-playing game)', 'Leslie Benzies, Simon Lashley, David Jones, Imran Sarwar, Billy Thomson', 2004 , 14 , '84%'],
     'Grand Theft Auto V': ['Action-Adventure Game', 'David Jones and Mike Dailly', 2013, 13, '95%'],

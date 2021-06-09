@@ -94,14 +94,23 @@ create_bucket:
 	@gsutil mb -l ${REGION} -p ${PROJECT_ID} gs://${BUCKET_NAME}
 
 # File to upload to gcp
-LOCAL_PATH="StarFish/data/top_streams_2450.csv"
+LOCAL_PATH_TOP="StarFish/data/top_streams_2450.csv"
+LOCAL_PATH_STREAMERS="StarFish/data/streamers_clean.csv"
+LOCAL_PATH_SOCIALS="StarFish/data/socials_clean.csv"
+LOCAL_PATH_GAMES="StarFish/data/games_clean.csv"
 
 # Bucket directory in which to store the uploaded file (`data` is an arbitrary name that we choose to use)
-BUCKET_FOLDER=twitch_data
+BUCKET_FOLDER=scraped_data
 
 # Name for the uploaded file inside of the bucket (we choose not to rename the file that we upload)
-BUCKET_FILE_NAME=$(shell basename ${LOCAL_PATH})
+BUCKET_FILE_NAME_TOP=$(shell basename ${LOCAL_PATH_TOP})
+BUCKET_FILE_NAME_STREAMERS=$(shell basename ${LOCAL_PATH_STREAMERS})
+BUCKET_FILE_NAME_SOCIALS=$(shell basename ${LOCAL_PATH_SOCIALS})
+BUCKET_FILE_NAME_GAMES=$(shell basename ${LOCAL_PATH_GAMES})
 
 upload_data:
-	@gsutil cp ${LOCAL_PATH} gs://${BUCKET_NAME}/${BUCKET_FOLDER}/${BUCKET_FILE_NAME}
+	@gsutil cp ${LOCAL_PATH_TOP} gs://${BUCKET_NAME}/${BUCKET_FOLDER}/${BUCKET_FILE_NAME_TOP}
+	@gsutil cp ${LOCAL_PATH_STREAMERS} gs://${BUCKET_NAME}/${BUCKET_FOLDER}/${BUCKET_FILE_NAME_STREAMERS}
+	@gsutil cp ${LOCAL_PATH_SOCIALS} gs://${BUCKET_NAME}/${BUCKET_FOLDER}/${BUCKET_FILE_NAME_SOCIALS}
+	@gsutil cp ${LOCAL_PATH_GAMES} gs://${BUCKET_NAME}/${BUCKET_FOLDER}/${BUCKET_FILE_NAME_GAMES}
 
