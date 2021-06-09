@@ -1,14 +1,28 @@
 import pandas as pd
 import streamlit as st
 
-def lineplot(df, column):
+def time_assignment(x):
+    '''Support function to classify streams by time when they are on air'''
+    if x == 1.0:
+        return 'morning'
+    elif x == 2.0:
+        return 'afternoon'
+    elif x == 3.0:
+        return 'evening'
+    else:
+        return 'night'
+
+def time_processing(df):
+    '''Input a dataframe for streams of individual streamers for datetime processing'''
     df['new_date'] = pd.to_datetime(df['new_date'])
+    df = df[df.new_date > '2015-01-01']
     df['month'] = df['new_date'].dt.to_period('M')
-    df_grouped = df.groupby('month', as_index = False)[[column]].sum()
-    df_grouped['month'] =  df_grouped['month'].astype(str)
-    chart_data = pd.DataFrame(
-        df_grouped[column])
-    return st.line_chart(chart_data)
+    df['month'] =  df['month'].astype(str)
+    df.daytime_classifier = df.daytime_classifier.apply(lambda x: time_assignment(x))
+    return df
+
+def lineplot(df, x, y):
+    return pd.crosstab(df[x], df[y])
 
 def get_10_recent_streams(df, streamer):
     '''gets the 10 most recent streams of each user
@@ -21,5 +35,3 @@ def get_10_recent_streams(df, streamer):
     streamer_df = streamer_df.sort_values(by=['last_seen'], ascending=False)
     ten_recent_streams = streamer_df.head(10)
     return ten_recent_streams
-
-
