@@ -59,8 +59,10 @@ def get_games_data(channels_data):
     '''Retrieve and preprocess games data per streamer from twitchtracker'''
     channels_failed = []
     game_df = pd.DataFrame()
-    for i, streamer in enumerate(channels_data['Username'].to_list()):
+    for i, streamer in enumerate(channels_data['username'].to_list()):
         url = f"https://twitchtracker.com/{streamer.lower()}/games"
+        if i == 3:
+            break
         try:
             df = parse_html(url)
             df['Username'] = streamer
@@ -72,9 +74,8 @@ def get_games_data(channels_data):
         time.sleep(uniform(1,4))
         print(f'#{i}: {streamer}')
 
-    # Write the data to csv
-    game_df.to_csv(f'data/games_clean_large.csv')
-    return channels_failed
+    print(f'Data for {len(channels_failed)} streamers could not be retrieved:\n\n{channels_failed}')
+    return game_df
 
 
 
@@ -84,10 +85,14 @@ if __name__ =='__main__':
     # Define the range of channels and subscribers pages to scrape
     #n_pages = input('How many pages would you like to scrape? ')
 
-    # Write the channel, game, and subs data to file
+    # Channel data
     channels = get_channels_data(50)
     channels.to_csv(f'data/raw/channels.csv')
-    #channels = pd.read_csv('data/raw/channels.csv')
-    fails = get_games_data(channels)
-    fails.to_csv('data/raw/games_fails.csv')
-    #get_subs_data(125).to_csv('data/raw/subs.csv')
+
+    # Game data
+    #channels = pd.read_csv('data/streamers_clean.csv')
+    game_df = get_games_data(channels)
+    game_df.to_csv(f'data/games_clean_large.csv')
+
+    # Subs data
+    get_subs_data(125).to_csv('data/raw/subs.csv')
