@@ -85,7 +85,7 @@ def page_settings(state):
     st.title(":wrench: Set your input")
     #display_state_values(state)
     state.games_df = pd.read_csv('StarFish/data/games_clean.csv')
-    state.stream_df = pd.read_csv('StarFish/data/top_2450.csv')
+    state.stream_df = pd.read_csv('StarFish/data/top_streamers_2450.csv')
     # clean games_df
     state.games_df = clean_gamer_df(state.games_df)
     state.df = pd.read_csv('StarFish/data/streamer_games_clean.csv')
