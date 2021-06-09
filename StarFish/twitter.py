@@ -6,10 +6,6 @@ import streamlit as st
 
 def twitter_viewer_locations(consumer_key, consumer_secret, access_token,access_token_secret, user, date, item_count):
     '''Takes secrets, username on twitter and starting date (format yyyy-mm-dd)'''
-    consumer_key= 'Xj2jbXn0tQImrpcmciRQ13upY'
-    consumer_secret='BvMGX1tYpo47LI3WfGKUzp1X0ZLyMvGr9K7XZHNnjTijExvJJb'
-    access_token= '798115618243411968-YgIWBpos6NqtipFl6469BQlxrTQnrKl'
-    access_token_secret= 'GRqEHWMOwaipCmLQa1epsWbuE72kOPc34rBDclrl4ygZi'
     auth = tw.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     api = tw.API(auth, wait_on_rate_limit=True)
@@ -35,11 +31,7 @@ def twitter_viewer_locations(consumer_key, consumer_secret, access_token,access_
 #- 900 tweets 15 min
 #- 100000 in 24h
 
-def get_streamer_data(streamer):
-    consumer_key= 'Xj2jbXn0tQImrpcmciRQ13upY'
-    consumer_secret='BvMGX1tYpo47LI3WfGKUzp1X0ZLyMvGr9K7XZHNnjTijExvJJb'
-    access_token= '798115618243411968-YgIWBpos6NqtipFl6469BQlxrTQnrKl'
-    access_token_secret= 'GRqEHWMOwaipCmLQa1epsWbuE72kOPc34rBDclrl4ygZi'
+def get_streamer_data(consumer_key, consumer_secret, access_token, access_token_secret, streamer):
     python_tweets = Twython(consumer_key, consumer_secret)
     streamer_data=[]
 #     time.sleep(60*15) #run every 15min
