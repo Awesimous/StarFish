@@ -148,7 +148,7 @@ def display_state_values(state):
     
     # prepare data for plotting (import and process)
     # index streams for one specific user
-    state.stream_df = pd.read_csv('StarFish/data/top_2450.csv')
+    state.stream_df = pd.read_csv('StarFish/data/top_streams_2450.csv')
     
     # selecting df for target
     state.target_stream = state.stream_df[state.stream_df['User'] == state.target]
