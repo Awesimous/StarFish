@@ -7,6 +7,19 @@ import StarFish.twitch as tw
 from google.cloud import storage
 from twitchAPI.twitch import Twitch
 
+def clean_gamer_df(df):
+    df.reset_index(inplace=True)
+    df['Total airtime'] = df['Total airtime'].astype(str).str[:-1]
+    df[['Followers per hour', 'to_remove']] = df['Followers'].str.split(' /',expand=True)
+    df = df.drop(columns = ['Followers', 'to_remove'])
+    df['Total airtime'] = df['Total airtime'].str.split(' ',expand=True)
+    df['Followers per hour'] = df['Followers per hour'].apply(lambda x: float(x))
+    df['Last seen'] = pd.to_datetime(df['Last seen'])
+    df = df.rename(columns = {'#':'id'})
+    df['id'] = df['id'].astype(str).str[1]
+    df = df.set_index('id')
+
+    return df
 
 class GCPFileHandler:
     '''Upload and download arbitrary files from the databases bucket'''
