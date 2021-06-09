@@ -56,6 +56,8 @@ GCPFileHandler('scraped_data/top_streams_2450.csv')\
 print('Downloaded top s')
 
 
+print("I'm a test. See me once or die.")
+
 
 def main():
     # import all relevant csv files
