@@ -28,7 +28,6 @@ from StarFish.images import load_image, image_tag, background_image_style
 from StarFish.plots import lineplot, get_10_recent_streams, time_processing
 import base64
 from StarFish.maps import country_lat_long, city_lat_long, get_map_data
-from StarFish.games_info import games_dict
 
 
 #Download dbs on initial setup
@@ -77,7 +76,7 @@ def page_settings(state):
     state.df = state.df.rename(columns={'Minimum followers gained on average per hour om air' : 'Minimum followers gained on average per hour on air'})
     state.usernames = state.df.Username.to_list()
     state.df_user = state.df.set_index('Username')
-    st.table(state.df.head())
+    #st.table(state.df.head())
     #set usernames as index
     # drop outliers as they make range setting difficult
     #make a list with all users in the range
@@ -101,7 +100,6 @@ def page_settings(state):
     # st.table(state.target_df)
     state.features = st.multiselect('Select which features you are interested in', state.df_user[["AVG Viewers", 'Time Streamed (in hours)','Hours Watched','Followers Gained', 'Total Followers','Total Views','All Time Peak Viewers']].columns)
     state.features = state.df_user[state.features]
-    state.features.dropna(inplace=True)
     state.features = state.features.clip(lower=0)
     if "AVG Viewers" in state.features:
         state.avg_viewer = st.slider('Minimum Average Viewer per Hour', 1, int(state.features['AVG Viewers'].max()), 1000)
