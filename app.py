@@ -29,10 +29,13 @@ from StarFish.plots import lineplot, get_10_recent_streams, time_processing
 import base64
 from StarFish.maps import country_lat_long, city_lat_long, get_map_data
 
+
+
 st.set_page_config(layout="wide", page_icon=":art:", page_title="StarFish")
 
 # Download dbs on initial setup
 print('Going to gcp')
+
 
 #stream_df = pd.read_csv('StarFish/data/streamers_clean.csv')
 #st.table(stream_df.head())
@@ -116,7 +119,6 @@ if "Total Views" in features:
 if "All Time Peak Viewers" in features:
     peak = st.sidebar.slider('Minimum All Time Peak Viewers', 1, int(features['All Time Peak Viewers'].max()), 1000)
     features = features[features['All Time Peak Viewers'] >= peak]
-
     
 st.sidebar.write("Select any of the following social media channels to include:")
 
