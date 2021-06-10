@@ -3,6 +3,9 @@ import pandas as pd
 import geograpy
 from twython import Twython
 import streamlit as st
+import os
+
+
 
 def twitter_viewer_locations(consumer_key, consumer_secret, access_token,access_token_secret, user, date, item_count):
     '''Takes secrets, username on twitter and starting date (format yyyy-mm-dd)'''
@@ -43,10 +46,11 @@ def get_streamer_data(consumer_key, consumer_secret, access_token, access_token_
 
 @st.cache
 def get_streamer_data_filtered(streamer):
-    CONSUMER_KEY='mop8lRIC7KaJ9Y7PipzqyrHkp'
-    CONSUMER_SECRET='ixSlgiVnukR27UPS0WxwHS9FYzaiZ20Z227v7oBly4AG58nRlS'
-    ACCESS_TOKEN='798115618243411968-40hS69bH8sUtSu3HvLMnIONBLkMSB1S'
-    ACCESS_TOKEN_SECRET='W1S9GBFYOWkYGiCvC3I6fXpNxYs2HBMFpeibPBLpVEtsT'
+    CONSUMER_KEY= os.environ.get('CONSUMER_KEY')
+    CONSUMER_SECRET=os.environ.get('CONSUMER_SECRET')
+    ACCESS_TOKEN=os.environ.get('ACCESS_TOKEN')
+    ACCESS_TOKEN_SECRET=os.environ.get('ACCESS_TOKEN_SECRET')
+    print(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
     data_streamer_filtered=[]
     for column in get_streamer_data(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN, ACCESS_TOKEN_SECRET,streamer):
         for row in get_streamer_data(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN, ACCESS_TOKEN_SECRET, streamer)[column]:

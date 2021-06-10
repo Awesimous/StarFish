@@ -169,140 +169,141 @@ if instagram:
     instagram_open = Image.open(instagram_img)
     st.image(instagram_open, width=100)
 
-
-st.write('Display the 5 best streamers (or less):')
 # show dataframe with 5 best streamers based on selection criterias
-top_5 = features.head()
-st.table(top_5)
-col_sort = st.radio('Please select one feature to use for ranking the streamers:', features.columns)
-st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-st.write(f'You selected {col_sort}, good choice!')
-# temp_time = ["morning", "afternoon", "evening", "night"]
-# time = st.radio('Which time you want your star to be streaming at?', temp_time)
-# st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-features = features.sort_values(by=[col_sort], ascending=False).head()
-# select one target to specify data on
-target = st.radio('Do you want to look at any streamer in particular?', top_5.index)
-st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-target_df = features.loc[target]
-#st.bar_chart(targets_df)
-st.title('Top 10 Games for your main target')
-games_target = games_df[games_df['Username'] == target]
-top_games_target = games_target.sort_values(by=['AVG Viewers']).head()
-top_games_sample = games_df.sort_values(by=['AVG Viewers']).head()
+if not features.empty:
+    st.write('Display the 5 best streamers (or less):')
+    top_5 = features.head()
+    st.table(top_5)
+    col_sort = st.radio('Please select one feature to use for ranking the streamers:', features.columns)
+    st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+    st.write(f'You selected {col_sort}, good choice!')
+    top_5 = features.sort_values(by=[col_sort], ascending=False).head()
+    # temp_time = ["morning", "afternoon", "evening", "night"]
+    # time = st.radio('Which time you want your star to be streaming at?', temp_time)
+    # st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 
-fig = go.Pie(labels=top_games_target["Game"], values= top_games_target["AVG Viewers"])
+    # select one target to specify data on
+    target = st.radio('Do you want to look at any streamer in particular?', top_5.index)
+    st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+    target_df = df_user.loc[target]
+    #st.bar_chart(targets_df)
+    st.title('Top 10 Games for your main target')
+    games_target = games_df[games_df['Username'] == target]
+    top_games_target = games_target.sort_values(by=['AVG Viewers']).head()
+    top_games_sample = games_df.sort_values(by=['AVG Viewers']).head()
 
-st.write(fig)
+    # fig = go.Pie(labels=top_games_target["Game"], values= top_games_target["AVG Viewers"])
 
-# fig = make_subplots(rows=1, 
-#                     cols=2,
-#                     subplot_titles=("Pie 1", "Pie 2"), 
-#                     specs=[
-#                     [{"type": "domain"}, {"type": "domain"}]
-#                     ])
-# fig.add_trace(go.Pie(labels=target_games_df["Game"]), 1, 1)
-# fig.add_trace(go.Pie(labels=target_games_df["Game"]), 1, 2)
-# fig.update_layout(
-#     showlegend=True,
-#     uniformtext_minsize=12, 
-#     uniformtext_mode='hide')
+    # st.write(fig)
 
-# fig, ax1 = plt.subplots(figsize=(10, 5))
-# plt.figure(figsize=(10, 5))
+    # fig = make_subplots(rows=1, 
+    #                     cols=2,
+    #                     subplot_titles=("Pie 1", "Pie 2"), 
+    #                     specs=[
+    #                     [{"type": "domain"}, {"type": "domain"}]
+    #                     ])
+    # fig.add_trace(go.Pie(labels=target_games_df["Game"]), 1, 1)
+    # fig.add_trace(go.Pie(labels=target_games_df["Game"]), 1, 2)
+    # fig.update_layout(
+    #     showlegend=True,
+    #     uniformtext_minsize=12, 
+    #     uniformtext_mode='hide')
 
-# def label_function(val):
-#     return f'{val:.0f}%'
+    # fig, ax1 = plt.subplots(figsize=(10, 5))
+    # plt.figure(figsize=(10, 5))
 
-# fig, ax1 = plt.subplots(figsize=(10, 5))
-# plt.figure(figsize=(10, 5))
-# data_df = pd.DataFrame(top_games[["Game", "AVG Viewers"]])
-# data_df.size().plot(
-#     kind='pie',
-#     colors=['tomato', 'lightgrey', '#b5eb9a'],
-#     autopct=label_function,
-#     ax=ax1)
-# st.write(fig)
+    # def label_function(val):
+    #     return f'{val:.0f}%'
 
-
-# st.title("Overview of 5 most recent live sessions on Twitch")
-# st.table(recent_streams.head())
-#plot the data
-
-
-
-
-# for Twitter
-twitter_name = df[df['Username'] == target]['Twitter']
-c6, c7 = st.beta_columns((1, 1))
-
-if twitter_name.iloc[0]:
-    st.title('Twitter')
-    image_path = 'images/Twitter.png'
-    image_link = f'https://twitter.com/{twitter_name.iloc[0]}'
-    st.write('Click here to get redirected to the Streamer Twitter Page!')
-    st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
-    if st.checkbox('Show background image Twitter', False):
-        st.write(background_image_style(image_path), unsafe_allow_html=True)
-    
-    twitter_df = get_streamer_data_filtered(twitter_name.iloc[0])
-    st.table(twitter_df[['text', 'retweet_count']])
-else:  
-    st.info('No Data found on Twitter for that Twitch User')
-yt_id = df_user.loc[target, ['YouTube']][0]
-yt_df = df_user[['YT Viewcount', 'YT Subscribers', 'YT Videocount']]
-if yt_id != 'nan':
-    st.title('YouTube')
-    image_path = 'images/YouTube.png'
-    image_link = f'https://youtube.com/{yt_id}'
-    st.write('Click here to get redirected to the Streamer YouTube Page!')
-    st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
-    if st.checkbox('Show background image YouTube', False):
-        st.write(background_image_style(image_path), unsafe_allow_html=True)
-    st.table(df_user.loc[target])
+    # fig, ax1 = plt.subplots(figsize=(10, 5))
+    # plt.figure(figsize=(10, 5))
+    # data_df = pd.DataFrame(top_games[["Game", "AVG Viewers"]])
+    # data_df.size().plot(
+    #     kind='pie',
+    #     colors=['tomato', 'lightgrey', '#b5eb9a'],
+    #     autopct=label_function,
+    #     ax=ax1)
+    # st.write(fig)
 
 
-# expander=st.beta_expander("expand")
-# with expander:
-#     fig = make_subplots(rows=1, 
-#                         cols=2,
-#                         subplot_titles=("Pie 1", "Pie 2"), 
-#                         specs=[
-#                         [{"type": "domain"}, {"type": "domain"}]
-#                         ])
-#     fig.add_trace(go.Pie(labels=top_10_followers_gained["Game"], values=top_10_followers_gained['Followers per hour']), 1, 1)
-#     fig.add_trace(go.Pie(labels=top_games_followers_gained["Game"], values=top_games_followers_gained['Followers per hour']), 1, 2)
-#     fig.update_layout(
-#         showlegend=True,
-#         uniformtext_minsize=12, 
-#         uniformtext_mode='hide')
-
-#     st.plotly_chart(fig)
-
-st.write(df)
-locations = df.loc[target,['Twitter Community Locations']]
-cities = locations['cities']
-print = get_map_data(cities)
-st.map(print)
+    # st.title("Overview of 5 most recent live sessions on Twitch")
+    # st.table(recent_streams.head())
+    #plot the data
 
 
 
-# words = [
-#     dict(text="Robinhood", value=16000, color="#b5de2b", country="US", industry="Cryptocurrency"),
-#     dict(text="Personio", value=8500, color="#b5de2b", country="DE", industry="Human Resources"),
-#     dict(text="Boohoo", value=6700, color="#b5de2b", country="UK", industry="Beauty"),
-#     dict(text="Deliveroo", value=13400, color="#b5de2b", country="UK", industry="Delivery"),
-#     dict(text="SumUp", value=8300, color="#b5de2b", country="UK", industry="Credit Cards"),
-#     dict(text="CureVac", value=12400, color="#b5de2b", country="DE", industry="BioPharma"),
-#     dict(text="Deezer", value=10300, color="#b5de2b", country="FR", industry="Music Streaming"),
-#     dict(text="Eurazeo", value=31, color="#b5de2b", country="FR", industry="Asset Management"),
-#     dict(text="Drift", value=6000, color="#b5de2b", country="US", industry="Marketing Automation"),
-#     dict(text="Twitch", value=4500, color="#b5de2b", country="US", industry="Social Media"),
-#     dict(text="Plaid", value=5600, color="#b5de2b", country="US", industry="FinTech"),
-# ]
-# return_obj = wordcloud.visualize(words, tooltip_data_fields={
-#     'text':'Company', 'value':'Mentions', 'country':'Country of Origin', 'industry':'Industry'
-# }, per_word_coloring=False)
-# if st.button("Clear state"):
-#         clear()
+
+    # for Twitter
+    twitter_name = df[df['Username'] == target]['Twitter']
+    c6, c7 = st.beta_columns((1, 1))
+
+    if twitter_name.iloc[0]:
+        st.title('Twitter')
+        image_path = 'images/Twitter.png'
+        image_link = f'https://twitter.com/{twitter_name.iloc[0]}'
+        st.write('Click here to get redirected to the Streamer Twitter Page!')
+        st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
+        if st.checkbox('Show background image Twitter', False):
+            st.write(background_image_style(image_path), unsafe_allow_html=True)
+        
+        twitter_df = get_streamer_data_filtered(twitter_name.iloc[0])
+        st.table(twitter_df[['text', 'retweet_count']])
+    else:  
+        st.info('No Data found on Twitter for that Twitch User')
+    yt_id = df_user.loc[target, ['YouTube']][0]
+    yt_df = df_user[['YT Viewcount', 'YT Subscribers', 'YT Videocount']]
+    if yt_id != 'nan':
+        st.title('YouTube')
+        image_path = 'images/YouTube.png'
+        image_link = f'https://youtube.com/{yt_id}'
+        st.write('Click here to get redirected to the Streamer YouTube Page!')
+        st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
+        if st.checkbox('Show background image YouTube', False):
+            st.write(background_image_style(image_path), unsafe_allow_html=True)
+        st.table(df_user.loc[target])
+
+
+    # expander=st.beta_expander("expand")
+    # with expander:
+    #     fig = make_subplots(rows=1, 
+    #                         cols=2,
+    #                         subplot_titles=("Pie 1", "Pie 2"), 
+    #                         specs=[
+    #                         [{"type": "domain"}, {"type": "domain"}]
+    #                         ])
+    #     fig.add_trace(go.Pie(labels=top_10_followers_gained["Game"], values=top_10_followers_gained['Followers per hour']), 1, 1)
+    #     fig.add_trace(go.Pie(labels=top_games_followers_gained["Game"], values=top_games_followers_gained['Followers per hour']), 1, 2)
+    #     fig.update_layout(
+    #         showlegend=True,
+    #         uniformtext_minsize=12, 
+    #         uniformtext_mode='hide')
+
+    #     st.plotly_chart(fig)
+
+    st.write(df)
+    locations = df.loc[target,['Twitter Community Locations']]
+    cities = locations['cities']
+    print = get_map_data(cities)
+    st.map(print)
+
+
+
+    # words = [
+    #     dict(text="Robinhood", value=16000, color="#b5de2b", country="US", industry="Cryptocurrency"),
+    #     dict(text="Personio", value=8500, color="#b5de2b", country="DE", industry="Human Resources"),
+    #     dict(text="Boohoo", value=6700, color="#b5de2b", country="UK", industry="Beauty"),
+    #     dict(text="Deliveroo", value=13400, color="#b5de2b", country="UK", industry="Delivery"),
+    #     dict(text="SumUp", value=8300, color="#b5de2b", country="UK", industry="Credit Cards"),
+    #     dict(text="CureVac", value=12400, color="#b5de2b", country="DE", industry="BioPharma"),
+    #     dict(text="Deezer", value=10300, color="#b5de2b", country="FR", industry="Music Streaming"),
+    #     dict(text="Eurazeo", value=31, color="#b5de2b", country="FR", industry="Asset Management"),
+    #     dict(text="Drift", value=6000, color="#b5de2b", country="US", industry="Marketing Automation"),
+    #     dict(text="Twitch", value=4500, color="#b5de2b", country="US", industry="Social Media"),
+    #     dict(text="Plaid", value=5600, color="#b5de2b", country="US", industry="FinTech"),
+    # ]
+    # return_obj = wordcloud.visualize(words, tooltip_data_fields={
+    #     'text':'Company', 'value':'Mentions', 'country':'Country of Origin', 'industry':'Industry'
+    # }, per_word_coloring=False)
+    # if st.button("Clear state"):
+    #         clear()
