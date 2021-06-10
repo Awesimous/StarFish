@@ -129,27 +129,27 @@ features = st.sidebar.multiselect('Select which features you are interested in',
 features = df_user[features]
 features = features.clip(lower=0)
 if "AVG Viewers" in features:
-    avg_viewer = st.sidebar.slider('Minimum Average Viewer per Hour', 1, int(features['AVG Viewers'].max()), 1000)
+    avg_viewer = st.sidebar.slider('Minimum Average Viewer per Hour', 1, int(np.array(features['AVG Viewers']).max()), 1000)
     features = features[features['AVG Viewers'] >= avg_viewer]
 if "Time Streamed (in hours)" in features:
-    time_streamed = st.sidebar.slider('Minimum time streamed in total hours', 1, int(features['Time Streamed (in hours)'].max()), 1000)
+    time_streamed = st.sidebar.slider('Minimum time streamed in total hours', 1, int(np.array(features['Time Streamed (in hours)']).max()), 1000)
     features = features[features['Time Streamed (in hours)'] >= time_streamed]
 if 'Hours Watched' in features:
-    hours_watched = st.sidebar.slider('Minimum hours watched', 1, int(features['Hours Watched'].max()), 1000)
+    hours_watched = st.sidebar.slider('Minimum hours watched', 1, int(np.array(features['Hours Watched']).max()), 1000)
     features = features[features['Hours Watched'] >= hours_watched]
 if 'Followers Gained' in features:
-    followers_hour = st.sidebar.slider('Minimum followers gained on average per hour on air', 1, int(features['Followers Gained'].max()), 1000)
+    followers_hour = st.sidebar.slider('Minimum followers gained on average per hour on air', 1, int(np.array(features['Followers Gained']).max()), 1000)
     features = features[features['Followers Gained'] >= followers_hour]
 if "Total Followers" in features:
-    total_follower = st.sidebar.slider('Minimum Total Follower', 1, int(features['Total Followers'].max()), 1000)
+    total_follower = st.sidebar.slider('Minimum Total Follower', 1, int(np.array(features['Total Followers']).max()), 1000)
     features = features[features['Total Followers'] >= total_follower]
 if "Total Views" in features:
-    total_views = st.sidebar.slider('Minimum Total Views', 1, int(features['Total Views'].max()), 1000)
+    total_views = st.sidebar.slider('Minimum Total Views', 1, int(np.array(features['Total Views']).max()), 1000)
     features = features[features['Total Views'] >= total_views]
 if "All Time Peak Viewers" in features:
-    peak = st.sidebar.slider('Minimum All Time Peak Viewers', 1, int(features['All Time Peak Viewers'].max()), 1000)
+    peak = st.sidebar.slider('Minimum All Time Peak Viewers', 1, int(np.array(features['All Time Peak Viewers']).max()), 1000)
     features = features[features['All Time Peak Viewers'] >= peak]
-    
+
 st.sidebar.write("Select any of the following social media channels to include:")
 
 twitter = st.sidebar.checkbox('Twitter')
@@ -162,7 +162,7 @@ if youtube:
     youtube_img ="images/YouTube.png"
     youtube_open = Image.open(youtube_img)
     st.image(youtube_open, width=150)
-    
+
 instagram = st.sidebar.checkbox('Instagram')
 if instagram:
     instagram_img ="images/Instagram.png"
@@ -196,9 +196,9 @@ fig = go.Pie(labels=top_games_target["Game"], values= top_games_target["AVG View
 
 st.write(fig)
 
-# fig = make_subplots(rows=1, 
+# fig = make_subplots(rows=1,
 #                     cols=2,
-#                     subplot_titles=("Pie 1", "Pie 2"), 
+#                     subplot_titles=("Pie 1", "Pie 2"),
 #                     specs=[
 #                     [{"type": "domain"}, {"type": "domain"}]
 #                     ])
@@ -206,7 +206,7 @@ st.write(fig)
 # fig.add_trace(go.Pie(labels=target_games_df["Game"]), 1, 2)
 # fig.update_layout(
 #     showlegend=True,
-#     uniformtext_minsize=12, 
+#     uniformtext_minsize=12,
 #     uniformtext_mode='hide')
 
 # fig, ax1 = plt.subplots(figsize=(10, 5))
@@ -245,10 +245,10 @@ if twitter_name.iloc[0]:
     st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
     if st.checkbox('Show background image Twitter', False):
         st.write(background_image_style(image_path), unsafe_allow_html=True)
-    
+
     twitter_df = get_streamer_data_filtered(twitter_name.iloc[0])
     st.table(twitter_df[['text', 'retweet_count']])
-else:  
+else:
     st.info('No Data found on Twitter for that Twitch User')
 yt_id = df_user.loc[target, ['YouTube']][0]
 yt_df = df_user[['YT Viewcount', 'YT Subscribers', 'YT Videocount']]
@@ -265,9 +265,9 @@ if yt_id != 'nan':
 
 # expander=st.beta_expander("expand")
 # with expander:
-#     fig = make_subplots(rows=1, 
+#     fig = make_subplots(rows=1,
 #                         cols=2,
-#                         subplot_titles=("Pie 1", "Pie 2"), 
+#                         subplot_titles=("Pie 1", "Pie 2"),
 #                         specs=[
 #                         [{"type": "domain"}, {"type": "domain"}]
 #                         ])
@@ -275,7 +275,7 @@ if yt_id != 'nan':
 #     fig.add_trace(go.Pie(labels=top_games_followers_gained["Game"], values=top_games_followers_gained['Followers per hour']), 1, 2)
 #     fig.update_layout(
 #         showlegend=True,
-#         uniformtext_minsize=12, 
+#         uniformtext_minsize=12,
 #         uniformtext_mode='hide')
 
 #     st.plotly_chart(fig)
