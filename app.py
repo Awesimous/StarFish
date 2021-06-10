@@ -261,7 +261,7 @@ if not features.empty:
         st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
         if st.checkbox('Show background image YouTube', False):
             st.write(background_image_style(image_path), unsafe_allow_html=True)
-        st.table(yt_id)
+        st.table(yt_df)
 
 
     # expander=st.beta_expander("expand")
