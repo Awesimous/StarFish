@@ -261,10 +261,10 @@ if not features.empty:
             
             twitter_df = get_streamer_data_filtered(twitter_name.iloc[0])
             st.subheader(f'Interesting Twitter Stats for {target}')
-            st.table(twitter_df[['user','name','location', 'followers_count', 'friends_count']])
-            twitter_df = twitter_df.reindex('created_at')
+            st.table(twitter_df[['Username','Name','Location', 'Followers_count', 'Friends_count']])
+            twitter_df = twitter_df.reindex('Created_at')
             st.subheader(f'Here are the most recent Tweets for {target}')
-            st.table(twitter_df[['text', 'retweet_count']])
+            st.table(twitter_df[['Text', 'Retweet_count']])
         else:  
             st.info('No Data found on Twitter for that Twitch User')
     st.write('')
