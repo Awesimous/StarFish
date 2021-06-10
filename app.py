@@ -260,11 +260,12 @@ if not features.empty:
             st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
             
             twitter_df = get_streamer_data_filtered(twitter_name.iloc[0])
+            twitter_user = twitter_df.set_index('Username')
             st.subheader(f'Interesting Twitter Stats for {target}')
-            st.table(twitter_df[['Username','Name','Location', 'Followers_count', 'Friends_count']].iloc[0])
-            twitter_df = twitter_df.set_index('Created_at')
+            st.table(twitter_user[['Username','Name','Location', 'Followers_count', 'Friends_count']].iloc[0])
+            twitter_tweets = twitter_df.set_index('Created_at')
             st.subheader(f'Here are the most recent Tweets for {target}')
-            st.table(twitter_df[['Text', 'Retweet_count']])
+            st.table(twitter_tweets[['Text', 'Retweet_count']])
         else:  
             st.info('No Data found on Twitter for that Twitch User')
     st.write('')
