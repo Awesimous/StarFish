@@ -30,7 +30,7 @@ from StarFish.images import load_image, image_tag, background_image_style
 from StarFish.plots import lineplot, get_10_recent_streams, time_processing
 from StarFish.maps import country_lat_long, city_lat_long, get_map_data
 import ast
-
+from datetime import datetime
 
 st.set_page_config(layout="wide", page_icon=":art:", page_title="StarFish")
 
@@ -152,9 +152,9 @@ if 'Followers Gained' in features:
 if "Total Followers" in features:
     total_follower = st.sidebar.slider('Minimum Total Follower', 1, int(np.array(features['Total Followers']).max()), 1)
     features = features[features['Total Followers'] >= total_follower]
-if "Total Views" in features:
-    total_views = st.sidebar.slider('Minimum Total Views', 1, int(np.array(features['Total Views']).max()), 1)
-    features = features[features['Total Views'] >= total_views]
+# if "Total Views" in features:
+#     total_views = st.sidebar.slider('Minimum Total Views', 1, int(np.array(features['Total Views']).max()), 1)
+#     features = features[features['Total Views'] >= total_views]
 if "All Time Peak Viewers" in features:
     peak = st.sidebar.slider('Minimum All Time Peak Viewers', 1, int(np.array(features['All Time Peak Viewers']).max()), 1)
     features = features[features['All Time Peak Viewers'] >= peak]
@@ -298,6 +298,7 @@ if not features.empty:
         cities = locations.get('cities', None)
         countries = locations.get('countries', None)
         if cities:
+            st.subheader(f'Let\'s have a look at where {target}\'s community is')
             print = pd.concat([get_map_data(cities),get_map_data(countries)], axis=0, ignore_index=True)
             st.map(print, zoom=2)
         else: 
