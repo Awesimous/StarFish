@@ -31,6 +31,7 @@ def twitter_viewer_locations(consumer_key, consumer_secret, access_token,access_
 #- 900 tweets 15 min
 #- 100000 in 24h
 
+
 def get_streamer_data(consumer_key, consumer_secret, access_token, access_token_secret, streamer):
     python_tweets = Twython(consumer_key, consumer_secret)
     streamer_data=[]
@@ -42,9 +43,13 @@ def get_streamer_data(consumer_key, consumer_secret, access_token, access_token_
 
 @st.cache
 def get_streamer_data_filtered(streamer):
+    CONSUMER_KEY='mop8lRIC7KaJ9Y7PipzqyrHkp'
+    CONSUMER_SECRET='ixSlgiVnukR27UPS0WxwHS9FYzaiZ20Z227v7oBly4AG58nRlS'
+    ACCESS_TOKEN='798115618243411968-40hS69bH8sUtSu3HvLMnIONBLkMSB1S'
+    ACCESS_TOKEN_SECRET='W1S9GBFYOWkYGiCvC3I6fXpNxYs2HBMFpeibPBLpVEtsT'
     data_streamer_filtered=[]
-    for column in get_streamer_data(streamer):
-        for row in get_streamer_data(streamer)[column]:
+    for column in get_streamer_data(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN, ACCESS_TOKEN_SECRET,streamer):
+        for row in get_streamer_data(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_TOKEN, ACCESS_TOKEN_SECRET, streamer)[column]:
             id_new = row["id"]
             text = row["text"]
             try:

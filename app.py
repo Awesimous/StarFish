@@ -69,19 +69,17 @@ def page_dashboard(state):
 def page_settings(state):
     st.title(":wrench: Set your input")
     #display_state_values(state)
-    state.games_df = pd.read_csv('StarFish/data/games_clean.csv')
-    state.stream_df = pd.read_csv('StarFish/data/top_2450.csv')
-    # clean games_df
-    state.games_df = clean_gamer_df(state.games_df)
-    state.df = pd.read_csv('StarFish/data/streamer_games_clean.csv')
-    state.df = state.df.drop(columns="Unnamed: 0")
-    # create a range of 200 users
-    state.target_df = state.df[500:700]
-    state.usernames = state.target_df.username.to_list()
+    state.games_df = pd.read_csv('StarFish/data/games_sample.csv')
+    ## we might want to implement some plots with data from bigger streamer as for our sample there is a problem to retrieve the data (more info with Simon)
+    #state.stream_df = pd.read_csv('StarFish/data/top_2450.csv')
+
+    state.df = pd.read_csv('StarFish/data/sample_df.csv')
+    state.df = state.df.rename(columns={'Minimum followers gained on average per hour om air' : 'Minimum followers gained on average per hour on air'})
+    state.usernames = state.df.Username.to_list()
+    state.df_user = state.df.set_index('Username')
+    st.table(state.df.head())
     #set usernames as index
-    state.target_df = state.df[500:700].set_index('username')
     # drop outliers as they make range setting difficult
-    state.target_df = state.target_df.drop('ESL_CSGO')
     #make a list with all users in the range
     games_dict = {
     'WoW': ['MORE (Multiplayer online role-playing game)', 'Leslie Benzies, Simon Lashley, David Jones, Imran Sarwar, Billy Thomson', 2004 , 14 , '84%'],
@@ -96,14 +94,17 @@ def page_settings(state):
     st.write("---")
     #st.table(state.target_df)
     #state.feature_df = state.target_df[state.features]
-    st.write('Select games you think could be interesting for your product:')
-    state.games_selection = st.multiselect('Select games you are interested in:', list(state.games_info.index.values))
-    
-    
-    state.features = st.multiselect('Select which features you are interested in', state.target_df.columns)
-    state.features = state.target_df[state.features]
+    # st.write('Select games you think could be interesting for your product:')
+    # state.games_selection = st.multiselect('Select games you are interested in:', list(state.games_info.index.values))
+    # state.target_df["10 most played games"]= state.target_df["10 most played games"].str.join('')
+    # state.target_df = state.target_df[state.target_df['10 most played games'].isin(state.games_selection)]
+    # st.table(state.target_df)
+    state.features = st.multiselect('Select which features you are interested in', state.df_user[["AVG Viewers", 'Time Streamed (in hours)','Hours Watched','Followers Gained', 'Total Followers','Total Views','All Time Peak Viewers']].columns)
+    state.features = state.df_user[state.features]
+    state.features.dropna(inplace=True)
+    state.features = state.features.clip(lower=0)
     if "AVG Viewers" in state.features:
-        state.avg_viewer = st.slider('Minimum Average Viewer per Hour', 1, int(state.target_df['AVG Viewers'].max()), 1000)
+        state.avg_viewer = st.slider('Minimum Average Viewer per Hour', 1, int(state.features['AVG Viewers'].max()), 1000)
         state.features = state.features[state.features['AVG Viewers'] >= state.avg_viewer]
     if "Time Streamed (in hours)" in state.features:
         state.time_streamed = st.slider('Minimum time streamed in total hours', 1, int(state.features['Time Streamed (in hours)'].max()), 1000)
@@ -112,7 +113,7 @@ def page_settings(state):
         state.hours_watched = st.slider('Minimum hours watched', 1, int(state.features['Hours Watched'].max()), 1000)
         state.features = state.features[state.features['Hours Watched'] >= state.hours_watched]
     if 'Followers Gained' in state.features:
-        state.followers_hour = st.slider('Minimum followers gained on average per hour om air', 1, int(state.features['Followers Gained'].max()), 1000)
+        state.followers_hour = st.slider('Minimum followers gained on average per hour on air', 1, int(state.features['Followers Gained'].max()), 1000)
         state.features = state.features[state.features['Followers Gained'] >= state.followers_hour]
     if "Total Followers" in state.features:
         state.total_follower = st.slider('Minimum Total Follower', 1, int(state.features['Total Followers'].max()), 1000)
@@ -122,15 +123,8 @@ def page_settings(state):
         state.features = state.features[state.features['Total Views'] >= state.total_views]
     if "All Time Peak Viewers" in state.features:
         state.peak = st.slider('Minimum All Time Peak Viewers', 1, int(state.features['All Time Peak Viewers'].max()), 1000)
-        state.features = state.features[state.target_df['All Time Peak Viewers'] >= state.peak]
+        state.features = state.features[state.features['All Time Peak Viewers'] >= state.peak]
 
-    # #if state.features:
-    # state.col_sort = st.radio('Select feature to sort on:', state.target_df.columns)
-    # st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-    # st.write(f'You selected {state.col_sort}!')
-    state.temp_time = ["morning", "afternoon", "evening", "night"]
-    state.time = st.radio('Which time you want your star to be streaming at?', state.temp_time)
-    st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     
     st.write("Select any of the following social media channels to include:")
     c3, c4, c5 = st.beta_columns((1, 1, 1))
@@ -152,130 +146,75 @@ def page_settings(state):
             instagram_img ="images/Instagram.png"
             instagram_open = Image.open(instagram_img)
             st.image(instagram_open, width=100)
-    # with c1:
-    #     game_1 = st.checkbox('WoW')
-    #     game_2 = st.checkbox('Grand Theft Auto V')
-    #     game_3 = st.checkbox('VALORANT')
-    #     game_4 = st.checkbox('Call of Duty: Warzone')
-    #     game_5 = st.checkbox('Minecraft')
-    # with c2:
-    #     option_c = st.checkbox('Fortnite')
-    #     option_b = st.checkbox('League of Legends')
-    #     option_l = st.checkbox('Just Chatting')
-    #     option_i = st.checkbox('All Other Games Combined')
 
 
 def display_state_values(state):
-    st.write('Display the 5 best streamers (or less) based on your chosen categories:')
+    st.write('Display the 5 best streamers (or less) based on average viewer:')
     # show dataframe with 5 best streamers based on selection criterias
-    state.feature_df = state.feature_df.sort_values(by=[state.col_sort], ascending=False).head()
-    st.table(state.feature_df)
-    # select one target to specify data on
-    state.target = st.radio('Do you want to look at any streamer in particular?', state.feature_df.index)
+    state.top_5 = state.features.head()
+    st.table(state.top_5)
+    state.col_sort = st.radio('Please select one feature to use for ranking the streamers:', state.features.columns)
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+    st.write(f'You selected {state.col_sort}, good choice!')
+    # state.temp_time = ["morning", "afternoon", "evening", "night"]
+    # state.time = st.radio('Which time you want your star to be streaming at?', state.temp_time)
+    # st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+    state.features = state.features.sort_values(by=[state.col_sort], ascending=False).head()
+    # select one target to specify data on
+    state.target = st.radio('Do you want to look at any streamer in particular?', state.top_5.index)
+    st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+    state.target_df = state.features.loc[state.target]
+    #st.bar_chart(state.targets_df)
+    st.title('Top 10 Games for your main target')
+    state.games_target = state.games_df[state.games_df['Username'] == state.target]
+    state.top_games_target = state.games_target.sort_values(by=['AVG Viewers']).head()
+    state.top_games_sample = state.games_df.sort_values(by=['AVG Viewers']).head()
+    
+    fig = go.Pie(labels=state.top_games_target["Game"], values= state.top_games_target["AVG Viewers"])
 
-    # with c1:
-    #     expander=st.beta_expander("expand")
-    #     with expander:
-    #         state.games_df = pd.read_csv('StarFish/data/games_clean.csv')
-    #         state.top_games_max_viewers = state.games_df.sort_values(by = ['Avg. viewers'], ascending=False)
-    #         state.top_10 = state.top_games_max_viewers.head(10)
+    st.write(fig)
+    
+    # fig, ax1 = plt.subplots(figsize=(10, 5))
+    # plt.figure(figsize=(10, 5))
+    
+    # def label_function(val):
+    #     return f'{val:.0f}%'
 
-    #         fig = make_subplots(rows=1, cols=2)
-    #         #fig = px.pie(state.top_10)
-    #         fig.add_trace(go.pie(state.top_10, values='Max. viewers', names='Game', 
-    #                             title='Max Viewers Top 10 Games', 
-    #                             color_discrete_sequence=px.colors.sequential.RdBu),
-    #                     row=1,col=1)
+    # fig, ax1 = plt.subplots(figsize=(10, 5))
+    # plt.figure(figsize=(10, 5))
+    # state.data_df = pd.DataFrame(state.top_games[["Game", "AVG Viewers"]])
+    # state.data_df.size().plot(
+    #     kind='pie',
+    #     colors=['tomato', 'lightgrey', '#b5eb9a'],
+    #     autopct=label_function,
+    #     ax=ax1)
+    # st.write(fig)
 
-    #         fig.update_layout(height=300, width=800, title_text="Side By Side Subplots")
 
-    #         g = st.plotly_chart(fig)
-        #c4, c5, c6 = st.beta_columns((1, 1, 2))
-    
-    # prepare data for plotting (import and process)
-    # index streams for one specific user
-    
-    
-    # selecting df for target
-    state.target_stream = state.stream_df[state.stream_df['User'] == state.target]
-    state.target_df = state.feature_df.loc[state.target]
-    
-    # updating processing to allow for plots:
-    state.target_stream = time_processing(state.target_stream)
-    
-    # import games_df
-    state.games_df = pd.read_csv('notebooks/CSVs/Games_df')
-    
-    state.target_games_df = state.games_df[state.games_df['User'] == state.target]
-    state.top_games_max_viewers = state.target_games_df.sort_values(by = ['Avg. viewers'], ascending=False)
-    st.title("Games with the most Viewers for the chosen streamer")
-    st.table(state.top_games_max_viewers.head(5))
-    state.top_games_followers_gained = state.target_games_df.sort_values(by =['Followers per hour'], ascending=False)
-    state.recent_streams = get_10_recent_streams(state.stream_df, state.target)
-    st.title("Overview of 5 most recent live sessions on Twitch")
-    st.table(state.recent_streams.head())
+    # st.title("Overview of 5 most recent live sessions on Twitch")
+    # st.table(state.recent_streams.head())
     #plot the data
     
-    fig = make_subplots(rows=1, 
-                        cols=2,
-                        subplot_titles=("Pie 1", "Pie 2"), 
-                        specs=[
-                        [{"type": "domain"}, {"type": "domain"}]
-                        ])
-    fig.add_trace(go.Pie(labels=state.target_games_df["Game"]), 1, 1)
-    fig.add_trace(go.Pie(labels=state.target_games_df["Game"]), 1, 2)
-    fig.update_layout(
-        showlegend=True,
-        uniformtext_minsize=12, 
-        uniformtext_mode='hide')
-
-    st.plotly_chart(fig)
-
-    fig = make_subplots(rows=1, 
-                        cols=2,
-                        subplot_titles=("Pie 1", "Pie 2"), 
-                        specs=[
-                        [{"type": "domain"}, {"type": "domain"}]
-                        ])
-    fig.add_trace(go.Pie(labels=state.recent_streams['Duration'], values=state.recent_streams['AVG Viewers']), 1, 1)
-    fig.add_trace(go.Pie(labels=state.recent_streams['AVG Viewers'], values=state.recent_streams['daytime_classifier']), 1, 2)
-    fig.update_layout(
-        showlegend=True,
-        uniformtext_minsize=12, 
-        uniformtext_mode='hide')
-
-    st.plotly_chart(fig)
-
-## trying to implement lineplots
-
-
-    # state.new_range = state.target_stream.iloc[::20, :][['AVG Viewers', 'MAX Viewers']]
-    # st.table(state.new_range)
-    
-    st.title('Some other Stuff with plots')
-    fig_line = px.line(lineplot(state.target_stream, 'month', 'AVG Viewers'))
-    st.plotly_chart(fig_line)
-
-    # st.plotly_chart(fig)
-
     # fig = make_subplots(rows=1, 
     #                     cols=2,
     #                     subplot_titles=("Pie 1", "Pie 2"), 
     #                     specs=[
     #                     [{"type": "domain"}, {"type": "domain"}]
     #                     ])
-    # add a bridge to get twitter name for specific target (StarFish/socials_clean.csv)
-    
-    state.socials = pd.read_csv('StarFish/data/socials_clean.csv')
-    state.social_target = state.socials[state.socials['username'] == state.target]
+    # fig.add_trace(go.Pie(labels=state.target_games_df["Game"]), 1, 1)
+    # fig.add_trace(go.Pie(labels=state.target_games_df["Game"]), 1, 2)
+    # fig.update_layout(
+    #     showlegend=True,
+    #     uniformtext_minsize=12, 
+    #     uniformtext_mode='hide')
+
+
     # for Twitter
-    state.twitter_name = state.social_target['Twitter']
-    st.write(state.twitter_name.iloc[0])
+    state.twitter_name = state.df[state.df['Username'] == state.target]['Twitter']
     c6, c7 = st.beta_columns((1, 1))
 
     with c6:
-        if state.twitter == True:
+        if state.twitter_name.iloc[0]:
             st.title('Twitter')
             image_path = 'images/Twitter.png'
             image_link = f'https://twitter.com/{state.twitter_name.iloc[0]}'
@@ -283,29 +222,24 @@ def display_state_values(state):
             st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
             if st.checkbox('Show background image', False):
                 st.write(background_image_style(image_path), unsafe_allow_html=True)
-            try:
-                state.twitter_df = get_streamer_data_filtered(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET, state.twitter)
-                st.dataframe(state.twitter_df[['text', 'retweet_count', 'created_at']])
-            except:
-                st.info('No Data found on Twitter for that Twitch User')
+            
+            state.twitter_df = get_streamer_data_filtered(state.twitter_name.iloc[0])
+            st.dataframe(state.twitter_df[['text', 'retweet_count', 'created_at']])
+        else:  
+            st.info('No Data found on Twitter for that Twitch User')
  
-    state.youtube_name = state.social_target['YouTube']
-    st.write(state.youtube_name.iloc[0])
     with c7:
-        if state.youtube == True:
+        if state.df_user.loc[state.target, ['YouTube']]:
             st.title('YouTube')
-            # image_path = 'images/YouTube.png'
-            # image_link = f'https://toutube.com/{state.toutube.iloc[0]}'
-            # st.write('Click here to get redirected to the Streamer YouTube Page!')
-            # st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
-            # if st.checkbox('Show background image', False):
-            #     st.write(background_image_style(image_path), unsafe_allow_html=True)
-            st.write('More info to follow')
-            # try:
-            #     state.twitter_df = get_streamer_data_filtered(state.twitter)
-            #     st.dataframe(state.twitter_df[['text', 'retweet_count', 'created_at']])
-            # except:
-            #     st.info('No Data found on Twitter for that Twitch User')
+            image_path = 'images/YouTube.png'
+            image_link = f'https://toutube.com/{state.youtube.loc[state.target]}'
+            st.write('Click here to get redirected to the Streamer YouTube Page!')
+            st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
+            if st.checkbox('Show background image', False):
+                st.write(background_image_style(image_path), unsafe_allow_html=True)
+            st.table(df_user.loc[state.target,[['YT Viewcount', 'YT Subscribers', 'YT Videocount']]])
+
+
     # expander=st.beta_expander("expand")
     # with expander:
     #     fig = make_subplots(rows=1, 
@@ -322,30 +256,12 @@ def display_state_values(state):
     #         uniformtext_mode='hide')
 
     #     st.plotly_chart(fig)
-    state.locations = twitter_viewer_locations(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN,ACCESS_TOKEN_SECRET, state.twitter, "2018-01-01", 50)
     
-    df = get_map_data(state.locations)
-    st.map(df)
-    # temp_table = get_streamer_data_filtered('shroud')
-    # st.table(temp_table) 
-         
-    # fig = make_subplots(rows=2, 
-    #                     cols=2,
-    #                     subplot_titles=("Pie 1", "Pie 2", "Pie 3", 'Pie 4'), 
-    #                     specs=[
-    #                     [{"type": "domain"}, {"type": "domain"}],
-    #                     [{"type": "domain"}, {"type": "domain"}]
-    #                     ])
-    # fig.add_trace(go.Pie(labels=state.top_10_followers_gained["Game"], values=state.top_10_followers_gained['Followers per hour']), 1, 1)
-    # fig.add_trace(go.Pie(labels=state.top_games_followers_gained["Game"], values=state.top_games_followers_gained['Followers per hour']), 1, 2)
-    # #fig.add_trace(go.Pie(labels=state.top_10_followers_gained["Game"], values=state.top_10_followers_gained['Followers per hour']), 2, 1)
-    # #fig.add_trace(go.Pie(labels=state.top_10_followers_gained["Game"], values=state.top_10_followers_gained['Followers per hour']), 2, 2)
-    # fig.update_layout(
-    #     showlegend=True,
-    #     uniformtext_minsize=12, 
-    #     uniformtext_mode='hide')
-
-    # st.plotly_chart(fig)
+    st.write(state.df)
+    state.locations = state.df.loc[state.target,['Twitter Community Locations']]
+    state.cities = state.locations['cities']
+    state.print = get_map_data(state.cities)
+    st.map(state.print)
 
 
 
