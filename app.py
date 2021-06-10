@@ -29,7 +29,7 @@ from StarFish.twitter import twitter_viewer_locations, get_streamer_data, get_st
 from StarFish.images import load_image, image_tag, background_image_style
 from StarFish.plots import lineplot, get_10_recent_streams, time_processing
 from StarFish.maps import country_lat_long, city_lat_long, get_map_data
-
+import ast
 
 
 st.set_page_config(layout="wide", page_icon=":art:", page_title="StarFish")
@@ -282,6 +282,7 @@ if not features.empty:
     #     st.plotly_chart(fig)
     if twitter:
         locations = df_user.loc[target]['Twitter Community Locations']
+        locations = ast.literal_eval(locations)
         cities = locations.get('cities', None)
         if cities:
             print = get_map_data(cities)
