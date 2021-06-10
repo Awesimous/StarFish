@@ -261,8 +261,8 @@ if not features.empty:
             
             twitter_df = get_streamer_data_filtered(twitter_name.iloc[0])
             st.subheader(f'Interesting Twitter Stats for {target}')
-            st.table(twitter_df[['Username','Name','Location', 'Followers_count', 'Friends_count']])
-            twitter_df = twitter_df.reindex('Created_at')
+            st.table(twitter_df[['Username','Name','Location', 'Followers_count', 'Friends_count']].iloc[0])
+            twitter_df = twitter_df.set_index('Created_at')
             st.subheader(f'Here are the most recent Tweets for {target}')
             st.table(twitter_df[['Text', 'Retweet_count']])
         else:  
