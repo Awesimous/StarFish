@@ -252,6 +252,7 @@ if not features.empty:
     else:  
         st.info('No Data found on Twitter for that Twitch User')
     yt_id = df_user.loc[target, ['YouTube']][0]
+    st.table(yt_id)
     yt_df = df_user[['YT Viewcount', 'YT Subscribers', 'YT Videocount']]
     if yt_id != 'nan':
         st.title('YouTube')
@@ -282,7 +283,7 @@ if not features.empty:
     #     st.plotly_chart(fig)
 
     st.write(df)
-    locations = df.loc[target,['Twitter Community Locations']]
+    locations = df_user.loc[target,['Twitter Community Locations']]
     cities = locations['cities']
     print = get_map_data(cities)
     st.map(print)
