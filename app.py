@@ -132,27 +132,27 @@ features = st.sidebar.multiselect('Select which features you are interested in',
 features = df_user[features]
 features = features.clip(lower=0)
 if "AVG Viewers" in features:
-    avg_viewer = st.sidebar.slider('Minimum Average Viewer per Hour', 1, int(features['AVG Viewers'].max()), 1000)
+    avg_viewer = st.sidebar.slider('Minimum Average Viewer per Hour', 1, int(np.array(features['AVG Viewers']).max()), 1000)
     features = features[features['AVG Viewers'] >= avg_viewer]
 if "Time Streamed (in hours)" in features:
-    time_streamed = st.sidebar.slider('Minimum time streamed in total hours', 1, int(features['Time Streamed (in hours)'].max()), 1000)
+    time_streamed = st.sidebar.slider('Minimum time streamed in total hours', 1, int(np.array(features['Time Streamed (in hours)']).max()), 1000)
     features = features[features['Time Streamed (in hours)'] >= time_streamed]
 if 'Hours Watched' in features:
-    hours_watched = st.sidebar.slider('Minimum hours watched', 1, int(features['Hours Watched'].max()), 1000)
+    hours_watched = st.sidebar.slider('Minimum hours watched', 1, int(np.array(features['Hours Watched']).max()), 1000)
     features = features[features['Hours Watched'] >= hours_watched]
 if 'Followers Gained' in features:
-    followers_hour = st.sidebar.slider('Minimum followers gained on average per hour on air', 1, int(features['Followers Gained'].max()), 1000)
+    followers_hour = st.sidebar.slider('Minimum followers gained on average per hour on air', 1, int(np.array(features['Followers Gained']).max()), 1000)
     features = features[features['Followers Gained'] >= followers_hour]
 if "Total Followers" in features:
-    total_follower = st.sidebar.slider('Minimum Total Follower', 1, int(features['Total Followers'].max()), 1000)
+    total_follower = st.sidebar.slider('Minimum Total Follower', 1, int(np.array(features['Total Followers']).max()), 1000)
     features = features[features['Total Followers'] >= total_follower]
 if "Total Views" in features:
-    total_views = st.sidebar.slider('Minimum Total Views', 1, int(features['Total Views'].max()), 1000)
+    total_views = st.sidebar.slider('Minimum Total Views', 1, int(np.array(features['Total Views']).max()), 1000)
     features = features[features['Total Views'] >= total_views]
 if "All Time Peak Viewers" in features:
-    peak = st.sidebar.slider('Minimum All Time Peak Viewers', 1, int(features['All Time Peak Viewers'].max()), 1000)
+    peak = st.sidebar.slider('Minimum All Time Peak Viewers', 1, int(np.array(features['All Time Peak Viewers']).max()), 1000)
     features = features[features['All Time Peak Viewers'] >= peak]
-    
+
 st.sidebar.write("Select any of the following social media channels to include:")
 
 twitter = st.sidebar.checkbox('Twitter')
@@ -160,6 +160,7 @@ youtube = st.sidebar.checkbox('YouTube')
 instagram = st.sidebar.checkbox('Instagram')
 
 # show dataframe with 5 best streamers based on selection criterias
+
 if not features.empty:
     st.write('Display the 5 best streamers (or less):')
     top_5 = features.head()
