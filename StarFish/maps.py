@@ -2,6 +2,7 @@ from geopy import geocoders
 from geopy.geocoders import Nominatim
 import streamlit as st
 import pandas as pd
+import numpy as np
 
 def country_lat_long(country):
     geolocator = Nominatim(user_agent='myapplication')
