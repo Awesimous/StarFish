@@ -90,9 +90,7 @@ else:
 games_df = pd.read_csv('StarFish/data/games_sample.csv')
 ## we might want to implement some plots with data from bigger streamer as for our sample there is a problem to retrieve the data (more info with Simon)
 #stream_df = pd.read_csv('StarFish/data/top_2450.csv')
-streams = pd.read_csv('StarFish/data/top_streams_2450.csv')
-st.table(streams)
-all_users = streams.Username.unique().to_list()
+line_plot_data = pd.read_csv('StarFish/data/line_plot_data.csv')
 df = pd.read_csv('StarFish/data/sample_df.csv')
 df['Time Streamed (in hours)'] = df['Time Streamed (in hours)'].apply(lambda x: int(x))
 df = df.rename(columns={'Minimum followers gained on average per hour om air' : 'Minimum followers gained on average per hour on air'})
@@ -224,17 +222,6 @@ if not features.empty:
     st.plotly_chart(fig)
     
     #select users for plot, to show difference between best, 500th, 1000th, 1500th streamer
-    user_1 = all_users[0]
-    streams_user_1 = streams[streams['Username'] == user_1]['AVG Viewers']
-    user_2 = all_users[500]
-    streams_user_2 = streams[streams['Username'] == user_2]['AVG Viewers']
-    user_3 = all_users[1000]
-    streams_user_3 = streams[streams['Username'] == user_3]['AVG Viewers']
-    user_4 = all_users[1500]
-    streams_user_4 = streams[streams['Username'] == user_4]['AVG Viewers']  
-    
-    line_plot_data = pd.DataFrame([streams_user_1,streams_user_2,streams_user_3,streams_user_4], 
-                                  columns=['Streamer 1', 'Streamer 2', 'Streamer 3', 'Streamer 4'])
     st.line_chart(line_plot_data)
     # st.title("Overview of 5 most recent live sessions on Twitch")
     # st.table(recent_streams.head())
