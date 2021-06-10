@@ -1,19 +1,21 @@
 from geopy import geocoders
 from geopy.geocoders import Nominatim
 import streamlit as st
+import pandas as pd
+import numpy as np
 
 def country_lat_long(country):
     geolocator = Nominatim(user_agent='myapplication')
-    state.location = geolocator.geocode(country)
-    latitude = state.location[1][0]
-    longitude = state.location[1][1]
+    location = geolocator.geocode(country)
+    latitude = location[1][0]
+    longitude = location[1][1]
     return latitude, longitude
 
 def city_lat_long(city):
     geolocator = Nominatim(user_agent='myapplication')
-    state.location = geolocator.geocode(city)
-    latitude = state.location[1][0]
-    longitude = state.location[1][1]
+    location = geolocator.geocode(city)
+    latitude = location[1][0]
+    longitude = location[1][1]
     return latitude, longitude
 
 @st.cache
