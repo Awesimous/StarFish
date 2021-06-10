@@ -4,6 +4,7 @@ import geograpy
 from twython import Twython
 import streamlit as st
 import os
+from datetime import datetime
 
 
 
@@ -74,6 +75,8 @@ def get_streamer_data_filtered(streamer):
             retweet_count= row["retweet_count"]
             source = row["source"]
             created_at = row["created_at"]
-            data_streamer_filtered.append({"id_new":id_new,"text":text,"url":url,"expanded_url":expanded_url,"name":name,"location":location,"followers_count":followers_count,"friends_count":friends_count,"listed_count":listed_count,"favourites_count":favourites_count,"profile_image_url":profile_image_url,"retweet_count":retweet_count,"source":source,"created_at":created_at})
+            # created_at = datetime.strftime(datetime.strptime(created_at,'%a %b %d %H:%M:%S +0000 %Y'), '%Y-%m-%d %H:%M')
+            data_streamer_filtered.append({"Id_new":id_new,"Text":text,"Url":url,"Expanded_url":expanded_url,"Name":name,"Location":location,"Followers_count":followers_count,"Friends_count":friends_count,"Listed_count":listed_count,"Favourites_count":favourites_count,"Profile_image_url":profile_image_url,"Retweet_count":retweet_count,"Source":source,"Created_at":created_at})
     streamer_tweets = pd.DataFrame(data_streamer_filtered)
+    streamer_tweets['Username'] = streamer 
     return streamer_tweets
