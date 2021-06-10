@@ -90,8 +90,11 @@ else:
 games_df = pd.read_csv('StarFish/data/games_sample.csv')
 ## we might want to implement some plots with data from bigger streamer as for our sample there is a problem to retrieve the data (more info with Simon)
 #stream_df = pd.read_csv('StarFish/data/top_2450.csv')
-
+# streams = pd.read_csv('StarFish/data/top_streams_2450.csv')
+# all_users = streams.Username.unique().to_list()
+# st.write(all_users)
 df = pd.read_csv('StarFish/data/sample_df.csv')
+df['Time Streamed (in hours)'] = df['Time Streamed (in hours)'].apply(lambda x: int(x))
 df = df.rename(columns={'Minimum followers gained on average per hour om air' : 'Minimum followers gained on average per hour on air'})
 usernames = df.Username.to_list()
 df_user = df.set_index('Username')
@@ -175,10 +178,10 @@ if not features.empty:
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     target_df = df_user.loc[target]
     #st.bar_chart(targets_df)
-    st.title('Top 10 Games for your main target')
+    st.title('Top 5 Games for your main target')
     games_target = games_df[games_df['Username'] == target]
     top_games_target = games_target.sort_values(by=['AVG Viewers']).head()
-    top_games_sample = games_df.sort_values(by=['AVG Viewers']).head()[=]
+    top_games_sample = games_df.sort_values(by=['AVG Viewers']).head()
     # fig = go.Pie(labels=top_games_target["Game"], values= top_games_target["AVG Viewers"])
 
     # st.write(fig)
