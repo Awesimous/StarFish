@@ -253,7 +253,7 @@ if not features.empty:
         st.info('No Data found on Twitter for that Twitch User')
     yt_id = df_user.loc[target, ['YouTube']][0]
     st.table(yt_id)
-    yt_df = df_user[['YT Viewcount', 'YT Subscribers', 'YT Videocount']]
+    yt_df = df_user[df_user['YouTube'] == yt_id][['YT Viewcount', 'YT Subscribers', 'YT Videocount']]
     if yt_id != 'nan':
         st.title('YouTube')
         image_path = 'images/YouTube.png'
@@ -262,7 +262,7 @@ if not features.empty:
         st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
         if st.checkbox('Show background image YouTube', False):
             st.write(background_image_style(image_path), unsafe_allow_html=True)
-        st.table(df_user.loc[target])
+        st.table(yt_id)
 
 
     # expander=st.beta_expander("expand")
