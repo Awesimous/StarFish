@@ -90,8 +90,11 @@ else:
 games_df = pd.read_csv('StarFish/data/games_sample.csv')
 ## we might want to implement some plots with data from bigger streamer as for our sample there is a problem to retrieve the data (more info with Simon)
 #stream_df = pd.read_csv('StarFish/data/top_2450.csv')
-
+# streams = pd.read_csv('StarFish/data/top_streams_2450.csv')
+# all_users = streams.Username.unique().to_list()
+# st.write(all_users)
 df = pd.read_csv('StarFish/data/sample_df.csv')
+df['Time Streamed (in hours)'] = df['Time Streamed (in hours)'].apply(lambda x: int(x))
 df = df.rename(columns={'Minimum followers gained on average per hour om air' : 'Minimum followers gained on average per hour on air'})
 usernames = df.Username.to_list()
 df_user = df.set_index('Username')
@@ -153,21 +156,8 @@ if "All Time Peak Viewers" in features:
 st.sidebar.write("Select any of the following social media channels to include:")
 
 twitter = st.sidebar.checkbox('Twitter')
-if twitter:
-    twitter_img ="images/Twitter.png"
-    twitter_open = Image.open(twitter_img)
-    st.image(twitter_open, width=100)
 youtube = st.sidebar.checkbox('YouTube')
-if youtube:
-    youtube_img ="images/YouTube.png"
-    youtube_open = Image.open(youtube_img)
-    st.image(youtube_open, width=150)
-    
 instagram = st.sidebar.checkbox('Instagram')
-if instagram:
-    instagram_img ="images/Instagram.png"
-    instagram_open = Image.open(instagram_img)
-    st.image(instagram_open, width=100)
 
 # show dataframe with 5 best streamers based on selection criterias
 if not features.empty:
@@ -188,11 +178,10 @@ if not features.empty:
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     target_df = df_user.loc[target]
     #st.bar_chart(targets_df)
-    st.title('Top 10 Games for your main target')
+    st.title('Top 5 Games for your main target')
     games_target = games_df[games_df['Username'] == target]
     top_games_target = games_target.sort_values(by=['AVG Viewers']).head()
     top_games_sample = games_df.sort_values(by=['AVG Viewers']).head()
-
     # fig = go.Pie(labels=top_games_target["Game"], values= top_games_target["AVG Viewers"])
 
     # st.write(fig)
@@ -216,20 +205,27 @@ if not features.empty:
     # def label_function(val):
     #     return f'{val:.0f}%'
 
+      # Equal aspect ratio ensures that pie is drawn as a circle.
+
     # fig, ax1 = plt.subplots(figsize=(10, 5))
     # plt.figure(figsize=(10, 5))
-    # data_df = pd.DataFrame(top_games[["Game", "AVG Viewers"]])
-    # data_df.size().plot(
-    #     kind='pie',
-    #     colors=['tomato', 'lightgrey', '#b5eb9a'],
-    #     autopct=label_function,
-    #     ax=ax1)
+    # plt.pie(, autopct='%1.1f%%',
+    #         shadow=True, startangle=90)
+    # ax1.legend(title="Games")
     # st.write(fig)
+    fig = px.pie(
+        names=top_games_target['Game'], values=top_games_target['AVG Viewers']
+    )
+    fig.update_layout(
+        showlegend=True,
+        uniformtext_minsize=12, 
+        uniformtext_mode='hide')
 
-
+    st.plotly_chart(fig)
+    
     # st.title("Overview of 5 most recent live sessions on Twitch")
     # st.table(recent_streams.head())
-    #plot the data
+    # plot the data
 
 
 
@@ -284,9 +280,10 @@ if not features.empty:
         locations = df_user.loc[target]['Twitter Community Locations']
         locations = ast.literal_eval(locations)
         cities = locations.get('cities', None)
+        countries = locations.get('countries', None)
         if cities:
-            print = get_map_data(cities)
-            st.map(print)
+            print = pd.concat([get_map_data(cities),get_map_data(countries)], axis=0, ignore_index=True)
+            st.map(print, zoom=2)
         else: 
             st.info('No data found on the communication location')
 
