@@ -252,7 +252,6 @@ if not features.empty:
     else:  
         st.info('No Data found on Twitter for that Twitch User')
     yt_id = df_user.loc[target, ['YouTube']][0]
-    st.table(yt_id)
     yt_df = df_user[df_user['YouTube'] == yt_id][['YT Viewcount', 'YT Subscribers', 'YT Videocount']]
     if yt_id != 'nan':
         st.title('YouTube')
