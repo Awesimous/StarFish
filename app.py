@@ -85,6 +85,14 @@ else:
         .download_from_gcp('StarFish/data/games_sample.csv')
     print('Downloaded games sample')
 
+p = Path('StarFish/data/line_plot_data.csv')
+if p.exists():
+    print('Skipping streamers_clean')
+else:
+    GCPFileHandler('scraped_data/line_plot_data.csv')\
+        .download_from_gcp('StarFish/data/line_plot_data.csv')
+    print('Downloaded plots')
+
 
 
 games_df = pd.read_csv('StarFish/data/games_sample.csv')
