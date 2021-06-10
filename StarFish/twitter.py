@@ -73,7 +73,7 @@ def get_streamer_data_filtered(streamer):
             profile_image_url = row["user"]["profile_image_url"]
             retweet_count= row["retweet_count"]
             source = row["source"]
-            created_at = pd.to_datetime(str(row["created_at"]), format='%Y-%m-%d %H:%M')
+            created_at = row["created_at"].strftime('%Y-%m-%d %H:%M')
             data_streamer_filtered.append({"Id_new":id_new,"Text":text,"Url":url,"Expanded_url":expanded_url,"Name":name,"Location":location,"Followers_count":followers_count,"Friends_count":friends_count,"Listed_count":listed_count,"Favourites_count":favourites_count,"Profile_image_url":profile_image_url,"Retweet_count":retweet_count,"Source":source,"Created_at":created_at})
     streamer_tweets = pd.DataFrame(data_streamer_filtered)
     streamer_tweets['Username'] = streamer 

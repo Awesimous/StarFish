@@ -134,7 +134,7 @@ st.write("---")
 # target_df["10 most played games"]= target_df["10 most played games"].str.join('')
 # target_df = target_df[target_df['10 most played games'].isin(games_selection)]
 # st.table(target_df)
-features = st.sidebar.multiselect('Select which features you are interested in', df_user[["AVG Viewers", 'Time Streamed (in hours)','Hours Watched','Followers Gained', 'Total Followers','Total Views','All Time Peak Viewers']].columns)
+features = st.sidebar.multiselect('Select which features you are interested in', df_user[["AVG Viewers", 'Time Streamed (in hours)','Hours Watched','Followers Gained', 'Total Followers','All Time Peak Viewers']].columns)
 features = df_user[features]
 features = features.clip(lower=0)
 if "AVG Viewers" in features:
