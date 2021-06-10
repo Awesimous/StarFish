@@ -281,11 +281,8 @@ if not features.empty:
 
     #     st.plotly_chart(fig)
     if twitter:
-        st.write(df_user)
         locations = df_user.loc[target]['Twitter Community Locations']
-        st.write(locations)
-        cities = locations.get('cities', default = None)
-        st.write(cities)
+        cities = locations.get('cities', None)
         if cities:
             print = get_map_data(cities)
             st.map(print)
