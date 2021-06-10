@@ -233,35 +233,35 @@ if not features.empty:
 
 
 
+    if twitter:
+        twitter_name = df[df['Username'] == target]['Twitter']
+        c6, c7 = st.beta_columns((1, 1))
 
-    # for Twitter
-    twitter_name = df[df['Username'] == target]['Twitter']
-    c6, c7 = st.beta_columns((1, 1))
-
-    if twitter_name.iloc[0]:
-        st.title('Twitter')
-        image_path = 'images/Twitter.png'
-        image_link = f'https://twitter.com/{twitter_name.iloc[0]}'
-        st.write('Click here to get redirected to the Streamer Twitter Page!')
-        st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
-        if st.checkbox('Show background image Twitter', False):
-            st.write(background_image_style(image_path), unsafe_allow_html=True)
-        
-        twitter_df = get_streamer_data_filtered(twitter_name.iloc[0])
-        st.table(twitter_df[['text', 'retweet_count']])
-    else:  
-        st.info('No Data found on Twitter for that Twitch User')
-    yt_id = df_user.loc[target, ['YouTube']][0]
-    yt_df = df_user[df_user['YouTube'] == yt_id][['YT Viewcount', 'YT Subscribers', 'YT Videocount']]
-    if yt_id != 'nan':
-        st.title('YouTube')
-        image_path = 'images/YouTube.png'
-        image_link = f'https://youtube.com/{yt_id}'
-        st.write('Click here to get redirected to the Streamer YouTube Page!')
-        st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
-        if st.checkbox('Show background image YouTube', False):
-            st.write(background_image_style(image_path), unsafe_allow_html=True)
-        st.table(yt_df)
+        if twitter_name.iloc[0]:
+            st.title('Twitter')
+            image_path = 'images/Twitter.png'
+            image_link = f'https://twitter.com/{twitter_name.iloc[0]}'
+            st.write('Click here to get redirected to the Streamer Twitter Page!')
+            st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
+            if st.checkbox('Show background image Twitter', False):
+                st.write(background_image_style(image_path), unsafe_allow_html=True)
+            
+            twitter_df = get_streamer_data_filtered(twitter_name.iloc[0])
+            st.table(twitter_df[['text', 'retweet_count']])
+        else:  
+            st.info('No Data found on Twitter for that Twitch User')
+    if youtube:
+        yt_id = df_user.loc[target, ['YouTube']][0]
+        yt_df = df_user[df_user['YouTube'] == yt_id][['YT Viewcount', 'YT Subscribers', 'YT Videocount']]
+        if yt_id != 'nan':
+            st.title('YouTube')
+            image_path = 'images/YouTube.png'
+            image_link = f'https://youtube.com/{yt_id}'
+            st.write('Click here to get redirected to the Streamer YouTube Page!')
+            st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
+            if st.checkbox('Show background image YouTube', False):
+                st.write(background_image_style(image_path), unsafe_allow_html=True)
+            st.table(yt_df)
 
 
     # expander=st.beta_expander("expand")
@@ -280,12 +280,14 @@ if not features.empty:
     #         uniformtext_mode='hide')
 
     #     st.plotly_chart(fig)
-
-    st.write(df)
-    locations = df_user.loc[target,['Twitter Community Locations']]
-    cities = locations['cities']
-    print = get_map_data(cities)
-    st.map(print)
+    if twitter:
+        locations = df_user.loc[target]['Twitter Community Locations']
+        cities = locations.get('cities', default = None)
+        if cities:
+            print = get_map_data(cities)
+            st.map(print)
+        else: 
+            st.info('No data found on the communication location')
 
 
 
