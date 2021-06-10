@@ -29,17 +29,37 @@ from StarFish.plots import lineplot, get_10_recent_streams, time_processing
 import base64
 from StarFish.maps import country_lat_long, city_lat_long, get_map_data
 
-
-#Download dbs on initial setup
-# print("GCP DOWNLOAD")
-# GCPFileHandler('twitch_data/top_streams_2450.csv')\
-#     .download_from_gcp('StarFish/data/top_streams_2450.csv')
-# print("GCP DOWNLOAD")
-# stream_df = pd.read_csv('StarFish/data/top_streams_2450.csv')
-# print("DOWNLOAD COMPLETE")
-# st.table(stream_df.head())
-
 st.set_page_config(layout="wide", page_icon=":art:", page_title="StarFish")
+
+# Download dbs on initial setup
+print('Going to gcp')
+GCPFileHandler('scraped_data/streamers_clean.csv')\
+    .download_from_gcp('StarFish/data/streamers_clean.csv')
+print('Downloaded streamers')
+
+#stream_df = pd.read_csv('StarFish/data/streamers_clean.csv')
+#st.table(stream_df.head())
+#print('Shown')
+
+GCPFileHandler('scraped_data/socials_clean.csv')\
+    .download_from_gcp('StarFish/data/socials_clean.csv')
+print('Downloaded soc')
+
+GCPFileHandler('scraped_data/games_clean.csv')\
+    .download_from_gcp('StarFish/data/games_clean.csv')
+print('Downloaded games')
+
+GCPFileHandler('scraped_data/top_streams_2450.csv')\
+    .download_from_gcp('StarFish/data/top_streams_2450.csv')
+print('Downloaded top s')
+
+GCPFileHandler('scraped_data/sample_df.csv')\
+    .download_from_gcp('StarFish/data/sample_df.csv')
+print('Downloaded combi sample')
+
+GCPFileHandler('scraped_data/games_sample.csv')\
+    .download_from_gcp('StarFish/data/games_sample.csv')
+print('Downloaded games sample')
 
 def main():
     # import all relevant csv files
@@ -147,7 +167,7 @@ def page_settings(state):
 
 
 def display_state_values(state):
-    st.write('Display the 5 best streamers (or less) based on average viewer:')
+    st.write('Display the 5 best streamers (or less):')
     # show dataframe with 5 best streamers based on selection criterias
     state.top_5 = state.features.head()
     st.table(state.top_5)
@@ -211,31 +231,29 @@ def display_state_values(state):
     state.twitter_name = state.df[state.df['Username'] == state.target]['Twitter']
     c6, c7 = st.beta_columns((1, 1))
 
-    with c6:
-        if state.twitter_name.iloc[0]:
-            st.title('Twitter')
-            image_path = 'images/Twitter.png'
-            image_link = f'https://twitter.com/{state.twitter_name.iloc[0]}'
-            st.write('Click here to get redirected to the Streamer Twitter Page!')
-            st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
-            if st.checkbox('Show background image', False):
-                st.write(background_image_style(image_path), unsafe_allow_html=True)
-            
-            state.twitter_df = get_streamer_data_filtered(state.twitter_name.iloc[0])
-            st.dataframe(state.twitter_df[['text', 'retweet_count', 'created_at']])
-        else:  
-            st.info('No Data found on Twitter for that Twitch User')
- 
-    with c7:
-        if state.df_user.loc[state.target, ['YouTube']]:
-            st.title('YouTube')
-            image_path = 'images/YouTube.png'
-            image_link = f'https://toutube.com/{state.youtube.loc[state.target]}'
-            st.write('Click here to get redirected to the Streamer YouTube Page!')
-            st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
-            if st.checkbox('Show background image', False):
-                st.write(background_image_style(image_path), unsafe_allow_html=True)
-            st.table(df_user.loc[state.target,[['YT Viewcount', 'YT Subscribers', 'YT Videocount']]])
+    if state.twitter_name.iloc[0]:
+        st.title('Twitter')
+        image_path = 'images/Twitter.png'
+        image_link = f'https://twitter.com/{state.twitter_name.iloc[0]}'
+        st.write('Click here to get redirected to the Streamer Twitter Page!')
+        st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
+        if st.checkbox('Show background image Twitter', False):
+            st.write(background_image_style(image_path), unsafe_allow_html=True)
+        
+        state.twitter_df = get_streamer_data_filtered(state.twitter_name.iloc[0])
+        st.dataframe(state.twitter_df[['text', 'retweet_count', 'created_at']])
+    else:  
+        st.info('No Data found on Twitter for that Twitch User')
+    state.yt_id = state.df_user.loc[state.target, ['YouTube']][0]
+    if state.yt_id != 'nan':
+        st.title('YouTube')
+        image_path = 'images/YouTube.png'
+        image_link = f'https://youtube.com/{state.yt_id}'
+        st.write('Click here to get redirected to the Streamer YouTube Page!')
+        st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
+        if st.checkbox('Show background image YouTube', False):
+            st.write(background_image_style(image_path), unsafe_allow_html=True)
+        st.table(state.df_user.loc[state.target])[['YT Viewcount', 'YT Subscribers', 'YT Videocount']]
 
 
     # expander=st.beta_expander("expand")
