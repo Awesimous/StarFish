@@ -1,61 +1,91 @@
-import streamlit as st
+import base64
 import time
+import wordcloud
+import requests
+import streamlit as st
 import datetime as dt
-from datetime import datetime
 import numpy as np
 import plotly.express as px
-import requests
 import plotly.graph_objects as go
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
-import wordcloud
+import altair as alt
+from PIL import Image
+from bs4 import BeautifulSoup
 from geopy import geocoders
+from datetime import datetime
+from pathlib import Path
 from geopy.geocoders import Nominatim
 from plotly.subplots import make_subplots
 from streamlit.hashing import _CodeHasher
 from StarFish.twitch import search_channels
-from bs4 import BeautifulSoup
 from StarFish.twitter import twitter_viewer_locations, get_streamer_data_filtered, get_streamer_data
 from StarFish.data import GCPFileHandler
-from PIL import Image
 from streamlit.report_thread import get_report_ctx
 from streamlit.server.server import Server
 from StarFish.data import GCPFileHandler, clean_gamer_df
 from StarFish.twitter import twitter_viewer_locations, get_streamer_data, get_streamer_data_filtered
-import altair as alt
 from StarFish.images import load_image, image_tag, background_image_style
 from StarFish.plots import lineplot, get_10_recent_streams, time_processing
-import base64
 from StarFish.maps import country_lat_long, city_lat_long, get_map_data
 
 
 
 st.set_page_config(layout="wide", page_icon=":art:", page_title="StarFish")
 
-# Download dbs on initial setup
-print('Going to gcp')
+print('Loading app.py')
+print('Checking for dbs..')
+
+p = Path('StarFish/data/streamers_clean.csv')
+if p.exists():
+    print('Skipping streamers_clean')
+else:
+    GCPFileHandler('scraped_data/streamers_clean.csv')\
+        .download_from_gcp('StarFish/data/streamers_clean.csv')
+    print('Downloaded streamers')
+
+p = Path('StarFish/data/socials_clean.csv')
+if p.exists():
+    print('Skipping socials_clean')
+else:
+    GCPFileHandler('scraped_data/socials_clean.csv')\
+        .download_from_gcp('StarFish/data/socials_clean.csv')
+    print('Downloaded soc')
+
+p = Path('StarFish/data/games_clean.csv')
+if p.exists():
+    print('Skipping games_clean')
+else:
+    GCPFileHandler('scraped_data/games_clean.csv')\
+        .download_from_gcp('StarFish/data/games_clean.csv')
+    print('Downloaded games')
+
+p = Path('StarFish/data/top_streams_2450.csv')
+if p.exists():
+    print('Skipping top_streams_2450')
+else:
+    GCPFileHandler('scraped_data/top_streams_2450.csv')\
+        .download_from_gcp('StarFish/data/top_streams_2450.csv')
+    print('Downloaded top s')
+
+p = Path('StarFish/data/sample_df.csv')
+if p.exists():
+    print('Skipping sample_df')
+else:
+    GCPFileHandler('scraped_data/sample_df.csv')\
+        .download_from_gcp('StarFish/data/sample_df.csv')
+    print('Downloaded combi sample')
+
+p = Path('StarFish/data/games_sample.csv')
+if p.exists():
+    print('Skipping games_sample')
+else:
+    GCPFileHandler('scraped_data/games_sample.csv')\
+        .download_from_gcp('StarFish/data/games_sample.csv')
+    print('Downloaded games sample')
 
 
-#stream_df = pd.read_csv('StarFish/data/streamers_clean.csv')
-#st.table(stream_df.head())
-#print('Shown')
-
-GCPFileHandler('scraped_data/games_clean.csv')\
-    .download_from_gcp('StarFish/data/games_clean.csv')
-print('Downloaded games')
-
-GCPFileHandler('scraped_data/top_streams_2450.csv')\
-    .download_from_gcp('StarFish/data/top_streams_2450.csv')
-print('Downloaded top s')
-
-GCPFileHandler('scraped_data/sample_df.csv')\
-    .download_from_gcp('StarFish/data/sample_df.csv')
-print('Downloaded combi sample')
-
-GCPFileHandler('scraped_data/games_sample.csv')\
-    .download_from_gcp('StarFish/data/games_sample.csv')
-print('Downloaded games sample')
 
 games_df = pd.read_csv('StarFish/data/games_sample.csv')
 ## we might want to implement some plots with data from bigger streamer as for our sample there is a problem to retrieve the data (more info with Simon)
