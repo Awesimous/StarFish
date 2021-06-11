@@ -187,13 +187,13 @@ if not features.empty:
             uniformtext_mode='hide')
             st.plotly_chart(fig)
         st.write('Amazing, that was quick! Cool Stuff, right?')
-        target = st.radio('', top_5.index)
-        st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
         # temp_time = ["morning", "afternoon", "evening", "night"]
         # time = st.radio('Which time you want your star to be streaming at?', temp_time)
         # st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     st.markdown('----')
     st.subheader('Do you want to look at any streamer in particular now?')
+    target = st.radio('', top_5.index)
+    st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     # select one target to specify data on
     target_df = df_user.loc[target]
     #st.bar_chart(targets_df)
@@ -202,37 +202,6 @@ if not features.empty:
     top_games_target = games_target.sort_values(by=['AVG Viewers']).head()
     top_games_sample = games_df.sort_values(by=['AVG Viewers']).head()
     # fig = go.Pie(labels=top_games_target["Game"], values= top_games_target["AVG Viewers"])
-
-    # st.write(fig)
-
-    # fig = make_subplots(rows=1, 
-    #                     cols=2,
-    #                     subplot_titles=("Pie 1", "Pie 2"), 
-    #                     specs=[
-    #                     [{"type": "domain"}, {"type": "domain"}]
-    #                     ])
-    # fig.add_trace(go.Pie(labels=target_games_df["Game"]), 1, 1)
-    # fig.add_trace(go.Pie(labels=target_games_df["Game"]), 1, 2)
-    # fig.update_layout(
-    #     showlegend=True,
-    #     uniformtext_minsize=12, 
-    #     uniformtext_mode='hide')
-
-    # fig, ax1 = plt.subplots(figsize=(10, 5))
-    # plt.figure(figsize=(10, 5))
-
-    # def label_function(val):
-    #     return f'{val:.0f}%'
-
-      # Equal aspect ratio ensures that pie is drawn as a circle.
-
-    # fig, ax1 = plt.subplots(figsize=(10, 5))
-    # plt.figure(figsize=(10, 5))
-    # plt.pie(, autopct='%1.1f%%',
-    #         shadow=True, startangle=90)
-    # ax1.legend(title="Games")
-    # st.write(fig)
-
     
     fig = px.pie(
     names=top_games_target['Game'], values=top_games_target['AVG Viewers']
@@ -248,7 +217,8 @@ if not features.empty:
     # st.title("Overview of 5 most recent live sessions on Twitch")
     # st.table(recent_streams.head())
     # plot the data
-    st.write('')
+    if twitter or youtube or instagram:
+        st.subheader('Let\'s move on to our social media section!')
     st.write('----')
     if twitter:
         twitter_name = df[df['Username'] == target]['Twitter']
