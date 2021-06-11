@@ -168,7 +168,7 @@ instagram = st.sidebar.checkbox('Instagram')
 # show dataframe with 5 best streamers based on selection criterias
 
 if not features.empty:
-    st.subheader('Before we dive right into it, please select one feature to use to rank our streamers:')
+    st.title('Before we dive right into it, please select one feature to use to rank our streamers:')
     col_sort = st.radio('', features.columns)
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     if col_sort:
@@ -191,13 +191,13 @@ if not features.empty:
         # time = st.radio('Which time you want your star to be streaming at?', temp_time)
         # st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     st.markdown('----')
-    st.subheader('Do you want to look at any streamer in particular now?')
+    st.title('Do you want to look at any streamer in particular now?')
     target = st.radio('', top_5.index)
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     # select one target to specify data on
     target_df = df_user.loc[target]
     #st.bar_chart(targets_df)
-    st.title('Top 5 Games for your main target')
+    st.subheader('Top 5 Games for your main target')
     games_target = games_df[games_df['Username'] == target]
     top_games_target = games_target.sort_values(by=['AVG Viewers']).head()
     top_games_sample = games_df.sort_values(by=['AVG Viewers']).head()
