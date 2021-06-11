@@ -178,7 +178,7 @@ if not features.empty:
         st.subheader('Display the 5 best streamers (or less) in a table:')
         st.table(top_5)
         if top_5.shape[0]>1:
-            st.subheader('Enough tables, let\'s plot them in a visually pleasing way!:')
+            st.subheader('Enough tables, let\'s plot them in a visually pleasing way!')
             fig = px.bar(top_5, x=top_5.index, y=top_5[col_sort], 
                     color=top_5.index, barmode="group")
             fig.update_layout(
