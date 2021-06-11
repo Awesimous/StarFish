@@ -175,10 +175,10 @@ if not features.empty:
         st.write(f'You selected {col_sort}, good choice!')
     top_5 = features.sort_values(by=[col_sort], ascending=False).head()
     if not top_5.empty:
-        st.subheader('Display the 5 best streamers (or less):')
+        st.subheader('Display the 5 best streamers (or less) in a table:')
         st.table(top_5)
         if top_5.shape[0]>1:
-            st.subheader('Now let us have a look how that looks like for our selected Stars:')
+            st.subheader('Enough tables, let\'s plot them in a visually pleasing way!:')
             fig = px.bar(top_5, x=top_5.index, y=top_5[col_sort], 
                     color=top_5.index, barmode="group")
             fig.update_layout(
