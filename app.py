@@ -168,32 +168,34 @@ instagram = st.sidebar.checkbox('Instagram')
 # show dataframe with 5 best streamers based on selection criterias
 
 if not features.empty:
-    st.subheader('Display the 5 best streamers (or less):')
-    top_5 = features.head()
-    st.table(top_5)
-    st.subheader('Please select one feature to use for ranking the streamers:')
+    st.subheader('Before we dive right into it, please select one feature to use to rank our streamers:')
     col_sort = st.radio('', features.columns)
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-    st.write(f'You selected {col_sort}, good choice!')
+    if col_sort:
+        st.write(f'You selected {col_sort}, good choice!')
     top_5 = features.sort_values(by=[col_sort], ascending=False).head()
-    # temp_time = ["morning", "afternoon", "evening", "night"]
-    # time = st.radio('Which time you want your star to be streaming at?', temp_time)
-    # st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-    st.subheader('Now let us have a look how that looks like for our selected Stars:')
-    if top_5.shape[0]>1:
-        fig = px.bar(top_5, x=top_5.index, y=top_5[col_sort], 
+    if not top_5.empty:
+        st.subheader('Display the 5 best streamers (or less):')
+        st.table(top_5)
+        if top_5.shape[0]>1:
+            st.subheader('More visual pleasing with a plot maybe?')
+            fig = px.bar(top_5, x=top_5.index, y=top_5[col_sort], 
                     color=top_5.index, barmode="group")
-        fig.update_layout(
+            fig.update_layout(
             showlegend=True,
             uniformtext_minsize=12, 
             uniformtext_mode='hide')
-        st.plotly_chart(fig)
-    st.write('Cool Stuff, right?')
+            st.plotly_chart(fig)
+        st.write('Amazing, that was quick! Cool Stuff, right?')
+        st.subheader('Do you want to look at any streamer in particular now?')
+        target = st.radio('', top_5.index)
+        st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+        # temp_time = ["morning", "afternoon", "evening", "night"]
+        # time = st.radio('Which time you want your star to be streaming at?', temp_time)
+        # st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+        st.subheader('Now let us have a look how that looks like for our selected Stars:')
     st.markdown('----')
     # select one target to specify data on
-    st.subheader('Do you want to look at any streamer in particular?')
-    target = st.radio('', top_5.index)
-    st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     target_df = df_user.loc[target]
     #st.bar_chart(targets_df)
     st.title('Top 5 Games for your main target')
@@ -274,21 +276,27 @@ if not features.empty:
     if youtube:
         yt_id = df_user.loc[target, ['YouTube']][0]
         yt_df = df_user[df_user['YouTube'] == yt_id][['YT Viewcount', 'YT Subscribers', 'YT Videocount']]
+        st.title('YouTube')
         if not yt_df.empty:
-            st.title('YouTube')
             image_path = 'images/YouTube.png'
             image_link = f'https://youtube.com/{yt_id}'
             st.write('Click here to get redirected to the Streamer YouTube Page!')
             st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
             st.subheader(f'Interesting YouTube Stats for {target}')
             st.table(yt_df)
+        else:
+            st.subheader('We are sorry!')
+            image1 ="images/YouTube.png"
+            original = Image.open(image1)
+            st.image(original, width=100)
+            st.info('Unfortunately we couldn\' find any information for the chosen streamer!')
     st.write('')
     st.write('----')
     if instagram:
         st.subheader('Oh Snap!')
-        image1 ="images/Instagram.png"
-        original = Image.open(image1)
-        st.image(original, width=100)
+        image2 ="images/Instagram.png"
+        original2 = Image.open(image2)
+        st.image(original2, width=100)
         st.info('Instagram Feature to come soon!')
         
     st.write('')
