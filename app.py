@@ -241,8 +241,9 @@ if not features.empty:
         uniformtext_minsize=12, 
         uniformtext_mode='hide')
     st.plotly_chart(fig)
+    
     #select users for plot, to show difference between best, 500th, 1000th, 1500th streamer
-    st.line_chart(line_plot_data)
+    # st.line_chart(line_plot_data)
     # st.title("Overview of 5 most recent live sessions on Twitch")
     # st.table(recent_streams.head())
     # plot the data
