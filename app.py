@@ -178,7 +178,7 @@ if not features.empty:
         st.subheader('Display the 5 best streamers (or less):')
         st.table(top_5)
         if top_5.shape[0]>1:
-            st.subheader('More visual pleasing with a plot maybe?')
+            st.subheader('Now let us have a look how that looks like for our selected Stars:')
             fig = px.bar(top_5, x=top_5.index, y=top_5[col_sort], 
                     color=top_5.index, barmode="group")
             fig.update_layout(
@@ -187,14 +187,13 @@ if not features.empty:
             uniformtext_mode='hide')
             st.plotly_chart(fig)
         st.write('Amazing, that was quick! Cool Stuff, right?')
-        st.subheader('Do you want to look at any streamer in particular now?')
         target = st.radio('', top_5.index)
         st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
         # temp_time = ["morning", "afternoon", "evening", "night"]
         # time = st.radio('Which time you want your star to be streaming at?', temp_time)
         # st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-        st.subheader('Now let us have a look how that looks like for our selected Stars:')
     st.markdown('----')
+    st.subheader('Do you want to look at any streamer in particular now?')
     # select one target to specify data on
     target_df = df_user.loc[target]
     #st.bar_chart(targets_df)
