@@ -274,7 +274,7 @@ if not features.empty:
     if youtube:
         yt_id = df_user.loc[target, ['YouTube']][0]
         yt_df = df_user[df_user['YouTube'] == yt_id][['YT Viewcount', 'YT Subscribers', 'YT Videocount']]
-        if yt_id != 'nan':
+        if not yt_df.empty:
             st.title('YouTube')
             image_path = 'images/YouTube.png'
             image_link = f'https://youtube.com/{yt_id}'
