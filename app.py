@@ -288,11 +288,12 @@ if not features.empty:
             st.subheader('We are sorry!')
             image1 ="images/YouTube.png"
             original = Image.open(image1)
-            st.image(original, width=100)
+            st.image(original, width=150)
             st.info('Unfortunately we couldn\' find any information for the chosen streamer!')
     st.write('')
     st.write('----')
     if instagram:
+        st.title('Instagram')
         st.subheader('Oh Snap!')
         image2 ="images/Instagram.png"
         original2 = Image.open(image2)
@@ -302,6 +303,7 @@ if not features.empty:
     st.write('')
     st.write('----')
     if twitter:
+        st.title('Community base')
         locations = df_user.loc[target]['Twitter Community Locations']
         locations = ast.literal_eval(locations)
         cities = locations.get('cities', None)
