@@ -168,70 +168,40 @@ instagram = st.sidebar.checkbox('Instagram')
 # show dataframe with 5 best streamers based on selection criterias
 
 if not features.empty:
-    st.subheader('Display the 5 best streamers (or less):')
-    top_5 = features.head()
-    st.table(top_5)
-    st.subheader('Please select one feature to use for ranking the streamers:')
+    st.title('Before we dive right into it, please select one feature to use to rank our streamers:')
     col_sort = st.radio('', features.columns)
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-    st.write(f'You selected {col_sort}, good choice!')
+    if col_sort:
+        st.write(f'You selected {col_sort}, good choice!')
     top_5 = features.sort_values(by=[col_sort], ascending=False).head()
-    # temp_time = ["morning", "afternoon", "evening", "night"]
-    # time = st.radio('Which time you want your star to be streaming at?', temp_time)
-    # st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-    st.subheader('Now let us have a look how that looks like for our selected Stars:')
-    if top_5.shape[0]>1:
-        fig = px.bar(top_5, x=top_5.index, y=top_5[col_sort], 
+    if not top_5.empty:
+        st.subheader('Display the 5 best streamers (or less) in a table:')
+        st.table(top_5)
+        if top_5.shape[0]>1:
+            st.subheader('Enough tables, let\'s plot them in a visually pleasing way!')
+            fig = px.bar(top_5, x=top_5.index, y=top_5[col_sort], 
                     color=top_5.index, barmode="group")
-        fig.update_layout(
+            fig.update_layout(
             showlegend=True,
             uniformtext_minsize=12, 
             uniformtext_mode='hide')
-        st.plotly_chart(fig)
-    st.write('Cool Stuff, right?')
+            st.plotly_chart(fig)
+        st.write('Amazing, that was quick! Cool Stuff, right?')
+        # temp_time = ["morning", "afternoon", "evening", "night"]
+        # time = st.radio('Which time you want your star to be streaming at?', temp_time)
+        # st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     st.markdown('----')
-    # select one target to specify data on
-    st.subheader('Do you want to look at any streamer in particular?')
+    st.title('Do you want to look at any streamer in particular now?')
     target = st.radio('', top_5.index)
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+    # select one target to specify data on
     target_df = df_user.loc[target]
     #st.bar_chart(targets_df)
-    st.title('Top 5 Games for your main target')
+    st.subheader('Top 5 Games for your main target')
     games_target = games_df[games_df['Username'] == target]
     top_games_target = games_target.sort_values(by=['AVG Viewers']).head()
     top_games_sample = games_df.sort_values(by=['AVG Viewers']).head()
     # fig = go.Pie(labels=top_games_target["Game"], values= top_games_target["AVG Viewers"])
-
-    # st.write(fig)
-
-    # fig = make_subplots(rows=1, 
-    #                     cols=2,
-    #                     subplot_titles=("Pie 1", "Pie 2"), 
-    #                     specs=[
-    #                     [{"type": "domain"}, {"type": "domain"}]
-    #                     ])
-    # fig.add_trace(go.Pie(labels=target_games_df["Game"]), 1, 1)
-    # fig.add_trace(go.Pie(labels=target_games_df["Game"]), 1, 2)
-    # fig.update_layout(
-    #     showlegend=True,
-    #     uniformtext_minsize=12, 
-    #     uniformtext_mode='hide')
-
-    # fig, ax1 = plt.subplots(figsize=(10, 5))
-    # plt.figure(figsize=(10, 5))
-
-    # def label_function(val):
-    #     return f'{val:.0f}%'
-
-      # Equal aspect ratio ensures that pie is drawn as a circle.
-
-    # fig, ax1 = plt.subplots(figsize=(10, 5))
-    # plt.figure(figsize=(10, 5))
-    # plt.pie(, autopct='%1.1f%%',
-    #         shadow=True, startangle=90)
-    # ax1.legend(title="Games")
-    # st.write(fig)
-
     
     fig = px.pie(
     names=top_games_target['Game'], values=top_games_target['AVG Viewers']
@@ -241,12 +211,14 @@ if not features.empty:
         uniformtext_minsize=12, 
         uniformtext_mode='hide')
     st.plotly_chart(fig)
+    
     #select users for plot, to show difference between best, 500th, 1000th, 1500th streamer
-    st.line_chart(line_plot_data)
+    # st.line_chart(line_plot_data)
     # st.title("Overview of 5 most recent live sessions on Twitch")
     # st.table(recent_streams.head())
     # plot the data
-    st.write('')
+    if twitter or youtube or instagram:
+        st.subheader('Let\'s move on to our social media section!')
     st.write('----')
     if twitter:
         twitter_name = df[df['Username'] == target]['Twitter']
@@ -273,26 +245,34 @@ if not features.empty:
     if youtube:
         yt_id = df_user.loc[target, ['YouTube']][0]
         yt_df = df_user[df_user['YouTube'] == yt_id][['YT Viewcount', 'YT Subscribers', 'YT Videocount']]
-        if yt_id != 'nan':
-            st.title('YouTube')
+        st.title('YouTube')
+        if not yt_df.empty:
             image_path = 'images/YouTube.png'
             image_link = f'https://youtube.com/{yt_id}'
             st.write('Click here to get redirected to the Streamer YouTube Page!')
             st.write(f'<a href="{image_link}">{image_tag(image_path)}</a>', unsafe_allow_html=True)
             st.subheader(f'Interesting YouTube Stats for {target}')
             st.table(yt_df)
+        else:
+            st.subheader('We are sorry!')
+            image1 ="images/YouTube.png"
+            original = Image.open(image1)
+            st.image(original, width=150)
+            st.info('Unfortunately we couldn\' find any information for the chosen streamer!')
     st.write('')
     st.write('----')
     if instagram:
+        st.title('Instagram')
         st.subheader('Oh Snap!')
-        image1 ="images/Instagram.png"
-        original = Image.open(image1)
-        st.image(original, width=100)
+        image2 ="images/Instagram.png"
+        original2 = Image.open(image2)
+        st.image(original2, width=100)
         st.info('Instagram Feature to come soon!')
         
     st.write('')
     st.write('----')
     if twitter:
+        st.title('Community base')
         locations = df_user.loc[target]['Twitter Community Locations']
         locations = ast.literal_eval(locations)
         cities = locations.get('cities', None)
